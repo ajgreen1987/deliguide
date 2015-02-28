@@ -14,6 +14,12 @@
 		DA27ED481AA152AA00689F55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA27ED471AA152AA00689F55 /* Images.xcassets */; };
 		DA27ED4B1AA152AA00689F55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA27ED491AA152AA00689F55 /* LaunchScreen.xib */; };
 		DA27ED571AA152AA00689F55 /* DeliGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED561AA152AA00689F55 /* DeliGuideTests.m */; };
+		DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED7C1AA15E4500689F55 /* UIViewController+ECSlidingViewController.m */; };
+		DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED7E1AA15E4500689F55 /* ECSlidingViewController.m */; };
+		DA27ED8B1AA15E4500689F55 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED801AA15E4500689F55 /* ECSlidingSegue.m */; };
+		DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED821AA15E4500689F55 /* ECSlidingInteractiveTransition.m */; };
+		DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */; };
+		DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,19 @@
 		DA27ED501AA152AA00689F55 /* DeliGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA27ED551AA152AA00689F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA27ED561AA152AA00689F55 /* DeliGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliGuideTests.m; sourceTree = "<group>"; };
+		DA27ED7C1AA15E4500689F55 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
+		DA27ED7D1AA15E4500689F55 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
+		DA27ED7E1AA15E4500689F55 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		DA27ED7F1AA15E4500689F55 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		DA27ED801AA15E4500689F55 /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingSegue.m; sourceTree = "<group>"; };
+		DA27ED811AA15E4500689F55 /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingSegue.h; sourceTree = "<group>"; };
+		DA27ED821AA15E4500689F55 /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
+		DA27ED831AA15E4500689F55 /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
+		DA27ED841AA15E4500689F55 /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingConstants.h; sourceTree = "<group>"; };
+		DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingAnimationController.m; sourceTree = "<group>"; };
+		DA27ED861AA15E4500689F55 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
+		DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +100,8 @@
 		DA27ED391AA152AA00689F55 /* DeliGuide */ = {
 			isa = PBXGroup;
 			children = (
+				DA27ED611AA155DD00689F55 /* Utilities */,
+				DA27ED601AA155D400689F55 /* Managers */,
 				DA27ED3E1AA152AA00689F55 /* AppDelegate.h */,
 				DA27ED3F1AA152AA00689F55 /* AppDelegate.m */,
 				DA27ED411AA152AA00689F55 /* ViewController.h */,
@@ -117,6 +138,41 @@
 				DA27ED551AA152AA00689F55 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA27ED601AA155D400689F55 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		DA27ED611AA155DD00689F55 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DA27ED621AA155E300689F55 /* Sliding Menu */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		DA27ED621AA155E300689F55 /* Sliding Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DA27ED7C1AA15E4500689F55 /* UIViewController+ECSlidingViewController.m */,
+				DA27ED7D1AA15E4500689F55 /* UIViewController+ECSlidingViewController.h */,
+				DA27ED7E1AA15E4500689F55 /* ECSlidingViewController.m */,
+				DA27ED7F1AA15E4500689F55 /* ECSlidingViewController.h */,
+				DA27ED801AA15E4500689F55 /* ECSlidingSegue.m */,
+				DA27ED811AA15E4500689F55 /* ECSlidingSegue.h */,
+				DA27ED821AA15E4500689F55 /* ECSlidingInteractiveTransition.m */,
+				DA27ED831AA15E4500689F55 /* ECSlidingInteractiveTransition.h */,
+				DA27ED841AA15E4500689F55 /* ECSlidingConstants.h */,
+				DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */,
+				DA27ED861AA15E4500689F55 /* ECSlidingAnimationController.h */,
+				DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */,
+				DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */,
+			);
+			name = "Sliding Menu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +276,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA27ED431AA152AA00689F55 /* ViewController.m in Sources */,
+				DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */,
+				DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */,
+				DA27ED8B1AA15E4500689F55 /* ECSlidingSegue.m in Sources */,
+				DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */,
 				DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */,
+				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
+				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
