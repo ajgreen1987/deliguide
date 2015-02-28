@@ -20,6 +20,7 @@
 		DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED821AA15E4500689F55 /* ECSlidingInteractiveTransition.m */; };
 		DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */; };
 		DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */; };
+		DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		DA27ED861AA15E4500689F55 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
 		DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
 		DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		DA9E9A661AA242DF003FE759 /* BHSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSlidingViewController.h; sourceTree = "<group>"; };
+		DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSlidingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +103,11 @@
 		DA27ED391AA152AA00689F55 /* DeliGuide */ = {
 			isa = PBXGroup;
 			children = (
+				DA9E9A641AA242AA003FE759 /* View Controllers */,
 				DA27ED611AA155DD00689F55 /* Utilities */,
 				DA27ED601AA155D400689F55 /* Managers */,
 				DA27ED3E1AA152AA00689F55 /* AppDelegate.h */,
 				DA27ED3F1AA152AA00689F55 /* AppDelegate.m */,
-				DA27ED411AA152AA00689F55 /* ViewController.h */,
-				DA27ED421AA152AA00689F55 /* ViewController.m */,
 				DA27ED441AA152AA00689F55 /* Main.storyboard */,
 				DA27ED471AA152AA00689F55 /* Images.xcassets */,
 				DA27ED491AA152AA00689F55 /* LaunchScreen.xib */,
@@ -173,6 +175,25 @@
 				DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */,
 			);
 			name = "Sliding Menu";
+			sourceTree = "<group>";
+		};
+		DA9E9A641AA242AA003FE759 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E9A651AA242B5003FE759 /* Menu */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DA9E9A651AA242B5003FE759 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DA27ED411AA152AA00689F55 /* ViewController.h */,
+				DA27ED421AA152AA00689F55 /* ViewController.m */,
+				DA9E9A661AA242DF003FE759 /* BHSlidingViewController.h */,
+				DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +303,7 @@
 				DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */,
 				DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */,
 				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
+				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
 			);
@@ -474,6 +496,7 @@
 				DA27ED5C1AA152AA00689F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA27ED5D1AA152AA00689F55 /* Build configuration list for PBXNativeTarget "DeliGuideTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +505,7 @@
 				DA27ED5F1AA152AA00689F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
