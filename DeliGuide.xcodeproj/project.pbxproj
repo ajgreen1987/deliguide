@@ -21,6 +21,10 @@
 		DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */; };
 		DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */; };
 		DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */; };
+		DAA084121AAB95D800ABBA68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084111AAB95D800ABBA68 /* MapKit.framework */; };
+		DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */; };
+		DAA084181AAB9FB800ABBA68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084171AAB9FB800ABBA68 /* CoreLocation.framework */; };
+		DAA084211AABA41D00ABBA68 /* BHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084201AABA41D00ABBA68 /* BHLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,15 @@
 		DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
 		DA9E9A661AA242DF003FE759 /* BHSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSlidingViewController.h; sourceTree = "<group>"; };
 		DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSlidingViewController.m; sourceTree = "<group>"; };
+		DAA084111AAB95D800ABBA68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DAA084141AAB99B700ABBA68 /* BHMainMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHMainMapViewController.h; sourceTree = "<group>"; };
+		DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHMainMapViewController.m; sourceTree = "<group>"; };
+		DAA084171AAB9FB800ABBA68 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DAA0841D1AABA1B200ABBA68 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DAA0841F1AABA41D00ABBA68 /* BHLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLocationManager.h; sourceTree = "<group>"; };
+		DAA084201AABA41D00ABBA68 /* BHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLocationManager.m; sourceTree = "<group>"; };
+		DAA084221AAD39F700ABBA68 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DAA084231AAD3CC200ABBA68 /* Managers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Managers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA084181AAB9FB800ABBA68 /* CoreLocation.framework in Frameworks */,
+				DAA084121AAB95D800ABBA68 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 		DA27ED2E1AA152AA00689F55 = {
 			isa = PBXGroup;
 			children = (
+				DAA084171AAB9FB800ABBA68 /* CoreLocation.framework */,
+				DAA084111AAB95D800ABBA68 /* MapKit.framework */,
 				DA27ED391AA152AA00689F55 /* DeliGuide */,
 				DA27ED531AA152AA00689F55 /* DeliGuideTests */,
 				DA27ED381AA152AA00689F55 /* Products */,
@@ -121,6 +138,7 @@
 			children = (
 				DA27ED3B1AA152AA00689F55 /* Info.plist */,
 				DA27ED3C1AA152AA00689F55 /* main.m */,
+				DAA084221AAD39F700ABBA68 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -145,6 +163,10 @@
 		DA27ED601AA155D400689F55 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DAA0841D1AABA1B200ABBA68 /* Constants.h */,
+				DAA0841F1AABA41D00ABBA68 /* BHLocationManager.h */,
+				DAA084201AABA41D00ABBA68 /* BHLocationManager.m */,
+				DAA084231AAD3CC200ABBA68 /* Managers.h */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -180,6 +202,7 @@
 		DA9E9A641AA242AA003FE759 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DAA084131AAB995D00ABBA68 /* Map */,
 				DA9E9A651AA242B5003FE759 /* Menu */,
 			);
 			name = "View Controllers";
@@ -194,6 +217,15 @@
 				DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		DAA084131AAB995D00ABBA68 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DAA084141AAB99B700ABBA68 /* BHMainMapViewController.h */,
+				DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,11 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA084211AABA41D00ABBA68 /* BHLocationManager.m in Sources */,
 				DA27ED431AA152AA00689F55 /* ViewController.m in Sources */,
 				DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */,
 				DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				DA27ED8B1AA15E4500689F55 /* ECSlidingSegue.m in Sources */,
 				DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */,
+				DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */,
 				DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */,
 				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
@@ -427,7 +461,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = DeliGuide/PrefixHeader.pch;
 				INFOPLIST_FILE = DeliGuide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -437,7 +474,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = DeliGuide/PrefixHeader.pch;
 				INFOPLIST_FILE = DeliGuide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
