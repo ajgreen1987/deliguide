@@ -137,6 +137,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self setScreenName:@"MENU"];
     [self.topViewController beginAppearanceTransition:YES animated:animated];
     
     if (self.currentTopViewPosition == ECSlidingViewControllerTopViewPositionAnchoredLeft) {

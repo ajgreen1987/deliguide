@@ -24,6 +24,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ECSlidingConstants.h"
+#import "GAITrackedViewController.h"
 
 @class ECSlidingViewController;
 
@@ -100,7 +101,7 @@
  There is no interface provided for anchoring the top layer, but there are methods and a gesture available for doing so. The `topViewController` will typically have a button to animate an anchoring and/or attach the provided `panGesture` to do it interactively.
  */
 
-@interface ECSlidingViewController : UIViewController <UIViewControllerContextTransitioning,
+@interface ECSlidingViewController : GAITrackedViewController <UIViewControllerContextTransitioning,
                                                        UIViewControllerTransitionCoordinator,
                                                        UIViewControllerTransitionCoordinatorContext> {
     @private

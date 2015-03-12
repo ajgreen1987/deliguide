@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : GAITrackedViewController
 
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue;
 
