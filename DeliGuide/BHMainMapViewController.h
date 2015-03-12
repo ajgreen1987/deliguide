@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "BHTableView.h"
 
 
-@interface BHMainMapViewController : UIViewController <UITextFieldDelegate, MKMapViewDelegate>
+@interface BHMainMapViewController : UIViewController <UITextFieldDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet UIButton *filter;
 @property (nonatomic, weak) IBOutlet UITextField *zipSearch;
+@property (nonatomic, weak) IBOutlet BHTableView *tableView;
 
 - (IBAction) handleFilterTouchUpInside:(id)sender;
 - (IBAction) handleViewListTouchUpInside:(id)sender;

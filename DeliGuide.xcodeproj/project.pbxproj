@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABA71AB124BD0036CAE8 /* BHTableView.m */; };
 		DA27ED3D1AA152AA00689F55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED3C1AA152AA00689F55 /* main.m */; };
 		DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED3F1AA152AA00689F55 /* AppDelegate.m */; };
 		DA27ED431AA152AA00689F55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED421AA152AA00689F55 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA20ABA61AB124BD0036CAE8 /* BHTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTableView.h; sourceTree = "<group>"; };
+		DA20ABA71AB124BD0036CAE8 /* BHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTableView.m; sourceTree = "<group>"; };
 		DA27ED371AA152AA00689F55 /* DeliGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA27ED3B1AA152AA00689F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA27ED3C1AA152AA00689F55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA20ABA51AB124A60036CAE8 /* Overlay Tableview */ = {
+			isa = PBXGroup;
+			children = (
+				DA20ABA61AB124BD0036CAE8 /* BHTableView.h */,
+				DA20ABA71AB124BD0036CAE8 /* BHTableView.m */,
+			);
+			name = "Overlay Tableview";
+			sourceTree = "<group>";
+		};
 		DA27ED2E1AA152AA00689F55 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +186,7 @@
 		DA27ED611AA155DD00689F55 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DA20ABA51AB124A60036CAE8 /* Overlay Tableview */,
 				DA27ED621AA155E300689F55 /* Sliding Menu */,
 			);
 			name = Utilities;
@@ -337,6 +350,7 @@
 				DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */,
 				DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */,
 				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
+				DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */,
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,

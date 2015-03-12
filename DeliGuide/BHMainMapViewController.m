@@ -9,6 +9,8 @@
 #import "BHMainMapViewController.h"
 #import "BHLocationManager.h"
 
+#define CELL_HEIGHT 120.0f
+
 @interface BHMainMapViewController ()
 
 @end
@@ -20,11 +22,48 @@
     [super viewDidLoad];
     
     [[BHLocationManager locationManager] requestLocationServicesAuthorization];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    [[self tableView] setContentInset:UIEdgeInsetsMake(self.mapView.frame.size.height-CELL_HEIGHT, 0, 0, 0)];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table View Magic
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    if (scrollView.contentOffset.y < self.mapView.frame.size.height*-1 )
+    {
+        [scrollView setContentOffset:CGPointMake(scrollView.contentOffset.x, self.mapView.frame.size.height*-3)];
+    }
+}
+
+#pragma mark - UITableViewDataSource
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 100;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
+    
+    return cell;
+    
 }
 
 #pragma mark - Text Field Delegate
