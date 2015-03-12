@@ -14,6 +14,8 @@
 		DA20ABBD1AB12EB00036CAE8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20ABBC1AB12EB00036CAE8 /* SystemConfiguration.framework */; };
 		DA20ABBF1AB12EBC0036CAE8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20ABBE1AB12EBC0036CAE8 /* libz.dylib */; };
 		DA20ABC11AB12EC70036CAE8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20ABC01AB12EC70036CAE8 /* libsqlite3.dylib */; };
+		DA20ABC41AB133DC0036CAE8 /* MenuItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABC31AB133DC0036CAE8 /* MenuItemObject.m */; };
+		DA20ABC71AB133ED0036CAE8 /* TravelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABC61AB133ED0036CAE8 /* TravelObject.m */; };
 		DA27ED3D1AA152AA00689F55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED3C1AA152AA00689F55 /* main.m */; };
 		DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED3F1AA152AA00689F55 /* AppDelegate.m */; };
 		DA27ED431AA152AA00689F55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED421AA152AA00689F55 /* ViewController.m */; };
@@ -64,6 +66,10 @@
 		DA20ABBC1AB12EB00036CAE8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DA20ABBE1AB12EBC0036CAE8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		DA20ABC01AB12EC70036CAE8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		DA20ABC21AB133DC0036CAE8 /* MenuItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemObject.h; sourceTree = "<group>"; };
+		DA20ABC31AB133DC0036CAE8 /* MenuItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemObject.m; sourceTree = "<group>"; };
+		DA20ABC51AB133ED0036CAE8 /* TravelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelObject.h; sourceTree = "<group>"; };
+		DA20ABC61AB133ED0036CAE8 /* TravelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelObject.m; sourceTree = "<group>"; };
 		DA27ED371AA152AA00689F55 /* DeliGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA27ED3B1AA152AA00689F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA27ED3C1AA152AA00689F55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +148,10 @@
 			children = (
 				DA20ABAA1AB12D370036CAE8 /* DeliObject.h */,
 				DA20ABAB1AB12D370036CAE8 /* DeliObject.m */,
+				DA20ABC21AB133DC0036CAE8 /* MenuItemObject.h */,
+				DA20ABC31AB133DC0036CAE8 /* MenuItemObject.m */,
+				DA20ABC51AB133ED0036CAE8 /* TravelObject.h */,
+				DA20ABC61AB133ED0036CAE8 /* TravelObject.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -413,8 +423,10 @@
 				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
 				DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */,
 				DA20ABAC1AB12D370036CAE8 /* DeliObject.m in Sources */,
+				DA20ABC41AB133DC0036CAE8 /* MenuItemObject.m in Sources */,
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
+				DA20ABC71AB133ED0036CAE8 /* TravelObject.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
