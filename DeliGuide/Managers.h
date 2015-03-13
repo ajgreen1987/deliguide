@@ -9,6 +9,7 @@
 #ifndef DeliGuide_Managers_h
 #define DeliGuide_Managers_h
 
+#import "BHApplicationManager.h"
 #import "BHLocationManager.h"
 
 #endif

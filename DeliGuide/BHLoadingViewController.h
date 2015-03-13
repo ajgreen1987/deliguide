@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
+#import "BHLocationManager.h"
 
-@interface BHLoadingViewController : GAITrackedViewController
+@interface BHLoadingViewController : GAITrackedViewController <BHLocationManagerDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 

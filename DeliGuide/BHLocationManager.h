@@ -9,11 +9,22 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+@protocol BHLocationManagerDelegate <NSObject>
+
+@optional
+- (void) userDeniedPermission;
+- (void) userAllowedPermission;
+- (void) didUpdateUserLocationFromLocation:(CLLocation*)anOldLocation toLocation:(CLLocation*)aNewLocation;
+
+@end
+
 @interface BHLocationManager : NSObject <CLLocationManagerDelegate>
 
+@property (nonatomic, weak) id<BHLocationManagerDelegate> locationManagerDelegate;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
 + (instancetype) locationManager;
 - (void)requestLocationServicesAuthorization;
+- (void) startUpdatingUserLocation;
 
 @end

@@ -30,6 +30,7 @@
 		DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */; };
 		DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */; };
 		DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */; };
+		DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */; };
 		DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */; };
 		DAA084121AAB95D800ABBA68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084111AAB95D800ABBA68 /* MapKit.framework */; };
 		DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */; };
@@ -99,6 +100,8 @@
 		DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
 		DA436E8A1AB2675000CE19A4 /* BHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLoadingViewController.h; sourceTree = "<group>"; };
 		DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLoadingViewController.m; sourceTree = "<group>"; };
+		DA6DE1D11AB280D700D2FB34 /* BHApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHApplicationManager.h; sourceTree = "<group>"; };
+		DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHApplicationManager.m; sourceTree = "<group>"; };
 		DA9E9A661AA242DF003FE759 /* BHSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSlidingViewController.h; sourceTree = "<group>"; };
 		DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSlidingViewController.m; sourceTree = "<group>"; };
 		DAA084111AAB95D800ABBA68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -252,6 +255,8 @@
 				DAA0841F1AABA41D00ABBA68 /* BHLocationManager.h */,
 				DAA084201AABA41D00ABBA68 /* BHLocationManager.m */,
 				DAA084231AAD3CC200ABBA68 /* Managers.h */,
+				DA6DE1D11AB280D700D2FB34 /* BHApplicationManager.h */,
+				DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* TravelObject.m in Sources */,
 				DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */,
+				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
