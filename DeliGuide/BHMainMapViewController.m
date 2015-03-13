@@ -7,7 +7,6 @@
 //
 
 #import "BHMainMapViewController.h"
-#import "BHLocationManager.h"
 
 #define CELL_HEIGHT 120.0f
 
@@ -21,7 +20,8 @@
 {
     [super viewDidLoad];
     
-    [[BHLocationManager locationManager] requestLocationServicesAuthorization];
+    
+    self.screenName = @"MAP";
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -60,7 +60,7 @@
 {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     
     return cell;
     
