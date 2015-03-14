@@ -18,6 +18,8 @@
 @property (nonatomic, assign) CGFloat satisfactionPercentage;
 @property (nonatomic, strong) NSString *deliHours;
 @property (nonatomic, assign) BOOL isFeatured;
+@property (nonatomic, strong) NSDecimalNumber *latitude;
+@property (nonatomic, strong) NSDecimalNumber *longitude;
 @property (nonatomic, strong) NSMutableDictionary *deliMoreInformation;
 @property (nonatomic, strong) NSMutableArray *deliTravelTimes;
 

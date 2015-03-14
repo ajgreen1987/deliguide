@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */; };
 		DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABA71AB124BD0036CAE8 /* BHTableView.m */; };
 		DA20ABAC1AB12D370036CAE8 /* DeliObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABAB1AB12D370036CAE8 /* DeliObject.m */; };
 		DA20ABAF1AB12E530036CAE8 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20ABAE1AB12E530036CAE8 /* libGoogleAnalyticsServices.a */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0C9D6D1AB4B52F00FEDC35 /* BHDeliTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliTableViewCell.h; sourceTree = "<group>"; };
+		DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliTableViewCell.m; sourceTree = "<group>"; };
 		DA20ABA61AB124BD0036CAE8 /* BHTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTableView.h; sourceTree = "<group>"; };
 		DA20ABA71AB124BD0036CAE8 /* BHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTableView.m; sourceTree = "<group>"; };
 		DA20ABAA1AB12D370036CAE8 /* DeliObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliObject.h; sourceTree = "<group>"; };
@@ -140,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0C9D6C1AB4B51500FEDC35 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DA0C9D6D1AB4B52F00FEDC35 /* BHDeliTableViewCell.h */,
+				DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */,
+			);
+			name = "Table View Cell";
+			sourceTree = "<group>";
+		};
 		DA20ABA51AB124A60036CAE8 /* Overlay Tableview */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,12 +317,12 @@
 			children = (
 				DA436E891AB2673600CE19A4 /* Loading */,
 				DAA084131AAB995D00ABBA68 /* Map */,
-				DA9E9A651AA242B5003FE759 /* Menu */,
+				DA9E9A651AA242B5003FE759 /* Sliding Menu */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		DA9E9A651AA242B5003FE759 /* Menu */ = {
+		DA9E9A651AA242B5003FE759 /* Sliding Menu */ = {
 			isa = PBXGroup;
 			children = (
 				DA27ED411AA152AA00689F55 /* ViewController.h */,
@@ -318,12 +330,13 @@
 				DA9E9A661AA242DF003FE759 /* BHSlidingViewController.h */,
 				DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */,
 			);
-			name = Menu;
+			name = "Sliding Menu";
 			sourceTree = "<group>";
 		};
 		DAA084131AAB995D00ABBA68 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				DA0C9D6C1AB4B51500FEDC35 /* Table View Cell */,
 				DAA084141AAB99B700ABBA68 /* BHMainMapViewController.h */,
 				DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */,
 			);
@@ -435,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */,
 				DAA084211AABA41D00ABBA68 /* BHLocationManager.m in Sources */,
 				DA27ED431AA152AA00689F55 /* ViewController.m in Sources */,
 				DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */,

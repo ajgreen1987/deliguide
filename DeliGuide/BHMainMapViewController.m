@@ -7,8 +7,9 @@
 //
 
 #import "BHMainMapViewController.h"
+#import "BHDeliTableViewCell.h"
 
-#define CELL_HEIGHT 120.0f
+#define CELL_HEIGHT 136.0f
 
 @interface BHMainMapViewController ()
 
@@ -20,7 +21,6 @@
 {
     [super viewDidLoad];
     
-    
     self.screenName = @"MAP";
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
@@ -31,7 +31,8 @@
 {
     [super viewDidLayoutSubviews];
     
-    [[self tableView] setContentInset:UIEdgeInsetsMake(self.mapView.frame.size.height-CELL_HEIGHT, 0, 0, 0)];
+    [[self tableView] setContentOffset:CGPointMake(0, -self.tableView.contentInset.top)];
+    [[self tableView] setContentInset:UIEdgeInsetsMake(self.mapView.frame.size.height-(CELL_HEIGHT*2), 0, 0, 0)];
 }
 
 
@@ -58,9 +59,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    BHDeliTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    cell.travelDistance.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     
     return cell;
     
