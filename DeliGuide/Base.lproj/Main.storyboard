@@ -290,6 +290,9 @@
                                 <state key="normal" title="List">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleViewListTouchUpInside:" destination="1a8-K0-BTj" eventType="touchUpInside" id="uKk-kg-zZe"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="136" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ryw-rb-fQh" customClass="BHTableView">
                                 <rect key="frame" x="0.0" y="124" width="320" height="444"/>

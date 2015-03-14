@@ -14,6 +14,7 @@
 @interface BHMainMapViewController ()
 
 @property (nonatomic, assign) BOOL isMapFullScreen;
+@property (nonatomic, assign) CGFloat originalTableViewYOrigin;
 
 @end
 
@@ -55,6 +56,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.originalTableViewYOrigin = self.tableView.frame.origin.y;
 }
 
 #pragma mark - Table View Magic
@@ -76,7 +78,6 @@
     [self.mapView addGestureRecognizer:tgr];
 }
 
-
 - (void)handleMapTapGesture:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer.state != UIGestureRecognizerStateEnded)
@@ -84,11 +85,22 @@
     
     if (!self.isMapFullScreen)
     {
-        // Animate the list view off the page
-        self.isMapFullScreen = !self.isMapFullScreen;
+        [self animateTableViewYOrigin];
     }
-    
-    
+}
+
+- (void)animateTableViewYOrigin
+{
+    CGFloat tableViewYOrigin = self.isMapFullScreen ? self.originalTableViewYOrigin : self.view.frame.size.height;
+    // Animate the list view off the page
+    [UIView animateWithDuration:0.6f
+                     animations:^{
+                         [self.tableView setFrame:CGRectMake(self.tableView.frame.origin.x,
+                                                             tableViewYOrigin,
+                                                             self.tableView.frame.size.width,
+                                                             self.tableView.frame.size.height)];
+                     }];
+    self.isMapFullScreen = !self.isMapFullScreen;
 }
 
 #pragma mark - UITableViewDataSource
@@ -138,6 +150,7 @@
 
 - (IBAction)handleViewListTouchUpInside:(id)sender
 {
+    [self animateTableViewYOrigin];
 }
 
 - (IBAction)handleUpdateLocationTouchUpInside:(id)sender
