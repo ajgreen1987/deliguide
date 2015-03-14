@@ -13,6 +13,8 @@
 
 @interface BHMainMapViewController ()
 
+@property (nonatomic, assign) BOOL isMapFullScreen;
+
 @end
 
 @implementation BHMainMapViewController
@@ -22,9 +24,8 @@
     [super viewDidLoad];
     
     self.screenName = @"MAP";
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    [self setupMap];
+    [self setupTableView];
 }
 
 -(void)viewDidLayoutSubviews
@@ -36,9 +37,24 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Initiailizers
+- (void) setupMap
+{
+    self.isMapFullScreen = NO;
+    [self setupMapTapGestureRecognizer];
+}
+
+- (void) setupTableView
+{
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
 #pragma mark - Table View Magic
@@ -48,6 +64,31 @@
     {
         [scrollView setContentOffset:CGPointMake(scrollView.contentOffset.x, self.mapView.frame.size.height*-3)];
     }
+}
+
+#pragma mark - Map Tap Recognizer
+- (void) setupMapTapGestureRecognizer
+{
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleMapTapGesture:)];
+    tgr.numberOfTapsRequired = 1;
+
+    
+    [self.mapView addGestureRecognizer:tgr];
+}
+
+
+- (void)handleMapTapGesture:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded)
+        return;
+    
+    if (!self.isMapFullScreen)
+    {
+        // Animate the list view off the page
+        self.isMapFullScreen = !self.isMapFullScreen;
+    }
+    
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -65,6 +106,16 @@
     
     return cell;
     
+}
+
+#pragma mark - UITableView Delegate
+- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath
+                             animated:YES];
+    
+    [self performSegueWithIdentifier:@"DetailsSegue"
+                              sender:self];
 }
 
 #pragma mark - Text Field Delegate
