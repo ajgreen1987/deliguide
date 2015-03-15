@@ -10,9 +10,10 @@
 #import <MapKit/MapKit.h>
 #import "BHTableView.h"
 #import "GAITrackedViewController.h"
+#import "BHLocationManager.h"
 
 
-@interface BHMainMapViewController : GAITrackedViewController <UITextFieldDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface BHMainMapViewController : GAITrackedViewController <UITextFieldDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, BHLocationManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet UIButton *filter;

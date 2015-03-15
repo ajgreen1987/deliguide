@@ -20,6 +20,11 @@
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
 }
 
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [[BHLocationManager locationManager] setLocationManagerDelegate:nil];
+}
+
 - (IBAction)handleLocationTouchUpInside:(id)sender
 {
     [[BHLocationManager locationManager] requestLocationServicesAuthorization];
@@ -48,29 +53,17 @@
 #pragma mark - Alert Views
 -(void)presentGPSUnavailableAlert
 {
-    UIAlertView *alertView = [[BHApplicationManager appManager] getErrorMessageAlertViewWithTitle:@"Error"
-                                                                            message:@"GPS location data is unavailable on this device.\nPlease try again."
-                                                                     viewController:self];
-    alertView.tag = 404;
-    [alertView show];
+    [BHLocationManager presentGPSUnavailableAlertForController:self];
 }
 
 -(void)presentGPSPermissionDeniedAlert
 {
-    UIAlertView *alertView = [[BHApplicationManager appManager] getErrorMessageAlertViewWithTitle:@"Location Service Disabled"
-                                                                            message:@"To re-enable, please go to Settings and turn on Location Service for this app."
-                                                                     viewController:self];
-    alertView.tag = 404;
-    [alertView show];
+    [BHLocationManager presentGPSPermissionDeniedAlertForController:self];
 }
 
 -(void)presentNoConnectionAlert
 {    
-    UIAlertView *alertView = [[BHApplicationManager appManager] getErrorMessageAlertViewWithTitle:@"Connectivity Issue"
-                                                                            message:@"Device has no wifi or mobile connectivity. Please try the operation after establishing connectivity."
-                                                                     viewController:self];
-    alertView.tag = 404;
-    [alertView show];
+    [BHLocationManager presentNoConnectionAlertForController:self];
 }
 
 @end

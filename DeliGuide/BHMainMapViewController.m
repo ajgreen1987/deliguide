@@ -49,6 +49,9 @@
 {
     self.isMapFullScreen = NO;
     [self setupMapTapGestureRecognizer];
+    
+    [[BHLocationManager locationManager] setLocationManagerDelegate:self];
+    [[BHLocationManager locationManager] startUpdatingUserLocation];
 }
 
 - (void) setupTableView
@@ -140,7 +143,54 @@
     return true;
 }
 
-#pragma mark - Map View Delegate
+#pragma mark - Location Delegate
+- (void) userAllowedPermission
+{
+    if (!self.mapView.showsUserLocation)
+    {
+        [self.mapView setShowsUserLocation:YES];
+        
+        [self zoomToUserLocation:self.mapView.userLocation.location];
+    }
+}
+
+- (void) userDeniedPermission
+{
+    [self presentGPSPermissionDeniedAlert];
+}
+
+- (void) didUpdateUserLocationFromLocation:(CLLocation *)anOldLocation toLocation:(CLLocation *)aNewLocation
+{
+    [self zoomToUserLocation:aNewLocation];
+}
+
+- (void) zoomToUserLocation:(CLLocation*)aLocation
+{
+    /*
+    MKCoordinateRegion region;
+    region.center = aLocation.coordinate;
+    region.span = MKCoordinateSpanMake(0.1, 0.1);
+    
+    region = [self.mapView regionThatFits:region];
+    [self.mapView setRegion:region animated:YES];
+     */
+}
+
+#pragma mark - Alert Views
+-(void)presentGPSUnavailableAlert
+{
+    [BHLocationManager presentGPSUnavailableAlertForController:self];
+}
+
+-(void)presentGPSPermissionDeniedAlert
+{
+    [BHLocationManager presentGPSPermissionDeniedAlertForController:self];
+}
+
+-(void)presentNoConnectionAlert
+{
+    [BHLocationManager presentNoConnectionAlertForController:self];
+}
 
 #pragma mark - Button Handlers
 - (IBAction) handleFilterTouchUpInside:(id)sender

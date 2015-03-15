@@ -24,6 +24,10 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
 + (instancetype) locationManager;
+
++ (void)presentGPSUnavailableAlertForController:(UIViewController*)aController;
++ (void)presentGPSPermissionDeniedAlertForController:(UIViewController*)aController;
++ (void)presentNoConnectionAlertForController:(UIViewController*)aController;
 - (void)requestLocationServicesAuthorization;
 - (void) startUpdatingUserLocation;
 

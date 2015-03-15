@@ -7,6 +7,7 @@
 //
 
 #import "BHLocationManager.h"
+#import "BHApplicationManager.h"
 
 @interface BHLocationManager ()
 
@@ -110,17 +111,42 @@ static BHLocationManager *sharedLocationManager = nil;
     {
         [[self locationManagerDelegate] userAllowedPermission];
     }
-    
-    [self.locationManager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    
     if ([self isDelegateValidForSelector:@selector(didUpdateUserLocationFromLocation:toLocation:)])
     {
         [[self locationManagerDelegate] didUpdateUserLocationFromLocation:oldLocation toLocation:newLocation];
     }
+}
+
+#pragma mark - Alert Views
++ (void)presentGPSUnavailableAlertForController:(UIViewController*)aController
+{
+    UIAlertView *alertView = [[BHApplicationManager appManager] getErrorMessageAlertViewWithTitle:@"Error"
+                                                                                          message:@"GPS location data is unavailable on this device.\nPlease try again."
+                                                                                   viewController:aController];
+    alertView.tag = 404;
+    [alertView show];
+}
+
++ (void)presentGPSPermissionDeniedAlertForController:(UIViewController*)aController
+{
+    UIAlertView *alertView = [[BHApplicationManager appManager] getErrorMessageAlertViewWithTitle:@"Location Service Disabled"
+                                                                                          message:@"To re-enable, please go to Settings and turn on Location Service for this app."
+                                                                                   viewController:aController];
+    alertView.tag = 404;
+    [alertView show];
+}
+
++ (void)presentNoConnectionAlertForController:(UIViewController*)aController
+{
+    UIAlertView *alertView = [[BHApplicationManager appManager] getErrorMessageAlertViewWithTitle:@"Connectivity Issue"
+                                                                                          message:@"Device has no wifi or mobile connectivity. Please try the operation after establishing connectivity."
+                                                                                   viewController:aController];
+    alertView.tag = 404;
+    [alertView show];
 }
 
 @end
