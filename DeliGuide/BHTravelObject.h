@@ -16,7 +16,7 @@ typedef enum
     PUBLIC
 } ModeOfTransportation;
 
-@interface TravelObject : NSObject
+@interface BHTravelObject : NSObject
 
 @property (nonatomic, assign) ModeOfTransportation *travelMode;
 @property (nonatomic, assign) CGFloat travelTime;

@@ -7,7 +7,9 @@
 //
 
 #import "BHMainMapViewController.h"
+#import "BHApplicationManager.h"
 #import "BHDeliTableViewCell.h"
+#import "BHDeliObject.h"
 
 #define CELL_HEIGHT 136.0f
 
@@ -27,6 +29,9 @@
     self.screenName = @"MAP";
     [self setupMap];
     [self setupTableView];
+    
+    // Mock Locations for now
+    [[BHApplicationManager appManager] setupMockDelis];
 }
 
 -(void)viewDidLayoutSubviews
@@ -110,14 +115,20 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    return [[[BHApplicationManager appManager] delis] count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BHDeliTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    cell.travelDistance.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    BHDeliObject *deli = (BHDeliObject*)[[[BHApplicationManager appManager] delis] objectAtIndex:indexPath.row];
+    
+    cell.deliName.text = deli.deliName;
+    cell.address.text = deli.deliDisplayAddress;
+    cell.satisfactionPercentage.text = [NSString stringWithFormat:@"%.2f LIKE",deli.satisfactionPercentage];
+    
+    cell.travelDistance.text = [NSString stringWithFormat:@"%ld min",(long)indexPath.row];
     
     return cell;
     

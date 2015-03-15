@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MenuItemObject : NSObject
+@interface BHMenuItemObject : NSObject
 
 @property (nonatomic, strong) NSString *menuCategory;
 @property (nonatomic, strong) NSString *menuSubCategory;

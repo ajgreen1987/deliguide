@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Mode. All rights reserved.
 //
 
-#import "DeliObject.h"
+#import "BHDeliObject.h"
 
-@implementation DeliObject
+@implementation BHDeliObject
 
 @end

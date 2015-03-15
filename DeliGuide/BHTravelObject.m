@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Mode. All rights reserved.
 //
 
-#import "TravelObject.h"
+#import "BHTravelObject.h"
 
-@implementation TravelObject
+@implementation BHTravelObject
 
 @end

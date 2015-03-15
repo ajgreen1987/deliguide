@@ -455,12 +455,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="6fM-xi-YrZ">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="iOR-th-RbM">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="d9F-Jr-ibn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="d9F-Jr-ibn">
                                 <rect key="frame" x="233" y="7" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
                                     <segue destination="hFY-9f-9n6" kind="unwind" unwindAction="unwindToMenuViewController:" id="ePs-5O-gZi"/>
                                 </connections>

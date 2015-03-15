@@ -10,7 +10,11 @@
 
 @interface BHApplicationManager : NSObject
 
+@property (nonatomic, strong) NSMutableArray *delis;
+
 + (instancetype)appManager;
+
+- (void) setupMockDelis;
 
 - (UIAlertView *) getErrorMessageAlertViewWithTitle:(NSString *)title
                                             message:(NSString *)message

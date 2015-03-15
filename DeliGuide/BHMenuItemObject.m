@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Mode. All rights reserved.
 //
 
-#import "MenuItemObject.h"
+#import "BHMenuItemObject.h"
 
-@implementation MenuItemObject
+@implementation BHMenuItemObject
 
 @end
