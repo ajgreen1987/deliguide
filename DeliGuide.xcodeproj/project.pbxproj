@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */; };
+		DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */; };
+		DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */; };
+		DA0C9D7D1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D7C1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m */; };
 		DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABA71AB124BD0036CAE8 /* BHTableView.m */; };
 		DA20ABAC1AB12D370036CAE8 /* BHDeliObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABAB1AB12D370036CAE8 /* BHDeliObject.m */; };
 		DA20ABAF1AB12E530036CAE8 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20ABAE1AB12E530036CAE8 /* libGoogleAnalyticsServices.a */; };
@@ -52,6 +55,12 @@
 /* Begin PBXFileReference section */
 		DA0C9D6D1AB4B52F00FEDC35 /* BHDeliTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliTableViewCell.h; sourceTree = "<group>"; };
 		DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliTableViewCell.m; sourceTree = "<group>"; };
+		DA0C9D741AB6328000FEDC35 /* BHDeliDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailsTableViewController.h; sourceTree = "<group>"; };
+		DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliDetailsTableViewController.m; sourceTree = "<group>"; };
+		DA0C9D781AB636CA00FEDC35 /* BHDeliDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailTableViewCell.h; sourceTree = "<group>"; };
+		DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliDetailTableViewCell.m; sourceTree = "<group>"; };
+		DA0C9D7B1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliSatisfactionTableViewCell.h; sourceTree = "<group>"; };
+		DA0C9D7C1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliSatisfactionTableViewCell.m; sourceTree = "<group>"; };
 		DA20ABA61AB124BD0036CAE8 /* BHTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTableView.h; sourceTree = "<group>"; };
 		DA20ABA71AB124BD0036CAE8 /* BHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTableView.m; sourceTree = "<group>"; };
 		DA20ABAA1AB12D370036CAE8 /* BHDeliObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliObject.h; sourceTree = "<group>"; };
@@ -150,6 +159,27 @@
 				DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */,
 			);
 			name = "Table View Cell";
+			sourceTree = "<group>";
+		};
+		DA0C9D701AB6265F00FEDC35 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				DA0C9D771AB6369300FEDC35 /* Table View Cells */,
+				DA0C9D741AB6328000FEDC35 /* BHDeliDetailsTableViewController.h */,
+				DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */,
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
+		DA0C9D771AB6369300FEDC35 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA0C9D781AB636CA00FEDC35 /* BHDeliDetailTableViewCell.h */,
+				DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */,
+				DA0C9D7B1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.h */,
+				DA0C9D7C1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m */,
+			);
+			name = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		DA20ABA51AB124A60036CAE8 /* Overlay Tableview */ = {
@@ -315,6 +345,7 @@
 		DA9E9A641AA242AA003FE759 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DA0C9D701AB6265F00FEDC35 /* Details */,
 				DA436E891AB2673600CE19A4 /* Loading */,
 				DAA084131AAB995D00ABBA68 /* Map */,
 				DA9E9A651AA242B5003FE759 /* Sliding Menu */,
@@ -450,6 +481,7 @@
 			files = (
 				DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */,
 				DAA084211AABA41D00ABBA68 /* BHLocationManager.m in Sources */,
+				DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */,
 				DA27ED431AA152AA00689F55 /* ViewController.m in Sources */,
 				DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */,
 				DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */,
@@ -464,7 +496,9 @@
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
+				DA0C9D7D1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m in Sources */,
 				DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */,
+				DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */,
 				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
 			);
