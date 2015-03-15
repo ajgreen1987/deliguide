@@ -128,7 +128,8 @@
     
     cell.deliName.text = deli.deliName;
     cell.address.text = deli.deliDisplayAddress;
-    cell.satisfactionPercentage.text = [NSString stringWithFormat:@"%.2f LIKE",deli.satisfactionPercentage];
+    cell.satisfactionPercentage.text = [NSString stringWithFormat:@"%.2f%% LIKE",deli.satisfactionPercentage];
+    cell.featured.hidden = !deli.isFeatured;
     
     cell.travelDistance.text = [NSString stringWithFormat:@"%ld min",(long)indexPath.row];
     
@@ -162,8 +163,6 @@
     if (!self.mapView.showsUserLocation)
     {
         [self.mapView setShowsUserLocation:YES];
-        
-        [self zoomToUserLocation:self.mapView.userLocation.location];
     }
 }
 
@@ -175,18 +174,6 @@
 - (void) didUpdateUserLocationFromLocation:(CLLocation *)anOldLocation toLocation:(CLLocation *)aNewLocation
 {
     [self zoomToUserLocation:aNewLocation];
-}
-
-- (void) zoomToUserLocation:(CLLocation*)aLocation
-{
-    /*
-    MKCoordinateRegion region;
-    region.center = aLocation.coordinate;
-    region.span = MKCoordinateSpanMake(0.1, 0.1);
-    
-    region = [self.mapView regionThatFits:region];
-    [self.mapView setRegion:region animated:YES];
-     */
 }
 
 #pragma mark - Alert Views

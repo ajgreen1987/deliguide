@@ -161,4 +161,41 @@ static BHLocationManager *sharedLocationManager = nil;
     [alertView show];
 }
 
+#pragma mark - Service Calls
+
+- (NSURL *) generateLocationURLWithZipCode:(NSString *)zipCode NumberToReturn:(NSNumber *)numberToReturn
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/locations/?address=%@&count=%d", LOCATIONS_URL, zipCode, [numberToReturn intValue]]];
+}
+
+- (NSURL *) generateLocationURLWithAddress:(NSString *)address NumberToReturn:(NSNumber *)numberToReturn
+{
+    address = [address stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
+    // Short sync request
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/locations/?address=%@&count=%d", LOCATIONS_URL, [address stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [numberToReturn intValue]]];
+}
+
+- (NSURL *) generateLocationURLWithLocation:(CLLocation*)location NumberToReturn:(NSNumber *)numberToReturn
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/locations/?address=%1.6f,%1.6f&count=%d", LOCATIONS_URL, location.coordinate.latitude, location.coordinate.longitude, [numberToReturn intValue]]];
+}
+
+- (void) makeRequestToURL:(NSURL*)anURL httpResponse:(NSHTTPURLResponse**)httpResponse error:(NSError **)error jsonDictionary:(NSDictionary**)jsonDictionary
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:anURL
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:5.0];
+    
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:httpResponse error:error];
+    
+    if (data && (([*httpResponse statusCode]/100) == 2))
+    {
+        *jsonDictionary = [NSJSONSerialization
+                           JSONObjectWithData:data
+                           options:kNilOptions
+                           error:error];
+    }
+}
+
+
 @end

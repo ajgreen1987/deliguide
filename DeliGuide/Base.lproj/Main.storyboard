@@ -340,7 +340,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Teq-GD-pf6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_featured" translatesAutoresizingMaskIntoConstraints="NO" id="Teq-GD-pf6">
                                                     <rect key="frame" x="238" y="21" width="74" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="74" id="9H9-H4-5fX"/>
@@ -511,6 +511,7 @@
     </scenes>
     <resources>
         <image name="Walking-50" width="25" height="25"/>
+        <image name="star_featured" width="120" height="120"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -9,6 +9,7 @@
 #ifndef DeliGuide_Constants_h
 #define DeliGuide_Constants_h
 
+#define LOCATIONS_URL @"http://www.google.com/"
 
 #define SLIDING_MENU_STORYBOARD_ID @"SlidingMenu"
 #define LOADING_CONTROLLER_STORYBOARD_ID @"LoadingController"

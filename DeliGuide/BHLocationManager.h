@@ -32,5 +32,10 @@
 
 - (void)requestLocationServicesAuthorization;
 - (void) startUpdatingUserLocation;
+- (NSURL *) generateLocationURLWithZipCode:(NSString *)zipCode NumberToReturn:(NSNumber *)numberToReturn;
+- (NSURL *) generateLocationURLWithAddress:(NSString *)address NumberToReturn:(NSNumber *)numberToReturn;
+- (NSURL *) generateLocationURLWithLocation:(CLLocation*)location NumberToReturn:(NSNumber *)numberToReturn;
+- (void) makeRequestToURL:(NSURL*)anURL httpResponse:(NSHTTPURLResponse**)httpResponse error:(NSError **)error jsonDictionary:(NSDictionary**)jsonDictionary;
+
 
 @end
