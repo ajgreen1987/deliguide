@@ -53,11 +53,17 @@
 - (void) setupMap
 {
     self.isMapFullScreen = NO;
-    [[self mapView] setScrollEnabled:self.isMapFullScreen];
     [self setupMapTapGestureRecognizer];
-    
+    [self enableMapFeatures:self.isMapFullScreen];
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
     [[BHLocationManager locationManager] startUpdatingUserLocation];
+}
+
+- (void) enableMapFeatures:(BOOL)shouldBeEnabled
+{
+    
+    [[self mapView] setScrollEnabled:shouldBeEnabled];
+    [[self mapView] setZoomEnabled:shouldBeEnabled];
 }
 
 - (void) setupTableView
@@ -110,7 +116,7 @@
                                                              self.tableView.frame.size.height)];
                      }];
     self.isMapFullScreen = !self.isMapFullScreen;
-    [[self mapView] setScrollEnabled:self.isMapFullScreen];
+    [self enableMapFeatures:self.isMapFullScreen];
 }
 
 #pragma mark - UITableViewDataSource
@@ -163,6 +169,8 @@
     if (!self.mapView.showsUserLocation)
     {
         [self.mapView setShowsUserLocation:YES];
+        
+        [self zoomToUserLocation:self.mapView.userLocation.location];
     }
 }
 
@@ -174,6 +182,14 @@
 - (void) didUpdateUserLocationFromLocation:(CLLocation *)anOldLocation toLocation:(CLLocation *)aNewLocation
 {
     [self zoomToUserLocation:aNewLocation];
+}
+
+- (void) zoomToUserLocation:(CLLocation*)aLocation
+{
+    /*
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(aLocation.coordinate, 800, 800);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+     */
 }
 
 #pragma mark - Alert Views
