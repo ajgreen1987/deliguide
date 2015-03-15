@@ -53,6 +53,7 @@
 - (void) setupMap
 {
     self.isMapFullScreen = NO;
+    [[self mapView] setScrollEnabled:self.isMapFullScreen];
     [self setupMapTapGestureRecognizer];
     
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
@@ -93,11 +94,11 @@
     
     if (!self.isMapFullScreen)
     {
-        [self animateTableViewYOrigin];
+        [self handleMapAndTableViewToggle];
     }
 }
 
-- (void)animateTableViewYOrigin
+- (void) handleMapAndTableViewToggle
 {
     CGFloat tableViewYOrigin = self.isMapFullScreen ? self.originalTableViewYOrigin : self.view.frame.size.height;
     // Animate the list view off the page
@@ -109,6 +110,7 @@
                                                              self.tableView.frame.size.height)];
                      }];
     self.isMapFullScreen = !self.isMapFullScreen;
+    [[self mapView] setScrollEnabled:self.isMapFullScreen];
 }
 
 #pragma mark - UITableViewDataSource
@@ -211,7 +213,7 @@
 
 - (IBAction)handleViewListTouchUpInside:(id)sender
 {
-    [self animateTableViewYOrigin];
+    [self handleMapAndTableViewToggle];
 }
 
 - (IBAction)handleUpdateLocationTouchUpInside:(id)sender

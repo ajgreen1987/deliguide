@@ -10,7 +10,7 @@
         <!--Loading View Controller-->
         <scene sceneID="QqV-6k-RWf">
             <objects>
-                <viewController id="RhU-T9-85V" customClass="BHLoadingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RhU-T9-85V" customClass="BHLoadingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4BO-K5-SY5"/>
                         <viewControllerLayoutGuide type="bottom" id="nie-fW-ouT"/>
@@ -56,7 +56,7 @@
         <!--Sliding View Controller-->
         <scene sceneID="34B-D3-BjB">
             <objects>
-                <viewController id="eRD-bo-cUD" customClass="BHSlidingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SlidingMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eRD-bo-cUD" customClass="BHSlidingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2DY-I8-xVw"/>
                         <viewControllerLayoutGuide type="bottom" id="KqV-Cg-40G"/>

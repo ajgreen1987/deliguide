@@ -9,6 +9,10 @@
 #ifndef DeliGuide_Constants_h
 #define DeliGuide_Constants_h
 
+
+#define SLIDING_MENU_STORYBOARD_ID @"SlidingMenu"
+#define LOADING_CONTROLLER_STORYBOARD_ID @"LoadingController"
+
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)

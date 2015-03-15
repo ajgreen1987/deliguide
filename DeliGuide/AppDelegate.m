@@ -8,9 +8,11 @@
 
 #import "AppDelegate.h"
 #import "GAI.h"
+#import "BHLocationManager.h"
 
 @interface AppDelegate ()
 
+- (void) setupRootViewController;
 - (void) setupGoogleAnalytics;
 
 @end
@@ -21,6 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
  
+    [self setupRootViewController];
     [self setupGoogleAnalytics];
     
     return YES;
@@ -46,6 +49,13 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Root Controller logic
+- (void) setupRootViewController
+{
+    NSString *storyboardId = [BHLocationManager isLocationAccessAuthorized] ? SLIDING_MENU_STORYBOARD_ID : LOADING_CONTROLLER_STORYBOARD_ID;
+    self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:storyboardId];
 }
 
 #pragma mark - Google Analytics

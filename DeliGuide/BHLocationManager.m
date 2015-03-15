@@ -47,11 +47,18 @@ static BHLocationManager *sharedLocationManager = nil;
             [self.locationManager requestWhenInUseAuthorization];
         }
     }
+    else
+    {
+        if ([self isDelegateValidForSelector:@selector(userDeniedPermission)])
+        {
+            [[self locationManagerDelegate] userDeniedPermission];
+        }
+    }
 }
 
 - (void) startUpdatingUserLocation
 {
-    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied)
+    if ([BHLocationManager isLocationAccessAuthorized])
     {
         [self.locationManager startUpdatingLocation];
         self.locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
@@ -68,6 +75,11 @@ static BHLocationManager *sharedLocationManager = nil;
             [[self locationManagerDelegate] userDeniedPermission];
         }
     }
+}
+
++ (BOOL)isLocationAccessAuthorized
+{
+    return ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied);
 }
 
 - (BOOL) isDelegateValidForSelector:(SEL)aSelector

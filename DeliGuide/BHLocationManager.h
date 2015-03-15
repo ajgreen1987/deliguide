@@ -28,6 +28,8 @@
 + (void)presentGPSUnavailableAlertForController:(UIViewController*)aController;
 + (void)presentGPSPermissionDeniedAlertForController:(UIViewController*)aController;
 + (void)presentNoConnectionAlertForController:(UIViewController*)aController;
++ (BOOL)isLocationAccessAuthorized;
+
 - (void)requestLocationServicesAuthorization;
 - (void) startUpdatingUserLocation;
 
