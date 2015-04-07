@@ -29,6 +29,8 @@
 + (void)presentGPSPermissionDeniedAlertForController:(UIViewController*)aController;
 + (void)presentNoConnectionAlertForController:(UIViewController*)aController;
 + (BOOL)isLocationAccessAuthorized;
++ (void) getDirectionsFromLocation:(CLLocation *)location
+                        toLocation:(CLLocation*)aNewLocation;
 
 - (void)requestLocationServicesAuthorization;
 - (void) startUpdatingUserLocation;

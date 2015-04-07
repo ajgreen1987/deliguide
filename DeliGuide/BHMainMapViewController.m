@@ -18,6 +18,8 @@
 @property (nonatomic, assign) BOOL isMapFullScreen;
 @property (nonatomic, assign) CGFloat originalTableViewYOrigin;
 
+- (void) handleProbableNavigationTrees;
+
 @end
 
 @implementation BHMainMapViewController
@@ -32,6 +34,11 @@
     
     // Mock Locations for now
     [[BHApplicationManager appManager] setupMockDelis];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self handleProbableNavigationTrees];
 }
 
 -(void)viewDidLayoutSubviews
@@ -72,6 +79,25 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.originalTableViewYOrigin = self.tableView.frame.origin.y;
+}
+
+#pragma mark - Navigation
+- (void) handleProbableNavigationTrees
+{
+    if ([[BHApplicationManager appManager] shouldSignIn])
+    {
+        [[BHApplicationManager appManager] setShouldSignIn:NO];
+        
+        [self performSegueWithIdentifier:@"SignIn"
+                                  sender:self];
+    }
+    else if ([[BHApplicationManager appManager] shouldSignUp])
+    {
+        [[BHApplicationManager appManager] setShouldSignUp:NO];
+        
+        [self performSegueWithIdentifier:@"SignUp"
+                                  sender:self];
+    }
 }
 
 #pragma mark - Table View Magic

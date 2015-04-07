@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BHApplicationManager.h"
 
 @interface ViewController ()
 
@@ -32,5 +33,25 @@
 }
 
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue { }
+
+- (IBAction)handleSignInTouchUpInside:(id)sender
+{
+    [[BHApplicationManager appManager] setShouldSignIn:YES];
+}
+
+- (IBAction)handleCreateAccountTouchUpInside:(id)sender
+{
+    [[BHApplicationManager appManager] setShouldSignUp:YES];
+}
+
+- (IBAction)handleProductsAndNutritionTouchUpInside:(id)sender
+{
+    [BHApplicationManager browserForURL:@"http://boarshead.com/health-wellness"];
+}
+
+- (IBAction)handleBoarsHeadWebsiteTouchUpInside:(id)sender
+{
+    [BHApplicationManager browserForURL:@"http://www.boarshead.com"];
+}
 
 @end

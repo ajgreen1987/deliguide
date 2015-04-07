@@ -13,5 +13,11 @@
 
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue;
 
+
+- (IBAction)handleSignInTouchUpInside:(id)sender;
+- (IBAction)handleCreateAccountTouchUpInside:(id)sender;
+- (IBAction)handleProductsAndNutritionTouchUpInside:(id)sender;
+- (IBAction)handleBoarsHeadWebsiteTouchUpInside:(id)sender;
+
 @end
 

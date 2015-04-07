@@ -86,4 +86,28 @@ static BHApplicationManager *sharedAppManager;
     }
 }
 
++ (void) callLocation:(NSString*)aTelephoneNumber
+{
+    NSString *telephone = [NSString stringWithFormat:@"tel:%@",aTelephoneNumber];
+    
+    NSURL *url = [NSURL URLWithString:telephone];
+    if ([[UIApplication sharedApplication] canOpenURL:url])
+    {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    else
+    {
+        UIAlertView *alert = [[BHApplicationManager appManager] getErrorMessageAlertViewWithTitle:@"Calling is disabled"
+                                                                     message:@"Please call the location from a mobile device"
+                                                              viewController:nil];
+        
+        [alert show];
+    }
+}
+
++ (void) browserForURL:(NSString *)aURL
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:aURL]];
+}
+
 @end

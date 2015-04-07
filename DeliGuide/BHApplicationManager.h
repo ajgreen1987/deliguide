@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class KAWebViewController;
+
 @interface BHApplicationManager : NSObject
 
 @property (nonatomic, strong) NSMutableArray *delis;
+@property (nonatomic, assign) BOOL shouldSignUp;
+@property (nonatomic, assign) BOOL shouldSignIn;
 
 + (instancetype)appManager;
 
@@ -19,5 +23,8 @@
 - (UIAlertView *) getErrorMessageAlertViewWithTitle:(NSString *)title
                                             message:(NSString *)message
                                      viewController:(UIViewController *)viewController;
+
++ (void) callLocation:(NSString*)aTelephoneNumber;
++ (void) browserForURL:(NSString*)aURL;
 
 @end

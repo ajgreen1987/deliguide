@@ -7,6 +7,9 @@
 //
 
 #import "BHDeliDetailsTableViewController.h"
+#import "BHApplicationManager.h"
+#import "BHLocationManager.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface BHDeliDetailsTableViewController ()
 
@@ -49,4 +52,22 @@
     return cell;
 }
 
+- (IBAction)handleCallLocationTouchUpInside:(id)sender
+{
+    [BHApplicationManager callLocation:@"(804) 222-1111"];
+}
+
+- (IBAction)handleDirectionsTouchUpInside:(id)sender
+{
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:29.33891 longitude:48.077202];
+    CLLocation *anotherLocation = [[CLLocation alloc] initWithLatitude:37.33120 longitude:48.077202];
+    
+    [BHLocationManager getDirectionsFromLocation:location
+                                      toLocation:anotherLocation];
+}
+
+- (IBAction)handleOrderTouchUpInside:(id)sender
+{
+    // Display Order screen
+}
 @end

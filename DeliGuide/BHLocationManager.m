@@ -195,6 +195,17 @@ static BHLocationManager *sharedLocationManager = nil;
                            options:kNilOptions
                            error:error];
     }
+    
+    
+}
+
++ (void) getDirectionsFromLocation:(CLLocation *)location
+                        toLocation:(CLLocation*)aNewLocation
+{
+    NSString *mapsURLString = [NSString stringWithFormat:@"http://maps.apple.com/?saddr=%1.6f,%1.6f&daddr=%1.6f,%1.6f",
+                               location.coordinate.latitude, location.coordinate.longitude, aNewLocation.coordinate.latitude, aNewLocation.coordinate.longitude];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mapsURLString]];
 }
 
 

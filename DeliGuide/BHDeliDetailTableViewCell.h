@@ -17,4 +17,7 @@
 @property (nonatomic, weak) IBOutlet UIButton *phoneNumber;
 @property (nonatomic, weak) IBOutlet UIButton *getDirections;
 
+- (IBAction) handlePhoneTouchUpInside:(id)sender;
+- (IBAction) handleGetDirectionsTouchUpInside:(id)sender;
+
 @end

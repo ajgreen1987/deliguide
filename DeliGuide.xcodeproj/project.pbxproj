@@ -34,6 +34,8 @@
 		DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */; };
 		DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */; };
 		DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */; };
+		DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */; };
+		DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */; };
 		DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */; };
 		DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */; };
 		DAA084121AAB95D800ABBA68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084111AAB95D800ABBA68 /* MapKit.framework */; };
@@ -112,6 +114,10 @@
 		DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
 		DA436E8A1AB2675000CE19A4 /* BHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLoadingViewController.h; sourceTree = "<group>"; };
 		DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLoadingViewController.m; sourceTree = "<group>"; };
+		DA6AC1C41AD36C00005337F7 /* BHSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSignInViewController.h; sourceTree = "<group>"; };
+		DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSignInViewController.m; sourceTree = "<group>"; };
+		DA6AC1C71AD36C7C005337F7 /* BHSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSignUpViewController.h; sourceTree = "<group>"; };
+		DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSignUpViewController.m; sourceTree = "<group>"; };
 		DA6DE1D11AB280D700D2FB34 /* BHApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHApplicationManager.h; sourceTree = "<group>"; };
 		DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHApplicationManager.m; sourceTree = "<group>"; };
 		DA9E9A661AA242DF003FE759 /* BHSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSlidingViewController.h; sourceTree = "<group>"; };
@@ -342,9 +348,21 @@
 			name = Loading;
 			sourceTree = "<group>";
 		};
+		DA6AC1C31AD36BC0005337F7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DA6AC1C41AD36C00005337F7 /* BHSignInViewController.h */,
+				DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */,
+				DA6AC1C71AD36C7C005337F7 /* BHSignUpViewController.h */,
+				DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 		DA9E9A641AA242AA003FE759 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DA6AC1C31AD36BC0005337F7 /* Authentication */,
 				DA0C9D701AB6265F00FEDC35 /* Details */,
 				DA436E891AB2673600CE19A4 /* Loading */,
 				DAA084131AAB995D00ABBA68 /* Map */,
@@ -488,6 +506,7 @@
 				DA27ED8B1AA15E4500689F55 /* ECSlidingSegue.m in Sources */,
 				DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */,
 				DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */,
+				DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */,
 				DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */,
 				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
 				DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */,
@@ -496,6 +515,7 @@
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
+				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,
 				DA0C9D7D1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m in Sources */,
 				DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */,
 				DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */,

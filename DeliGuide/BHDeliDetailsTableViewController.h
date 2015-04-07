@@ -10,4 +10,8 @@
 
 @interface BHDeliDetailsTableViewController : UITableViewController
 
+- (IBAction)handleCallLocationTouchUpInside:(id)sender;
+- (IBAction)handleDirectionsTouchUpInside:(id)sender;
+- (IBAction)handleOrderTouchUpInside:(id)sender;
+
 @end
