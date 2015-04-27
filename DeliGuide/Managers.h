@@ -11,5 +11,6 @@
 
 #import "BHApplicationManager.h"
 #import "BHLocationManager.h"
+#import "BHEasyWayServicesManager.h"
 
 #endif

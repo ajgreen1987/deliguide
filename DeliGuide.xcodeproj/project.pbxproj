@@ -42,6 +42,7 @@
 		DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */; };
 		DAA084181AAB9FB800ABBA68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084171AAB9FB800ABBA68 /* CoreLocation.framework */; };
 		DAA084211AABA41D00ABBA68 /* BHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084201AABA41D00ABBA68 /* BHLocationManager.m */; };
+		DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D7FD1AEC860C003DA43A /* BHEasyWayServicesManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,8 @@
 		DAA084201AABA41D00ABBA68 /* BHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLocationManager.m; sourceTree = "<group>"; };
 		DAA084221AAD39F700ABBA68 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DAA084231AAD3CC200ABBA68 /* Managers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Managers.h; sourceTree = "<group>"; };
+		DAB3D7FC1AEC860C003DA43A /* BHEasyWayServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHEasyWayServicesManager.h; sourceTree = "<group>"; };
+		DAB3D7FD1AEC860C003DA43A /* BHEasyWayServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHEasyWayServicesManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,12 +302,14 @@
 		DA27ED601AA155D400689F55 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DAA084231AAD3CC200ABBA68 /* Managers.h */,
 				DAA0841D1AABA1B200ABBA68 /* Constants.h */,
 				DAA0841F1AABA41D00ABBA68 /* BHLocationManager.h */,
 				DAA084201AABA41D00ABBA68 /* BHLocationManager.m */,
-				DAA084231AAD3CC200ABBA68 /* Managers.h */,
 				DA6DE1D11AB280D700D2FB34 /* BHApplicationManager.h */,
 				DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */,
+				DAB3D7FC1AEC860C003DA43A /* BHEasyWayServicesManager.h */,
+				DAB3D7FD1AEC860C003DA43A /* BHEasyWayServicesManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,
 				DA0C9D7D1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m in Sources */,
 				DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */,
+				DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */,
 				DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */,
 				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
