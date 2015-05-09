@@ -90,9 +90,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="0Zv-fe-5Rr" kind="push" identifier="SignInLoading" id="7qa-XN-6qM"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enC-HF-RA5" customClass="BHPrimaryButton">
                                 <rect key="frame" x="16" y="286" width="120" height="37"/>
@@ -128,9 +125,6 @@
                                 <state key="normal" title="YOUR FAVORITE DELIS" image="favorite">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="agH-3N-bam" kind="push" identifier="SignUpLoading" id="gWe-cb-cQs"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1346,8 +1340,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Nst-7Z-Fe5"/>
-        <segue reference="7qa-XN-6qM"/>
-        <segue reference="gWe-cb-cQs"/>
+        <segue reference="ye3-6p-l8U"/>
+        <segue reference="adE-hN-4tC"/>
         <segue reference="OOE-1O-hpr"/>
     </inferredMetricsTieBreakers>
 </document>
