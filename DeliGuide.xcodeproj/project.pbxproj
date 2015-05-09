@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3DB1AFE7D5100A66EEB /* BHDrawerBackgroundView.m */; };
 		DA06D3DF1AFE802000A66EEB /* BHSearchFieldBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3DE1AFE802000A66EEB /* BHSearchFieldBackgroundView.m */; };
+		DA06D3E51AFE9A1F00A66EEB /* BHFacebookButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3E41AFE9A1F00A66EEB /* BHFacebookButton.m */; };
+		DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3E71AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m */; };
 		DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */; };
 		DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */; };
 		DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */; };
@@ -67,6 +69,10 @@
 		DA06D3DB1AFE7D5100A66EEB /* BHDrawerBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDrawerBackgroundView.m; sourceTree = "<group>"; };
 		DA06D3DD1AFE802000A66EEB /* BHSearchFieldBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSearchFieldBackgroundView.h; sourceTree = "<group>"; };
 		DA06D3DE1AFE802000A66EEB /* BHSearchFieldBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSearchFieldBackgroundView.m; sourceTree = "<group>"; };
+		DA06D3E31AFE9A1F00A66EEB /* BHFacebookButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHFacebookButton.h; sourceTree = "<group>"; };
+		DA06D3E41AFE9A1F00A66EEB /* BHFacebookButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHFacebookButton.m; sourceTree = "<group>"; };
+		DA06D3E61AFE9BF800A66EEB /* BHNavigationBarBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHNavigationBarBackgroundView.h; sourceTree = "<group>"; };
+		DA06D3E71AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHNavigationBarBackgroundView.m; sourceTree = "<group>"; };
 		DA0C9D6D1AB4B52F00FEDC35 /* BHDeliTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliTableViewCell.h; sourceTree = "<group>"; };
 		DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliTableViewCell.m; sourceTree = "<group>"; };
 		DA0C9D741AB6328000FEDC35 /* BHDeliDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailsTableViewController.h; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 				DA06D3DB1AFE7D5100A66EEB /* BHDrawerBackgroundView.m */,
 				DA06D3DD1AFE802000A66EEB /* BHSearchFieldBackgroundView.h */,
 				DA06D3DE1AFE802000A66EEB /* BHSearchFieldBackgroundView.m */,
+				DA06D3E61AFE9BF800A66EEB /* BHNavigationBarBackgroundView.h */,
+				DA06D3E71AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m */,
 			);
 			name = Backgrounds;
 			sourceTree = "<group>";
@@ -440,6 +448,8 @@
 			children = (
 				DAE41C101AFA39D400A3C1CD /* BHPrimaryButton.h */,
 				DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */,
+				DA06D3E31AFE9A1F00A66EEB /* BHFacebookButton.h */,
+				DA06D3E41AFE9A1F00A66EEB /* BHFacebookButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -605,6 +615,8 @@
 				DA20ABC41AB133DC0036CAE8 /* BHMenuItemObject.m in Sources */,
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */,
+				DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */,
+				DA06D3E51AFE9A1F00A66EEB /* BHFacebookButton.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
 				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,

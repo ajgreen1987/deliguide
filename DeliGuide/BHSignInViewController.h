@@ -11,4 +11,6 @@
 
 @interface BHSignInViewController : GAITrackedViewController
 
+- (IBAction)handleTouchIDToggleTouchUpInside:(id)sender;
+
 @end

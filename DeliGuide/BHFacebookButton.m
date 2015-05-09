@@ -1,14 +1,14 @@
 //
-//  PrimaryButton.m
+//  BHFacebookButton.m
 //  DeliGuide
 //
-//  Created by AJ Green on 5/6/15.
+//  Created by AJ Green on 5/9/15.
 //  Copyright (c) 2015 Mode. All rights reserved.
 //
 
-#import "BHPrimaryButton.h"
+#import "BHFacebookButton.h"
 
-@implementation BHPrimaryButton
+@implementation BHFacebookButton
 
 
 // Only override drawRect: if you perform custom drawing.
@@ -20,8 +20,8 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     //// Color Declarations
-    UIColor* color1 = [UIColor colorWithRed: 0.63 green: 0.141 blue: 0.106 alpha: 1];
-    UIColor* color2 = [UIColor colorWithRed: 0.39 green: 0.067 blue: 0.051 alpha: 1];
+    UIColor* color2 = [UIColor colorWithRed: 0.159 green: 0.24 blue: 0.483 alpha: 1];
+    UIColor* color1 = [UIColor colorWithRed: 0.185 green: 0.288 blue: 0.589 alpha: 1];
     
     //// Gradient Declarations
     CGFloat linearGradient1Locations[] = {0, 1};
@@ -29,21 +29,28 @@
     
     //// Slices
     {
-        //// btn-primary
+        //// btn-fb
         {
             //// Group 3
             {
-                //// Rectangle-91-Copy
+                //// Rectangle-91
                 {
                     //// path-3 Drawing
-                    UIBezierPath* path3Path = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) cornerRadius: 2];
+                    UIBezierPath* path3Path = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
+                                                                         cornerRadius: 2];
                     CGContextSaveGState(context);
                     [path3Path addClip];
                     CGContextDrawLinearGradient(context, linearGradient1,
-                                                CGPointMake(0, self.frame.size.height*0.5f),
-                                                CGPointMake(self.frame.size.width, self.frame.size.height*0.5f),
+                                                CGPointMake(0, self.frame.size.width*0.5f),
+                                                CGPointMake(self.frame.size.height, self.frame.size.width*0.5f),
                                                 kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
                     CGContextRestoreGState(context);
+                    
+                    
+                    //// path- Drawing
+                    
+                    
+                    //// path- 2 Drawing
                 }
             }
         }

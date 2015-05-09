@@ -26,4 +26,6 @@
 #define iPhone568ImageNamed(image) (isPhone568 ? [NSString stringWithFormat:@"%@-568h.%@", [image stringByDeletingPathExtension], [image pathExtension]] : image)
 #define iPhone568Image(image) ([UIImage imageNamed:iPhone568ImageNamed(image)])
 
+#define NAVIGATION_BAR_BACK [UIImage imageNamed:@"arrow-back"]
+
 #endif

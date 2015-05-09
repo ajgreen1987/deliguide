@@ -16,4 +16,10 @@
     self.title = @"Sign In";    
 }
 
+- (IBAction)handleTouchIDToggleTouchUpInside:(id)sender
+{
+    UIButton *toggleButton = (UIButton*)sender;
+    
+    [toggleButton setSelected:!toggleButton.isSelected];
+}
 @end

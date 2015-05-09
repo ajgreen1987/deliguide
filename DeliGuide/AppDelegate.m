@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "GAI.h"
 #import "BHLocationManager.h"
+#import "BHNavigationBarBackgroundView.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,7 @@
  
     [self setupRootViewController];
     [self setupGoogleAnalytics];
+    [self setupNavigationControllerAppearance];
     
     return YES;
 }
@@ -74,6 +76,19 @@
     
     // Initialize tracker. Replace with your tracking ID.
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-24547261-13"];
+}
+
+- (void) setupNavigationControllerAppearance
+{
+    [[UINavigationBar appearance] setBackIndicatorImage:NAVIGATION_BAR_BACK];
+    [[[UINavigationBar appearance] layer] insertSublayer:[[BHNavigationBarBackgroundView background] layer] atIndex:0];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor redColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           UITextAttributeTextColor: [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0],
+                                                           UITextAttributeTextShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
+                                                           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, -1)],
+                                                           UITextAttributeFont: [UIFont fontWithName:@"Arial-Bold" size:0.0],
+                                                           }];
 }
 
 @end
