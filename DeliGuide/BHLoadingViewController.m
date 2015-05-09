@@ -20,6 +20,11 @@
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self handleProbableNavigationTrees];
+}
+
 - (void) viewWillDisappear:(BOOL)animated
 {
     [[BHLocationManager locationManager] setLocationManagerDelegate:nil];
@@ -38,6 +43,25 @@
 {
     [self performSegueWithIdentifier:@"LandingPage"
                               sender:self];
+}
+
+#pragma mark - Navigation
+- (void) handleProbableNavigationTrees
+{
+    if ([[BHApplicationManager appManager] shouldSignIn])
+    {
+        [[BHApplicationManager appManager] setShouldSignIn:NO];
+        
+        [self performSegueWithIdentifier:@"SignInLoading"
+                                  sender:self];
+    }
+    else if ([[BHApplicationManager appManager] shouldSignUp])
+    {
+        [[BHApplicationManager appManager] setShouldSignUp:NO];
+        
+        [self performSegueWithIdentifier:@"SignUpLoading"
+                                  sender:self];
+    }
 }
 
 #pragma mark - Location Delegate
