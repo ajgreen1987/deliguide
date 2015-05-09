@@ -27,5 +27,6 @@
 #define iPhone568Image(image) ([UIImage imageNamed:iPhone568ImageNamed(image)])
 
 #define NAVIGATION_BAR_BACK [UIImage imageNamed:@"arrow-back"]
+#define NAVIGATION_FONT     [UIFont fontWithName:@"Arial-Bold" size:0.0f]
 
 #endif

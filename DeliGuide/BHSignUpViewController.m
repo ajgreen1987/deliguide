@@ -23,7 +23,7 @@
     self.currentTextField = 0;
     
     self.screenName = @"SIGNUP";
-    self.title = @"Sign Up";
+    self.title = @"Create Your Account";
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField

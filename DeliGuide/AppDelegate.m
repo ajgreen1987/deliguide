@@ -80,15 +80,15 @@
 
 - (void) setupNavigationControllerAppearance
 {
+
+    
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];    
+    
     [[UINavigationBar appearance] setBackIndicatorImage:NAVIGATION_BAR_BACK];
     [[[UINavigationBar appearance] layer] insertSublayer:[[BHNavigationBarBackgroundView background] layer] atIndex:0];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor redColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                                           UITextAttributeTextColor: [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0],
-                                                           UITextAttributeTextShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
-                                                           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, -1)],
-                                                           UITextAttributeFont: [UIFont fontWithName:@"Arial-Bold" size:0.0],
-                                                           }];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName:NAVIGATION_FONT}];
 }
 
 @end
