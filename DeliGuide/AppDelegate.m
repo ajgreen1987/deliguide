@@ -54,8 +54,10 @@
 #pragma mark - Root Controller logic
 - (void) setupRootViewController
 {
+    /*
     NSString *storyboardId = [BHLocationManager isLocationAccessAuthorized] ? SLIDING_MENU_STORYBOARD_ID : LOADING_CONTROLLER_STORYBOARD_ID;
     self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:storyboardId];
+     */
 }
 
 #pragma mark - Google Analytics

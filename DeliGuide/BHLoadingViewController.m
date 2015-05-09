@@ -25,6 +25,9 @@
     [[BHLocationManager locationManager] setLocationManagerDelegate:nil];
 }
 
+
+- (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue { }
+
 - (IBAction)handleLocationTouchUpInside:(id)sender
 {
     [[BHLocationManager locationManager] requestLocationServicesAuthorization];

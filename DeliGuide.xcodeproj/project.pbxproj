@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3DB1AFE7D5100A66EEB /* BHDrawerBackgroundView.m */; };
+		DA06D3DF1AFE802000A66EEB /* BHSearchFieldBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3DE1AFE802000A66EEB /* BHSearchFieldBackgroundView.m */; };
 		DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */; };
 		DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */; };
 		DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */; };
@@ -43,6 +45,11 @@
 		DAA084181AAB9FB800ABBA68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084171AAB9FB800ABBA68 /* CoreLocation.framework */; };
 		DAA084211AABA41D00ABBA68 /* BHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084201AABA41D00ABBA68 /* BHLocationManager.m */; };
 		DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D7FD1AEC860C003DA43A /* BHEasyWayServicesManager.m */; };
+		DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */; };
+		DAE41C161AFAEB3C00A3C1CD /* BHSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C151AFAEB3C00A3C1CD /* BHSplashViewController.m */; };
+		DAE41C201AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C1D1AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m */; };
+		DAE41C211AFAEFE000A3C1CD /* UIView+MBIBnspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C1F1AFAEFE000A3C1CD /* UIView+MBIBnspectable.m */; };
+		DAE41C251AFAF21500A3C1CD /* BHLocationSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C241AFAF21500A3C1CD /* BHLocationSearchTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA06D3DA1AFE7D5100A66EEB /* BHDrawerBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDrawerBackgroundView.h; sourceTree = "<group>"; };
+		DA06D3DB1AFE7D5100A66EEB /* BHDrawerBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDrawerBackgroundView.m; sourceTree = "<group>"; };
+		DA06D3DD1AFE802000A66EEB /* BHSearchFieldBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSearchFieldBackgroundView.h; sourceTree = "<group>"; };
+		DA06D3DE1AFE802000A66EEB /* BHSearchFieldBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSearchFieldBackgroundView.m; sourceTree = "<group>"; };
 		DA0C9D6D1AB4B52F00FEDC35 /* BHDeliTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliTableViewCell.h; sourceTree = "<group>"; };
 		DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliTableViewCell.m; sourceTree = "<group>"; };
 		DA0C9D741AB6328000FEDC35 /* BHDeliDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailsTableViewController.h; sourceTree = "<group>"; };
@@ -134,6 +145,16 @@
 		DAA084231AAD3CC200ABBA68 /* Managers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Managers.h; sourceTree = "<group>"; };
 		DAB3D7FC1AEC860C003DA43A /* BHEasyWayServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHEasyWayServicesManager.h; sourceTree = "<group>"; };
 		DAB3D7FD1AEC860C003DA43A /* BHEasyWayServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHEasyWayServicesManager.m; sourceTree = "<group>"; };
+		DAE41C101AFA39D400A3C1CD /* BHPrimaryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHPrimaryButton.h; sourceTree = "<group>"; };
+		DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHPrimaryButton.m; sourceTree = "<group>"; };
+		DAE41C141AFAEB3C00A3C1CD /* BHSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSplashViewController.h; sourceTree = "<group>"; };
+		DAE41C151AFAEB3C00A3C1CD /* BHSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSplashViewController.m; sourceTree = "<group>"; };
+		DAE41C1C1AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MBIBnsepectable.h"; sourceTree = "<group>"; };
+		DAE41C1D1AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MBIBnsepectable.m"; sourceTree = "<group>"; };
+		DAE41C1E1AFAEFE000A3C1CD /* UIView+MBIBnspectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MBIBnspectable.h"; sourceTree = "<group>"; };
+		DAE41C1F1AFAEFE000A3C1CD /* UIView+MBIBnspectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MBIBnspectable.m"; sourceTree = "<group>"; };
+		DAE41C231AFAF21500A3C1CD /* BHLocationSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLocationSearchTextField.h; sourceTree = "<group>"; };
+		DAE41C241AFAF21500A3C1CD /* BHLocationSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLocationSearchTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +182,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA06D3D91AFE7D3D00A66EEB /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				DA06D3DA1AFE7D5100A66EEB /* BHDrawerBackgroundView.h */,
+				DA06D3DB1AFE7D5100A66EEB /* BHDrawerBackgroundView.m */,
+				DA06D3DD1AFE802000A66EEB /* BHSearchFieldBackgroundView.h */,
+				DA06D3DE1AFE802000A66EEB /* BHSearchFieldBackgroundView.m */,
+			);
+			name = Backgrounds;
+			sourceTree = "<group>";
+		};
 		DA0C9D6C1AB4B51500FEDC35 /* Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +349,11 @@
 		DA27ED611AA155DD00689F55 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DA06D3D91AFE7D3D00A66EEB /* Backgrounds */,
+				DAE41C221AFAF20100A3C1CD /* Location Textfield */,
+				DAE41C1B1AFAEFD500A3C1CD /* Categories */,
+				DAE41C171AFAEBBB00A3C1CD /* Segue */,
+				DAE41C0F1AFA39AA00A3C1CD /* Buttons */,
 				DA20ABAD1AB12E3D0036CAE8 /* Google Analytics */,
 				DA20ABA51AB124A60036CAE8 /* Overlay Tableview */,
 				DA27ED621AA155E300689F55 /* Sliding Menu */,
@@ -367,6 +404,7 @@
 		DA9E9A641AA242AA003FE759 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DAE41C131AFAEB1A00A3C1CD /* Splash */,
 				DA6AC1C31AD36BC0005337F7 /* Authentication */,
 				DA0C9D701AB6265F00FEDC35 /* Details */,
 				DA436E891AB2673600CE19A4 /* Loading */,
@@ -395,6 +433,51 @@
 				DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */,
 			);
 			name = Map;
+			sourceTree = "<group>";
+		};
+		DAE41C0F1AFA39AA00A3C1CD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				DAE41C101AFA39D400A3C1CD /* BHPrimaryButton.h */,
+				DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		DAE41C131AFAEB1A00A3C1CD /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				DAE41C141AFAEB3C00A3C1CD /* BHSplashViewController.h */,
+				DAE41C151AFAEB3C00A3C1CD /* BHSplashViewController.m */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		DAE41C171AFAEBBB00A3C1CD /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Segue;
+			sourceTree = "<group>";
+		};
+		DAE41C1B1AFAEFD500A3C1CD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DAE41C1C1AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.h */,
+				DAE41C1D1AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m */,
+				DAE41C1E1AFAEFE000A3C1CD /* UIView+MBIBnspectable.h */,
+				DAE41C1F1AFAEFE000A3C1CD /* UIView+MBIBnspectable.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		DAE41C221AFAF20100A3C1CD /* Location Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				DAE41C231AFAF21500A3C1CD /* BHLocationSearchTextField.h */,
+				DAE41C241AFAF21500A3C1CD /* BHLocationSearchTextField.m */,
+			);
+			name = "Location Textfield";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,22 +590,29 @@
 				DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */,
 				DA27ED431AA152AA00689F55 /* ViewController.m in Sources */,
 				DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */,
+				DAE41C201AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m in Sources */,
 				DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */,
+				DAE41C251AFAF21500A3C1CD /* BHLocationSearchTextField.m in Sources */,
 				DA27ED8B1AA15E4500689F55 /* ECSlidingSegue.m in Sources */,
 				DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */,
 				DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */,
 				DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */,
 				DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */,
 				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
+				DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */,
 				DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */,
 				DA20ABAC1AB12D370036CAE8 /* BHDeliObject.m in Sources */,
 				DA20ABC41AB133DC0036CAE8 /* BHMenuItemObject.m in Sources */,
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
+				DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
 				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,
+				DA06D3DF1AFE802000A66EEB /* BHSearchFieldBackgroundView.m in Sources */,
 				DA0C9D7D1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m in Sources */,
+				DAE41C211AFAEFE000A3C1CD /* UIView+MBIBnspectable.m in Sources */,
 				DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */,
+				DAE41C161AFAEB3C00A3C1CD /* BHSplashViewController.m in Sources */,
 				DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */,
 				DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */,
 				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
