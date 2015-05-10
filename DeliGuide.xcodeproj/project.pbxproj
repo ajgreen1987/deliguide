@@ -11,6 +11,9 @@
 		DA06D3DF1AFE802000A66EEB /* BHSearchFieldBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3DE1AFE802000A66EEB /* BHSearchFieldBackgroundView.m */; };
 		DA06D3E51AFE9A1F00A66EEB /* BHFacebookButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3E41AFE9A1F00A66EEB /* BHFacebookButton.m */; };
 		DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3E71AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m */; };
+		DA06D3EB1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3EA1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m */; };
+		DA06D3EE1AFED0AE00A66EEB /* BHUserObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3ED1AFED0AE00A66EEB /* BHUserObject.m */; };
+		DA06D3F21AFEEB0B00A66EEB /* BHNoFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3F11AFEEB0B00A66EEB /* BHNoFavoritesViewController.m */; };
 		DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */; };
 		DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */; };
 		DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */; };
@@ -73,6 +76,12 @@
 		DA06D3E41AFE9A1F00A66EEB /* BHFacebookButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHFacebookButton.m; sourceTree = "<group>"; };
 		DA06D3E61AFE9BF800A66EEB /* BHNavigationBarBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHNavigationBarBackgroundView.h; sourceTree = "<group>"; };
 		DA06D3E71AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHNavigationBarBackgroundView.m; sourceTree = "<group>"; };
+		DA06D3E91AFEC87A00A66EEB /* BHSignUpSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSignUpSuccessViewController.h; sourceTree = "<group>"; };
+		DA06D3EA1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSignUpSuccessViewController.m; sourceTree = "<group>"; };
+		DA06D3EC1AFED0AE00A66EEB /* BHUserObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHUserObject.h; sourceTree = "<group>"; };
+		DA06D3ED1AFED0AE00A66EEB /* BHUserObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHUserObject.m; sourceTree = "<group>"; };
+		DA06D3F01AFEEB0B00A66EEB /* BHNoFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHNoFavoritesViewController.h; sourceTree = "<group>"; };
+		DA06D3F11AFEEB0B00A66EEB /* BHNoFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHNoFavoritesViewController.m; sourceTree = "<group>"; };
 		DA0C9D6D1AB4B52F00FEDC35 /* BHDeliTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliTableViewCell.h; sourceTree = "<group>"; };
 		DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliTableViewCell.m; sourceTree = "<group>"; };
 		DA0C9D741AB6328000FEDC35 /* BHDeliDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailsTableViewController.h; sourceTree = "<group>"; };
@@ -201,6 +210,15 @@
 			name = Backgrounds;
 			sourceTree = "<group>";
 		};
+		DA06D3EF1AFEEAF600A66EEB /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				DA06D3F01AFEEB0B00A66EEB /* BHNoFavoritesViewController.h */,
+				DA06D3F11AFEEB0B00A66EEB /* BHNoFavoritesViewController.m */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
 		DA0C9D6C1AB4B51500FEDC35 /* Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +267,8 @@
 				DA20ABC31AB133DC0036CAE8 /* BHMenuItemObject.m */,
 				DA20ABC51AB133ED0036CAE8 /* BHTravelObject.h */,
 				DA20ABC61AB133ED0036CAE8 /* BHTravelObject.m */,
+				DA06D3EC1AFED0AE00A66EEB /* BHUserObject.h */,
+				DA06D3ED1AFED0AE00A66EEB /* BHUserObject.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -405,6 +425,8 @@
 				DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */,
 				DA6AC1C71AD36C7C005337F7 /* BHSignUpViewController.h */,
 				DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */,
+				DA06D3E91AFEC87A00A66EEB /* BHSignUpSuccessViewController.h */,
+				DA06D3EA1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -412,6 +434,7 @@
 		DA9E9A641AA242AA003FE759 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DA06D3EF1AFEEAF600A66EEB /* Favorites */,
 				DAE41C131AFAEB1A00A3C1CD /* Splash */,
 				DA6AC1C31AD36BC0005337F7 /* Authentication */,
 				DA0C9D701AB6265F00FEDC35 /* Details */,
@@ -612,11 +635,13 @@
 				DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */,
 				DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */,
 				DA20ABAC1AB12D370036CAE8 /* BHDeliObject.m in Sources */,
+				DA06D3EE1AFED0AE00A66EEB /* BHUserObject.m in Sources */,
 				DA20ABC41AB133DC0036CAE8 /* BHMenuItemObject.m in Sources */,
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */,
 				DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */,
 				DA06D3E51AFE9A1F00A66EEB /* BHFacebookButton.m in Sources */,
+				DA06D3F21AFEEB0B00A66EEB /* BHNoFavoritesViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
 				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,
@@ -628,6 +653,7 @@
 				DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */,
 				DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */,
 				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
+				DA06D3EB1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

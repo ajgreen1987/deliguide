@@ -13,6 +13,7 @@
 
 - (void) awakeFromNib
 {
+    [self setDelegate:self];
     [self setupRoundingEdges];
     [self setupLeftView];
     [self setupRightView];
@@ -70,10 +71,41 @@
 
 - (void) locationSelected
 {
-    if ((self.searchDelegate != nil) && [self.searchDelegate respondsToSelector:@selector(tappedLocationButton)])
+    if([self isSearchDelegateValidForSelector:@selector(tappedLocationButton)])
     {
         [[self searchDelegate] tappedLocationButton];
     }
+}
+
+- (void) textFieldDidBeginEditing:(UITextField *)textField
+{
+    if ([self isSearchDelegateValidForSelector:@selector(didStartEditing)])
+    {
+        [[self searchDelegate] didStartEditing];
+    }
+    
+    [UIView animateWithDuration:0.1f
+                     animations:^{
+                         
+                         self.frame = CGRectMake(self.frame.origin.x,
+                                                 self.frame.origin.y,
+                                                 self.frame.size.width * .66f,
+                                                 self.frame.size.height);
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+         self.frame = CGRectMake(self.frame.origin.x,
+                                 self.frame.origin.y,
+                                 self.frame.size.width * .66f,
+                                 self.frame.size.height);
+     }
+     ];
+}
+
+- (BOOL) isSearchDelegateValidForSelector:(SEL)aSelector
+{
+    return ((self.searchDelegate != nil) && [self.searchDelegate respondsToSelector:aSelector]);
 }
 
 

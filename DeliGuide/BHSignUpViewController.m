@@ -7,8 +7,12 @@
 //
 
 #import "BHSignUpViewController.h"
+#import "BHApplicationManager.h"
 
-#define kMaxTextFields 3
+#define kMaxTextFields  2
+#define NAME_TAG        0
+#define EMAIL_TAG       1
+#define PASSWORD_TAG    2
 
 @interface BHSignUpViewController ()
 
@@ -36,6 +40,9 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    [self setcurrentUserInformation:[textField text]
+                forTextFieldWithTag:[textField tag]];
+    
     [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
@@ -53,6 +60,32 @@
     
     [textField resignFirstResponder];
     return YES;
+}
+
+- (void) setcurrentUserInformation:(NSString*)information forTextFieldWithTag:(NSInteger)aTag
+{
+    switch (aTag)
+    {
+        case NAME_TAG:
+            [[[BHApplicationManager appManager] currentUser] setUserName:information];
+            break;
+        case EMAIL_TAG:
+            [[[BHApplicationManager appManager] currentUser] setUserEmail:information];
+            break;
+        default:
+            [[[BHApplicationManager appManager] currentUser] setUserPassword:information];
+            break;
+    }
+}
+
+- (IBAction) handleSignUpTouchUpInside:(id)sender
+{
+    if ([[[BHApplicationManager appManager] currentUser] isReadyForSignUp])
+    {
+        // Signup service call and next page
+        [self performSegueWithIdentifier:@"SignUpSuccess"
+                                  sender:self];
+    }
 }
 
 

@@ -10,11 +10,12 @@
 
 @protocol BHLocationSearchTextFieldDelegate <NSObject>
 
+- (void) didStartEditing;
 - (void) tappedLocationButton;
 
 @end
 
-@interface BHLocationSearchTextField : UITextField
+@interface BHLocationSearchTextField : UITextField <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet id<BHLocationSearchTextFieldDelegate> searchDelegate;
 @property (nonatomic, weak) IBInspectable UIImage *searchImage;

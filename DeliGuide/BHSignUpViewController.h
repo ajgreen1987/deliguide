@@ -13,4 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+- (IBAction) handleSignUpTouchUpInside:(id)sender;
+
 @end

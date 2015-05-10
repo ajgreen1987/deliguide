@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BHUserObject.h"
 
 @class KAWebViewController;
 
@@ -19,6 +20,8 @@
 + (instancetype)appManager;
 
 - (void) setupMockDelis;
+
+- (BHUserObject*) currentUser;
 
 - (UIAlertView *) getErrorMessageAlertViewWithTitle:(NSString *)title
                                             message:(NSString *)message

@@ -9,7 +9,9 @@
 #import "BHApplicationManager.h"
 #import "BHDeliObject.h"
 
+
 static BHApplicationManager *sharedAppManager;
+static BHUserObject *sharedUser;
 
 @implementation BHApplicationManager
 
@@ -19,6 +21,7 @@ static BHApplicationManager *sharedAppManager;
         if (sharedAppManager == nil)
         {
             sharedAppManager = [[self alloc] init];
+            sharedUser = [[BHUserObject alloc] init];
         }
     }
     return sharedAppManager;
@@ -47,6 +50,17 @@ static BHApplicationManager *sharedAppManager;
     }
     
     return _delis;
+}
+
+- (BHUserObject*) currentUser
+{
+    return sharedUser;
+}
+
+- (void) resetUserInformation
+{
+    sharedUser = nil;
+    sharedUser = [[BHUserObject alloc] init];
 }
 
 - (void) setupMockDelis

@@ -14,7 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
-- (IBAction)handleLocationTouchUpInside:(id)sender;
+- (void) handleLocationTouchUpInside:(id)sender;
+- (IBAction) handleFavoritesTouchUpInside:(id)sender;
 
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue;
 

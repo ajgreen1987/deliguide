@@ -16,7 +16,9 @@
 {
     [super viewDidLoad];
     
-    self.screenName = @"Loading";
+    self.screenName = @"LOADING";
+    self.title = @"New York Deli Guide";
+    
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
 }
 
@@ -33,9 +35,18 @@
 
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue { }
 
-- (IBAction)handleLocationTouchUpInside:(id)sender
+- (void)handleLocationTouchUpInside:(id)sender
 {
     [[BHLocationManager locationManager] requestLocationServicesAuthorization];
+}
+
+- (IBAction) handleFavoritesTouchUpInside:(id)sender
+{
+    if ([[[[BHApplicationManager appManager] currentUser] favorites] count] < 1)
+    {
+        [self performSegueWithIdentifier:@"NoFavorites"
+                                  sender:self];
+    }
 }
 
 #pragma mark - Controller Segue
