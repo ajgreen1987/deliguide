@@ -44,6 +44,7 @@
 		DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */; };
 		DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */; };
 		DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */; };
+		DA9349151AFFE2390019B8BF /* BHCustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9349141AFFE2390019B8BF /* BHCustomSearchBar.m */; };
 		DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */; };
 		DAA084121AAB95D800ABBA68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084111AAB95D800ABBA68 /* MapKit.framework */; };
 		DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */; };
@@ -147,6 +148,8 @@
 		DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSignUpViewController.m; sourceTree = "<group>"; };
 		DA6DE1D11AB280D700D2FB34 /* BHApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHApplicationManager.h; sourceTree = "<group>"; };
 		DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHApplicationManager.m; sourceTree = "<group>"; };
+		DA9349131AFFE2390019B8BF /* BHCustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHCustomSearchBar.h; sourceTree = "<group>"; };
+		DA9349141AFFE2390019B8BF /* BHCustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHCustomSearchBar.m; sourceTree = "<group>"; };
 		DA9E9A661AA242DF003FE759 /* BHSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSlidingViewController.h; sourceTree = "<group>"; };
 		DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSlidingViewController.m; sourceTree = "<group>"; };
 		DAA084111AAB95D800ABBA68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -377,6 +380,7 @@
 		DA27ED611AA155DD00689F55 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DA9349121AFFE2100019B8BF /* SearchBar */,
 				DA06D3D91AFE7D3D00A66EEB /* Backgrounds */,
 				DAE41C221AFAF20100A3C1CD /* Location Textfield */,
 				DAE41C1B1AFAEFD500A3C1CD /* Categories */,
@@ -429,6 +433,15 @@
 				DA06D3EA1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		DA9349121AFFE2100019B8BF /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				DA9349131AFFE2390019B8BF /* BHCustomSearchBar.h */,
+				DA9349141AFFE2390019B8BF /* BHCustomSearchBar.m */,
+			);
+			name = SearchBar;
 			sourceTree = "<group>";
 		};
 		DA9E9A641AA242AA003FE759 /* View Controllers */ = {
@@ -644,6 +657,7 @@
 				DA06D3F21AFEEB0B00A66EEB /* BHNoFavoritesViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
+				DA9349151AFFE2390019B8BF /* BHCustomSearchBar.m in Sources */,
 				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,
 				DA06D3DF1AFE802000A66EEB /* BHSearchFieldBackgroundView.m in Sources */,
 				DA0C9D7D1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m in Sources */,

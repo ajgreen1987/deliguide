@@ -17,12 +17,23 @@
 
 @implementation BHLocationSearchTextField
 
-- (void) awakeFromNib
+- (id) initWithFrame:(CGRect)frame
+         searchImage:(UIImage*)searchImage
+      andButtonImage:(UIImage*)buttonImage
 {
-    [self setDelegate:self];
-    [self setupRoundingEdges];
-    [self setupLeftView];
-    [self setupRightView];
+    self = [super initWithFrame:frame];
+    
+    if (self)
+    {
+        [self setSearchImage:searchImage];
+        [self setButtonImage:buttonImage];
+        [self setDelegate:self];
+        [self setupRoundingEdges];
+        [self setupLeftView];
+        [self setupRightView];
+    }
+    
+    return self;
 }
 
 - (void) setupRoundingEdges
@@ -89,7 +100,7 @@
     self.originalWidth = self.frame.size.width;
      __block BHLocationSearchTextField *blocksafeSelf = self;
     
-    [UIView animateWithDuration:0.1f
+    [UIView animateWithDuration:0.8f
                      animations:^{
                          
                          blocksafeSelf.frame = CGRectMake(blocksafeSelf.frame.origin.x,
@@ -100,17 +111,8 @@
                      }
                      completion:^(BOOL finished)
      {
-         blocksafeSelf.frame = CGRectMake(blocksafeSelf.frame.origin.x,
-                                 blocksafeSelf.frame.origin.y,
-                                 blocksafeSelf.frame.size.width * .76f,
-                                 blocksafeSelf.frame.size.height);
-         
          if ([blocksafeSelf isSearchDelegateValidForSelector:@selector(didStartEditing)])
          {
-             [[NSNotificationCenter defaultCenter] addObserver:blocksafeSelf
-                                                      selector:@selector(handleCancel)
-                                                          name:CANCEL_LOC_SEARCH
-                                                        object:nil];
              [[blocksafeSelf searchDelegate] didStartEditing];
          }
      }
@@ -126,7 +128,7 @@
 {
     __block BHLocationSearchTextField *blocksafeSelf = self;
     
-    [UIView animateWithDuration:0.1f
+    [UIView animateWithDuration:0.8f
                      animations:^{
                          
                          blocksafeSelf.frame = CGRectMake(blocksafeSelf.frame.origin.x,
@@ -137,18 +139,10 @@
                      }
                      completion:^(BOOL finished)
      {
-         blocksafeSelf.frame = CGRectMake(blocksafeSelf.frame.origin.x,
-                                 blocksafeSelf.frame.origin.y,
-                                 blocksafeSelf.originalWidth,
-                                 blocksafeSelf.frame.size.height);
-
          [blocksafeSelf resignFirstResponder];
          
          if ([blocksafeSelf isSearchDelegateValidForSelector:@selector(didCancelEditing)])
          {
-             [[NSNotificationCenter defaultCenter] removeObserver:blocksafeSelf
-                                                             name:CANCEL_LOC_SEARCH
-                                                           object:blocksafeSelf];
              [[blocksafeSelf searchDelegate] didCancelEditing];
          }
      }

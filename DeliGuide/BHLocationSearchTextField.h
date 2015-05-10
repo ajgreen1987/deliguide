@@ -18,8 +18,14 @@
 
 @interface BHLocationSearchTextField : UITextField <UITextFieldDelegate>
 
+- (id) initWithFrame:(CGRect)frame
+         searchImage:(UIImage*)searchImage
+      andButtonImage:(UIImage*)buttonImage;
+
 @property (nonatomic, weak) IBOutlet id<BHLocationSearchTextFieldDelegate> searchDelegate;
 @property (nonatomic, weak) IBInspectable UIImage *searchImage;
 @property (nonatomic, weak) IBInspectable UIImage *buttonImage;
+
+- (void) handleCancel;
 
 @end

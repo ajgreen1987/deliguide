@@ -30,4 +30,24 @@
 #define NAVIGATION_BAR_BACK [UIImage imageNamed:@"arrow-back"]
 #define NAVIGATION_FONT     [UIFont fontWithName:@"Arial-Bold" size:0.0f]
 
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
+
+#define RED_1   UIColorFromRGB(0x9C2B21)
+#define GOLD_1  UIColorFromRGB(0xB5985A)
+#define GOLD_2  UIColorFromRGB(0xDFB968)
+#define CREAM_1 UIColorFromRGB(0xFFFCF4)
+#define GRAY_1  UIColorFromRGB(0xC3BCAE)
+#define GRAY_2  UIColorFromRGB(0x787878)
+
+#define UIViewParentController(__view) ({ \
+UIResponder *__responder = __view; \
+while ([__responder isKindOfClass:[UIView class]]) \
+__responder = [__responder nextResponder]; \
+(UIViewController *)__responder; \
+})
+
 #endif

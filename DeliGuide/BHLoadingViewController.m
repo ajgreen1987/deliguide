@@ -49,13 +49,6 @@
     }
 }
 
-- (IBAction)handleCancelTouchUpInside:(id)sender
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:CANCEL_LOC_SEARCH
-                                                        object:self];
-    [self.cancel setHidden:YES];
-}
-
 #pragma mark - Controller Segue
 - (void) presentMapController
 {
