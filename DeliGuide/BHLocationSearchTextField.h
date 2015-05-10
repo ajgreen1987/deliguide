@@ -11,6 +11,7 @@
 @protocol BHLocationSearchTextFieldDelegate <NSObject>
 
 - (void) didStartEditing;
+- (void) didCancelEditing;
 - (void) tappedLocationButton;
 
 @end

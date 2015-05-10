@@ -49,6 +49,13 @@
     }
 }
 
+- (IBAction)handleCancelTouchUpInside:(id)sender
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:CANCEL_LOC_SEARCH
+                                                        object:self];
+    [self.cancel setHidden:YES];
+}
+
 #pragma mark - Controller Segue
 - (void) presentMapController
 {
@@ -102,6 +109,17 @@
 -(void)presentNoConnectionAlert
 {    
     [BHLocationManager presentNoConnectionAlertForController:self];
+}
+
+#pragma mark - Search Delegate
+- (void) didStartEditing
+{
+    [self.cancel setHidden:NO];
+}
+
+- (void) tappedLocationButton
+{
+    
 }
 
 @end

@@ -11,6 +11,7 @@
 
 #define LOCATIONS_URL @"http://www.google.com/"
 
+#define CANCEL_LOC_SEARCH       @"CANCELSEARCH"
 #define SLIDING_MENU_STORYBOARD_ID @"SlidingMenu"
 #define LOADING_CONTROLLER_STORYBOARD_ID @"LoadingController"
 #define FADE_SEGUE_ID   @"LandingFade"

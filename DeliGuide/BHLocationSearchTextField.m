@@ -9,6 +9,12 @@
 #import "BHLocationSearchTextField.h"
 #import "BHSearchFieldBackgroundView.h"
 
+@interface BHLocationSearchTextField ()
+
+@property (nonatomic, assign) CGFloat originalWidth;
+
+@end
+
 @implementation BHLocationSearchTextField
 
 - (void) awakeFromNib
@@ -79,26 +85,34 @@
 
 - (void) textFieldDidBeginEditing:(UITextField *)textField
 {
-    if ([self isSearchDelegateValidForSelector:@selector(didStartEditing)])
-    {
-        [[self searchDelegate] didStartEditing];
-    }
+
+    self.originalWidth = self.frame.size.width;
+     __block BHLocationSearchTextField *blocksafeSelf = self;
     
     [UIView animateWithDuration:0.1f
                      animations:^{
                          
-                         self.frame = CGRectMake(self.frame.origin.x,
-                                                 self.frame.origin.y,
-                                                 self.frame.size.width * .66f,
-                                                 self.frame.size.height);
+                         blocksafeSelf.frame = CGRectMake(blocksafeSelf.frame.origin.x,
+                                                 blocksafeSelf.frame.origin.y,
+                                                 blocksafeSelf.frame.size.width * .76f,
+                                                 blocksafeSelf.frame.size.height);
                          
                      }
                      completion:^(BOOL finished)
      {
-         self.frame = CGRectMake(self.frame.origin.x,
-                                 self.frame.origin.y,
-                                 self.frame.size.width * .66f,
-                                 self.frame.size.height);
+         blocksafeSelf.frame = CGRectMake(blocksafeSelf.frame.origin.x,
+                                 blocksafeSelf.frame.origin.y,
+                                 blocksafeSelf.frame.size.width * .76f,
+                                 blocksafeSelf.frame.size.height);
+         
+         if ([blocksafeSelf isSearchDelegateValidForSelector:@selector(didStartEditing)])
+         {
+             [[NSNotificationCenter defaultCenter] addObserver:blocksafeSelf
+                                                      selector:@selector(handleCancel)
+                                                          name:CANCEL_LOC_SEARCH
+                                                        object:nil];
+             [[blocksafeSelf searchDelegate] didStartEditing];
+         }
      }
      ];
 }
@@ -106,6 +120,39 @@
 - (BOOL) isSearchDelegateValidForSelector:(SEL)aSelector
 {
     return ((self.searchDelegate != nil) && [self.searchDelegate respondsToSelector:aSelector]);
+}
+
+- (void) handleCancel
+{
+    __block BHLocationSearchTextField *blocksafeSelf = self;
+    
+    [UIView animateWithDuration:0.1f
+                     animations:^{
+                         
+                         blocksafeSelf.frame = CGRectMake(blocksafeSelf.frame.origin.x,
+                                                 blocksafeSelf.frame.origin.y,
+                                                 blocksafeSelf.originalWidth,
+                                                 blocksafeSelf.frame.size.height);
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+         blocksafeSelf.frame = CGRectMake(blocksafeSelf.frame.origin.x,
+                                 blocksafeSelf.frame.origin.y,
+                                 blocksafeSelf.originalWidth,
+                                 blocksafeSelf.frame.size.height);
+
+         [blocksafeSelf resignFirstResponder];
+         
+         if ([blocksafeSelf isSearchDelegateValidForSelector:@selector(didCancelEditing)])
+         {
+             [[NSNotificationCenter defaultCenter] removeObserver:blocksafeSelf
+                                                             name:CANCEL_LOC_SEARCH
+                                                           object:blocksafeSelf];
+             [[blocksafeSelf searchDelegate] didCancelEditing];
+         }
+     }
+     ];
 }
 
 
