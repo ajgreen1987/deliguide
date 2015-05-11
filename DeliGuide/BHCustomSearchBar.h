@@ -9,8 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "BHLocationSearchTextField.h"
 
+@protocol BHCustomSearchBarDelegate <NSObject>
+
+- (void) customSearchbarTouchedUserLocation;
+- (void) customSearchbarEnteredText:(NSString*)textEntered;
+
+@end
+
 @interface BHCustomSearchBar : UIView <BHLocationSearchTextFieldDelegate>
 
+@property (nonatomic, assign) IBOutlet id<BHCustomSearchBarDelegate> customSearchDelegate;
 @property (nonatomic, weak) IBInspectable UIImage *searchImage;
 @property (nonatomic, weak) IBInspectable UIImage *buttonImage;
 

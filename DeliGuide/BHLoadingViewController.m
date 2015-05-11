@@ -18,13 +18,12 @@
     
     self.screenName = @"LOADING";
     self.title = @"New York Deli Guide";
-    
-    [[BHLocationManager locationManager] setLocationManagerDelegate:self];
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [self handleProbableNavigationTrees];
+    [[BHLocationManager locationManager] setLocationManagerDelegate:self];
 }
 
 - (void) viewWillDisappear:(BOOL)animated
@@ -34,11 +33,6 @@
 
 
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue { }
-
-- (void)handleLocationTouchUpInside:(id)sender
-{
-    [[BHLocationManager locationManager] requestLocationServicesAuthorization];
-}
 
 - (IBAction) handleFavoritesTouchUpInside:(id)sender
 {
@@ -52,7 +46,7 @@
 #pragma mark - Controller Segue
 - (void) presentMapController
 {
-    [self performSegueWithIdentifier:@"LandingPage"
+    [self performSegueWithIdentifier:@"MapView"
                               sender:self];
 }
 
@@ -77,9 +71,7 @@
 
 #pragma mark - Location Delegate
 - (void) userDeniedPermission
-{
-    [self presentMapController];
-    
+{    
     [self presentGPSPermissionDeniedAlert];
 }
 
@@ -105,14 +97,15 @@
 }
 
 #pragma mark - Search Delegate
-- (void) didStartEditing
+
+- (void) customSearchbarTouchedUserLocation
 {
-    [self.cancel setHidden:NO];
+    [[BHLocationManager locationManager] requestLocationServicesAuthorization];
 }
 
-- (void) tappedLocationButton
+- (void) customSearchbarEnteredText:(NSString *)textEntered
 {
-    
+    // Perform search for text entered
 }
 
 @end

@@ -8,12 +8,12 @@
 
 #import "AppDelegate.h"
 #import "GAI.h"
-#import "BHLocationManager.h"
+#import "BHApplicationManager.h"
 #import "BHNavigationBarBackgroundView.h"
+#import "BHMockDataManager.h"
 
 @interface AppDelegate ()
 
-- (void) setupRootViewController;
 - (void) setupGoogleAnalytics;
 
 @end
@@ -23,8 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
- 
-    [self setupRootViewController];
+    [self setupUser];
     [self setupGoogleAnalytics];
     [self setupNavigationControllerAppearance];
     
@@ -53,13 +52,19 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark - Root Controller logic
-- (void) setupRootViewController
+#pragma mark - AppManager
+- (void) setupUser
 {
-    /*
-    NSString *storyboardId = [BHLocationManager isLocationAccessAuthorized] ? SLIDING_MENU_STORYBOARD_ID : LOADING_CONTROLLER_STORYBOARD_ID;
-    self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:storyboardId];
-     */
+    NSString *userID = [BHApplicationManager readStringFromUserDefaultsForKey:USER_ID_KEY];
+    
+    if ([userID isEqual:nil])
+    {
+        [[BHApplicationManager appManager] setCurrentUser:[BHMockDataManager anonymousUser]];
+    }
+    else
+    {
+        [[BHApplicationManager appManager] setCurrentUser:[BHMockDataManager mockUser]];
+    }
 }
 
 #pragma mark - Google Analytics
@@ -78,6 +83,7 @@
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-24547261-13"];
 }
 
+#pragma mark - Nav Appearance
 - (void) setupNavigationControllerAppearance
 {
 

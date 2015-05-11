@@ -45,6 +45,7 @@
 		DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */; };
 		DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */; };
 		DA9349151AFFE2390019B8BF /* BHCustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9349141AFFE2390019B8BF /* BHCustomSearchBar.m */; };
+		DA9349181B001A480019B8BF /* BHMockDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9349171B001A480019B8BF /* BHMockDataManager.m */; };
 		DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */; };
 		DAA084121AAB95D800ABBA68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084111AAB95D800ABBA68 /* MapKit.framework */; };
 		DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */; };
@@ -150,6 +151,8 @@
 		DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHApplicationManager.m; sourceTree = "<group>"; };
 		DA9349131AFFE2390019B8BF /* BHCustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHCustomSearchBar.h; sourceTree = "<group>"; };
 		DA9349141AFFE2390019B8BF /* BHCustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHCustomSearchBar.m; sourceTree = "<group>"; };
+		DA9349161B001A480019B8BF /* BHMockDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHMockDataManager.h; sourceTree = "<group>"; };
+		DA9349171B001A480019B8BF /* BHMockDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHMockDataManager.m; sourceTree = "<group>"; };
 		DA9E9A661AA242DF003FE759 /* BHSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSlidingViewController.h; sourceTree = "<group>"; };
 		DA9E9A671AA242DF003FE759 /* BHSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSlidingViewController.m; sourceTree = "<group>"; };
 		DAA084111AAB95D800ABBA68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -373,6 +376,8 @@
 				DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */,
 				DAB3D7FC1AEC860C003DA43A /* BHEasyWayServicesManager.h */,
 				DAB3D7FD1AEC860C003DA43A /* BHEasyWayServicesManager.m */,
+				DA9349161B001A480019B8BF /* BHMockDataManager.h */,
+				DA9349171B001A480019B8BF /* BHMockDataManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 				DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */,
 				DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */,
 				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
+				DA9349181B001A480019B8BF /* BHMockDataManager.m in Sources */,
 				DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */,
 				DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */,
 				DA20ABAC1AB12D370036CAE8 /* BHDeliObject.m in Sources */,

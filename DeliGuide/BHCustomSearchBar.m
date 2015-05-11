@@ -133,7 +133,10 @@
 
 - (void) tappedLocationButton
 {
-    
+    if ([[self customSearchDelegate] respondsToSelector:@selector(customSearchbarTouchedUserLocation)])
+    {
+        [[self customSearchDelegate] customSearchbarTouchedUserLocation];
+    }
 }
 
 

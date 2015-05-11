@@ -13,15 +13,12 @@
 
 @interface BHApplicationManager : NSObject
 
-@property (nonatomic, strong) NSMutableArray *delis;
+@property (nonatomic, strong) BHUserObject *currentUser;
+@property (nonatomic, strong) NSArray *delis;
 @property (nonatomic, assign) BOOL shouldSignUp;
 @property (nonatomic, assign) BOOL shouldSignIn;
 
 + (instancetype)appManager;
-
-- (void) setupMockDelis;
-
-- (BHUserObject*) currentUser;
 
 - (UIAlertView *) getErrorMessageAlertViewWithTitle:(NSString *)title
                                             message:(NSString *)message
@@ -29,5 +26,7 @@
 
 + (void) callLocation:(NSString*)aTelephoneNumber;
 + (void) browserForURL:(NSString*)aURL;
++ (NSString*) readStringFromUserDefaultsForKey:(NSString*)aKey;
++ (void) writeString:(NSString*)aValue toUserDefaultsForKey:(NSString*)aKey;
 
 @end

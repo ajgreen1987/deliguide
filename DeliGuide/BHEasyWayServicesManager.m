@@ -23,29 +23,53 @@ static BHEasyWayServicesManager *sharedServicesManager;
     return sharedServicesManager;
 }
 
-- (NSDictionary*) makeGetServiceRequestWithParameters:(NSDictionary*)serviceParameters
+#pragma mark - Service Calls
+/*
+- (NSURL *) generateLocationURLWithZipCode:(NSString *)zipCode NumberToReturn:(NSNumber *)numberToReturn
 {
-    NSString *urlString = @"";
-    NSError *requestError = nil;
-    NSError *responseError = nil;
-    NSHTTPURLResponse *response = nil;
     
-    NSURLRequest *request = [NSURLRequest
-                             requestWithURL:[NSURL URLWithString:urlString]
-                             cachePolicy:NSURLRequestReloadIgnoringCacheData
-                             timeoutInterval:5.0];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/locations/?address=%@&count=%d", LOCATIONS_URL, zipCode, [numberToReturn intValue]]];
+}
+
+- (NSURL *) generateLocationURLWithAddress:(NSString *)address NumberToReturn:(NSNumber *)numberToReturn
+{
+    address = [address stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
+    // Short sync request
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/locations/?address=%@&count=%d", LOCATIONS_URL, [address stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [numberToReturn intValue]]];
+}
+
+- (NSURL *) generateLocationURLWithLocation:(CLLocation*)location NumberToReturn:(NSNumber *)numberToReturn
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/locations/?address=%1.6f,%1.6f&count=%d", LOCATIONS_URL, location.coordinate.latitude, location.coordinate.longitude, [numberToReturn intValue]]];
+}
+
+- (void) makeRequestToURL:(NSURL*)anURL httpResponse:(NSHTTPURLResponse**)httpResponse error:(NSError **)error jsonDictionary:(NSDictionary**)jsonDictionary
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:anURL
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:5.0];
     
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:httpResponse error:error];
     
-    NSData *connectionData = [NSURLConnection sendSynchronousRequest:request
-                                                   returningResponse:&response
-                                                               error:&requestError];
+    if (data && (([*httpResponse statusCode]/100) == 2))
+    {
+        *jsonDictionary = [NSJSONSerialization
+                           JSONObjectWithData:data
+                           options:kNilOptions
+                           error:error];
+    }
     
-    NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:connectionData
-                                                             options:NSJSONReadingMutableContainers
-                                                               error:&responseError];
-    
-    return responseJSON;
     
 }
+
++ (void) getDirectionsFromLocation:(CLLocation *)location
+                        toLocation:(CLLocation*)aNewLocation
+{
+    NSString *mapsURLString = [NSString stringWithFormat:@"http://maps.apple.com/?saddr=%1.6f,%1.6f&daddr=%1.6f,%1.6f",
+                               location.coordinate.latitude, location.coordinate.longitude, aNewLocation.coordinate.latitude, aNewLocation.coordinate.longitude];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mapsURLString]];
+}
+ */
 
 @end

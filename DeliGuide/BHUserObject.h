@@ -10,6 +10,7 @@
 
 @interface BHUserObject : NSObject
 
+@property (nonatomic, assign) BOOL isAnonymous;
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSString *userEmail;
 @property (nonatomic, strong) NSString *userPassword;

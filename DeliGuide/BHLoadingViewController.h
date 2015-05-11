@@ -9,19 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
 #import "BHLocationManager.h"
+#import "BHCustomSearchBar.h"
 
-@class BHLocationSearchTextField;
-
-@interface BHLoadingViewController : GAITrackedViewController <BHLocationManagerDelegate, UIAlertViewDelegate>
+@interface BHLoadingViewController : GAITrackedViewController <BHLocationManagerDelegate, UIAlertViewDelegate, BHCustomSearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIButton *cancel;
 @property (nonatomic, weak) IBOutlet BHLocationSearchTextField *searchTextField;
 
-- (void) handleLocationTouchUpInside:(id)sender;
 - (IBAction) handleFavoritesTouchUpInside:(id)sender;
 
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue;
-- (IBAction)handleCancelTouchUpInside:(id)sender;
 
 @end

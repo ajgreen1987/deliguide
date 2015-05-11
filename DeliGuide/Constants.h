@@ -9,7 +9,14 @@
 #ifndef DeliGuide_Constants_h
 #define DeliGuide_Constants_h
 
-#define LOCATIONS_URL @"http://www.google.com/"
+#define USE_MOCK_LOCATIONS  1
+
+#define API_KEY                     @"skxgq9aqrs"
+#define API_BASE_URL                @"http://www.easywayordering.com/ewoapi/ewoapi_v1.php?apireq"
+#define API_KVP_EQUALS              @"="
+#define API_PARAMETER_SEPERATOR     @"?"
+
+#define USER_ID_KEY     @"USERID"
 
 #define CANCEL_LOC_SEARCH       @"CANCELSEARCH"
 #define SLIDING_MENU_STORYBOARD_ID @"SlidingMenu"

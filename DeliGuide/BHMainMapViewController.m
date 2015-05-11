@@ -29,15 +29,12 @@
     [super viewDidLoad];
     
     self.screenName = @"MAP";
-    [self setupMap];
-    [self setupTableView];
-    
-    // Mock Locations for now
-    [[BHApplicationManager appManager] setupMockDelis];
 }
 
-- (void) viewDidAppear:(BOOL)animated
+- (void) viewWillAppear:(BOOL)animated
 {
+    [self setupMap];
+    [self setupTableView];
     [self handleProbableNavigationTrees];
 }
 
@@ -63,7 +60,7 @@
     [self setupMapTapGestureRecognizer];
     [self enableMapFeatures:self.isMapFullScreen];
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
-    [[BHLocationManager locationManager] startUpdatingUserLocation];
+    [[BHLocationManager locationManager] requestLocationServicesAuthorization];
 }
 
 - (void) enableMapFeatures:(BOOL)shouldBeEnabled
@@ -101,8 +98,8 @@
 }
 
 #pragma mark - Table View Magic
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{    
     if (scrollView.contentOffset.y < self.mapView.frame.size.height*-1 )
     {
         [scrollView setContentOffset:CGPointMake(scrollView.contentOffset.x, self.mapView.frame.size.height*-3)];
