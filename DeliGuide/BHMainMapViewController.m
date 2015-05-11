@@ -33,6 +33,7 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
+    [self setupCustomSearchBar];
     [self setupMap];
     [self setupTableView];
     [self handleProbableNavigationTrees];
@@ -54,6 +55,12 @@
 }
 
 #pragma mark - Initiailizers
+- (void) setupCustomSearchBar
+{
+    [self.customSearchBar setShouldAutoShrink:YES];
+    [self.customSearchBar setRightSideButtonTitle:@"FILTER"];
+}
+
 - (void) setupMap
 {
     self.isMapFullScreen = NO;
@@ -176,16 +183,6 @@
                               sender:self];
 }
 
-#pragma mark - Text Field Delegate
-- (BOOL) textFieldShouldReturn:(UITextField *)textField
-{
-    // Resign first responder
-    [self.zipSearch resignFirstResponder];
-    
-    // Update the Map and locations
-    return true;
-}
-
 #pragma mark - Location Delegate
 - (void) userAllowedPermission
 {
@@ -232,11 +229,6 @@
 }
 
 #pragma mark - Button Handlers
-- (IBAction) handleFilterTouchUpInside:(id)sender
-{
-    
-}
-
 - (IBAction)handleViewListTouchUpInside:(id)sender
 {
     [self handleMapAndTableViewToggle];

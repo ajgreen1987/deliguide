@@ -10,11 +10,14 @@
 #import "BHLocationSearchTextField.h"
 
 #define BLACK_NAV_TAG       111001
+#define CANCEL_TITLE        @"CANCEL"
 
 @interface BHCustomSearchBar ()
 
 @property (nonatomic, strong) BHLocationSearchTextField *textField;
-@property (nonatomic, strong) UIButton *cancel;
+@property (nonatomic, strong) UIButton *rightSideButton;
+
+- (BOOL) isRightSideACancelButton;
 
 @end
 
@@ -23,7 +26,7 @@
 - (void) awakeFromNib
 {
     [self setupTextfield];
-    [self setupCancel];
+    [self setupRightSideButton];
 }
 
 - (void) dimOtherViewsToAlpha:(CGFloat)alpha
@@ -84,35 +87,47 @@
     [self addSubview:self.textField];
 }
 
-- (void) setupCancel
+- (void) setupRightSideButton
 {
-    self.cancel = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.rightSideButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.rightSideButtonTitle = CANCEL_TITLE;
     
-    [self.cancel setFrame:CGRectMake(0.0f,
+    [self.rightSideButton setFrame:CGRectMake(0.0f,
                                      0.0f,
                                      75.0f,
                                      30.0f)];
-    [self.cancel setAlpha:0.0f];
-    [self.cancel setAdjustsImageWhenHighlighted:YES];
-    [self.cancel addTarget:self
-                    action:@selector(handleCancelTouchUpInside)
+    [self.rightSideButton setAlpha:0.0f];
+    [self.rightSideButton setAdjustsImageWhenHighlighted:YES];
+    [self.rightSideButton addTarget:self
+                    action:@selector(handleRightSideButtonTouchUpInside)
           forControlEvents:UIControlEventTouchUpInside];
-    [self.cancel setTitle:@"CANCEL" forState:UIControlStateNormal];
-    [self.cancel setTitleColor:GOLD_1 forState:UIControlStateNormal];
-    [self.cancel setCenter:CGPointMake(self.bounds.size.width - (self.cancel.frame.size.width*0.55f),
+    [self.rightSideButton setTitle:self.rightSideButtonTitle
+                          forState:UIControlStateNormal];
+    [self.rightSideButton setTitleColor:GOLD_1 forState:UIControlStateNormal];
+    [self.rightSideButton setCenter:CGPointMake(self.bounds.size.width - (self.rightSideButton.frame.size.width*0.55f),
                                        self.bounds.size.height*0.5f)];
     
-    [self addSubview:self.cancel];
+    [self addSubview:self.rightSideButton];
 }
 
-- (void) handleCancelTouchUpInside
+- (void) handleRightSideButtonTouchUpInside
 {
-    [UIView animateWithDuration:0.2f
-                     animations:^{
-                         [self.cancel setAlpha:0.0f];
-                     }];
-    
-    [self.textField handleCancel];
+    if ([self isRightSideACancelButton])
+    {
+        [UIView animateWithDuration:0.2f
+                         animations:^{
+                             [self.rightSideButton setAlpha:0.0f];
+                         }];
+        
+        [self.textField handleCancel];
+    }
+    else
+    {
+        if ([[self customSearchDelegate] respondsToSelector:@selector(customSearchbarTouchedRightButton:)])
+        {
+            [[self customSearchDelegate] customSearchbarTouchedRightButton:self.rightSideButton];
+        }
+    }
 }
 
 #pragma mark - Search Delegate
@@ -120,7 +135,7 @@
 {
     [UIView animateWithDuration:0.2f
                      animations:^{
-                         [self.cancel setAlpha:1.0f];
+                         [self.rightSideButton setAlpha:1.0f];
                      }];
     
     [self dimOtherViewsToAlpha:0.4f];
@@ -139,6 +154,24 @@
     }
 }
 
+- (BOOL) isRightSideACancelButton
+{
+    return [self.rightSideButtonTitle isEqualToString:CANCEL_TITLE];
+}
+
+- (void) setRightSideButtonTitle:(NSString *)rightSideButtonTitle
+{
+    _rightSideButtonTitle = rightSideButtonTitle;
+    [self.rightSideButton setTitle:_rightSideButtonTitle
+                          forState:UIControlStateNormal];
+}
+
+- (void) setShouldAutoShrink:(BOOL)shouldAutoShrink
+{
+    _shouldAutoShrink = shouldAutoShrink;
+    
+    
+}
 
 
 @end

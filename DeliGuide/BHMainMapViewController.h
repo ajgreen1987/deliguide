@@ -11,16 +11,15 @@
 #import "BHTableView.h"
 #import "GAITrackedViewController.h"
 #import "BHLocationManager.h"
+#import "BHCustomSearchBar.h"
 
 
 @interface BHMainMapViewController : GAITrackedViewController <UITextFieldDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, BHLocationManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
-@property (nonatomic, weak) IBOutlet UIButton *filter;
-@property (nonatomic, weak) IBOutlet UITextField *zipSearch;
 @property (nonatomic, weak) IBOutlet BHTableView *tableView;
+@property (nonatomic, weak) IBOutlet BHCustomSearchBar *customSearchBar;
 
-- (IBAction) handleFilterTouchUpInside:(id)sender;
 - (IBAction) handleViewListTouchUpInside:(id)sender;
 - (IBAction) handleUpdateLocationTouchUpInside:(id)sender;
 

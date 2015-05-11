@@ -522,41 +522,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" id="B8Y-qz-i4k">
-                                <rect key="frame" x="0.0" y="64" width="320" height="62"/>
+                            <view contentMode="scaleToFill" id="Gwx-iL-Zum" customClass="BHCustomSearchBar">
+                                <rect key="frame" x="1" y="65" width="319" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="YtA-6E-eZU">
-                                        <rect key="frame" x="230" y="0.0" width="91" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="FILTER">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.87450980389999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="handleFilterTouchUpInside:" destination="1a8-K0-BTj" eventType="touchUpInside" id="6YT-OJ-i3n"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Find a Deli Near You" minimumFontSize="17" clearButtonMode="whileEditing" id="MbV-9a-shd">
-                                        <rect key="frame" x="8" y="16" width="212" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="1a8-K0-BTj" id="Vjp-Fk-gtA"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="searchImage" value="search"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="location-off"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="customSearchDelegate" destination="1a8-K0-BTj" id="6mu-Pd-kcN"/>
+                                </connections>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="mbF-Tj-Wim">
                                 <rect key="frame" x="0.0" y="124" width="320" height="444"/>
@@ -586,7 +561,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="136" sectionHeaderHeight="22" sectionFooterHeight="22" id="ryw-rb-fQh" customClass="BHTableView">
-                                <rect key="frame" x="0.0" y="124" width="320" height="444"/>
+                                <rect key="frame" x="0.0" y="111" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -694,7 +669,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6fM-xi-YrZ">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="iOR-th-RbM">
@@ -709,10 +684,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="filter" destination="YtA-6E-eZU" id="hzY-h5-PUA"/>
+                        <outlet property="customSearchBar" destination="Gwx-iL-Zum" id="eFX-au-dbu"/>
                         <outlet property="mapView" destination="mbF-Tj-Wim" id="OcR-Eb-AD4"/>
                         <outlet property="tableView" destination="ryw-rb-fQh" id="zpw-nF-8Lo"/>
-                        <outlet property="zipSearch" destination="MbV-9a-shd" id="t3q-SM-uz3"/>
                         <segue destination="A3f-Vb-EGy" kind="push" identifier="DetailsSegue" id="MS8-N6-Yd0"/>
                         <segue destination="0Zv-fe-5Rr" kind="push" identifier="SignIn" id="ye3-6p-l8U"/>
                         <segue destination="agH-3N-bam" kind="push" identifier="SignUp" id="adE-hN-4tC"/>
@@ -1169,8 +1143,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GZ8-Rd-3pM"/>
         <segue reference="Nst-7Z-Fe5"/>
-        <segue reference="ien-9U-N6T"/>
+        <segue reference="adE-hN-4tC"/>
+        <segue reference="ye3-6p-l8U"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -443,6 +443,8 @@
 		DA9349121AFFE2100019B8BF /* SearchBar */ = {
 			isa = PBXGroup;
 			children = (
+				DAE41C231AFAF21500A3C1CD /* BHLocationSearchTextField.h */,
+				DAE41C241AFAF21500A3C1CD /* BHLocationSearchTextField.m */,
 				DA9349131AFFE2390019B8BF /* BHCustomSearchBar.h */,
 				DA9349141AFFE2390019B8BF /* BHCustomSearchBar.m */,
 			);
@@ -525,8 +527,6 @@
 		DAE41C221AFAF20100A3C1CD /* Location Textfield */ = {
 			isa = PBXGroup;
 			children = (
-				DAE41C231AFAF21500A3C1CD /* BHLocationSearchTextField.h */,
-				DAE41C241AFAF21500A3C1CD /* BHLocationSearchTextField.m */,
 			);
 			name = "Location Textfield";
 			sourceTree = "<group>";

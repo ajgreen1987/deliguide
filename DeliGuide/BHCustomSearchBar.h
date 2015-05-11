@@ -13,13 +13,16 @@
 
 - (void) customSearchbarTouchedUserLocation;
 - (void) customSearchbarEnteredText:(NSString*)textEntered;
+- (void) customSearchbarTouchedRightButton:(id)sender;
 
 @end
 
 @interface BHCustomSearchBar : UIView <BHLocationSearchTextFieldDelegate>
 
+@property (nonatomic, assign) BOOL shouldAutoShrink; // Lulz
 @property (nonatomic, assign) IBOutlet id<BHCustomSearchBarDelegate> customSearchDelegate;
 @property (nonatomic, weak) IBInspectable UIImage *searchImage;
 @property (nonatomic, weak) IBInspectable UIImage *buttonImage;
+@property (nonatomic, weak) IBInspectable NSString *rightSideButtonTitle;
 
 @end
