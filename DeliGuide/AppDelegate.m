@@ -23,6 +23,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    for (NSString* family in [UIFont familyNames])
+//    {
+//        NSLog(@"%@", family);
+//        
+//        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+//        {
+//            NSLog(@"  %@", name);
+//        }
+//    }
+    
     [self setupUser];
     [self setupGoogleAnalytics];
     [self setupNavigationControllerAppearance];
@@ -89,12 +99,11 @@
 
     
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
-                                                         forBarMetrics:UIBarMetricsDefault];    
-    
+                                                         forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setBackIndicatorImage:NAVIGATION_BAR_BACK];
     [[[UINavigationBar appearance] layer] insertSublayer:[[BHNavigationBarBackgroundView background] layer] atIndex:0];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor redColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName:NAVIGATION_FONT}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName:AppFontSabonItalic(15)}];
 }
 
 @end

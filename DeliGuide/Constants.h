@@ -57,4 +57,17 @@ __responder = [__responder nextResponder]; \
 (UIViewController *)__responder; \
 })
 
+#define AppFontSabonItalic(_size_)\
+[UIFont fontWithName:@"Sabon-Italic" size:_size_]
+#define AppFontSabonRoman(_size_)\
+[UIFont fontWithName:@"Sabon-Roman" size:_size_]
+#define AppFontSabonRomanSC(_size_)\
+[UIFont fontWithName:@"Sabon-RomanSC" size:_size_]
+#define AppFontAvenirDemiBold(_size_)\
+[UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:_size_]
+#define AppFontAvenirMedium(_size_)\
+[UIFont fontWithName:@"AvenirNextCondensed-Medium" size:_size_]
+#define AppFontAvenirRegular(_size_)\
+[UIFont fontWithName:@"AvenirNextCondensed-Regular" size:_size_]
+
 #endif

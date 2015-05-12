@@ -62,8 +62,8 @@
     CLLocation *location = [[CLLocation alloc] initWithLatitude:29.33891 longitude:48.077202];
     CLLocation *anotherLocation = [[CLLocation alloc] initWithLatitude:37.33120 longitude:48.077202];
     
-    [BHLocationManager getDirectionsFromLocation:location
-                                      toLocation:anotherLocation];
+    /*[BHLocationManager getDirectionsFromLocation:location
+                                      toLocation:anotherLocation];*/
 }
 
 - (IBAction)handleOrderTouchUpInside:(id)sender

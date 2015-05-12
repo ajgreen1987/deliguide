@@ -10,6 +10,20 @@
 
 @implementation BHPrimaryButton
 
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self)
+    {
+        [[self titleLabel] setFont:AppFontSabonRomanSC(18)];
+        [[self titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
+        [[self titleLabel] setNumberOfLines:0];
+        [[self titleLabel] setTextAlignment:NSTextAlignmentCenter];
+    }
+    
+    return self;
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

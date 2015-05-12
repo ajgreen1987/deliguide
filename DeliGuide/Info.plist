@@ -55,6 +55,16 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SabonBollta.ttf</string>
+		<string>SabonIta.ttf</string>
+		<string>SabonRom.ttf</string>
+		<string>SabonRomSC.ttf</string>
+		<string>Avenir Next Demi Bold.ttf</string>
+		<string>Avenir Next Medium.ttf</string>
+		<string>Avenir Next Regular.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

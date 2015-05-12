@@ -52,6 +52,15 @@
 		DAA084181AAB9FB800ABBA68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA084171AAB9FB800ABBA68 /* CoreLocation.framework */; };
 		DAA084211AABA41D00ABBA68 /* BHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA084201AABA41D00ABBA68 /* BHLocationManager.m */; };
 		DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D7FD1AEC860C003DA43A /* BHEasyWayServicesManager.m */; };
+		DAC9EEAC1B01954500E3B730 /* Avenir Next Demi Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA41B01954500E3B730 /* Avenir Next Demi Bold.ttf */; };
+		DAC9EEAD1B01954500E3B730 /* Avenir Next Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA51B01954500E3B730 /* Avenir Next Medium.ttf */; };
+		DAC9EEAE1B01954500E3B730 /* Avenir Next Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA61B01954500E3B730 /* Avenir Next Regular.ttf */; };
+		DAC9EEAF1B01954500E3B730 /* SabonBolIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA81B01954500E3B730 /* SabonBolIta.ttf */; };
+		DAC9EEB01B01954500E3B730 /* SabonIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA91B01954500E3B730 /* SabonIta.ttf */; };
+		DAC9EEB11B01954500E3B730 /* SabonRom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEAA1B01954500E3B730 /* SabonRom.ttf */; };
+		DAC9EEB21B01954500E3B730 /* SabonRomSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEAB1B01954500E3B730 /* SabonRomSC.ttf */; };
+		DAC9EEB51B019D9000E3B730 /* BHSecondaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC9EEB41B019D9000E3B730 /* BHSecondaryButton.m */; };
+		DAC9EEB91B01A27500E3B730 /* BHDividerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC9EEB81B01A27500E3B730 /* BHDividerView.m */; };
 		DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */; };
 		DAE41C161AFAEB3C00A3C1CD /* BHSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C151AFAEB3C00A3C1CD /* BHSplashViewController.m */; };
 		DAE41C201AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C1D1AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m */; };
@@ -166,6 +175,17 @@
 		DAA084231AAD3CC200ABBA68 /* Managers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Managers.h; sourceTree = "<group>"; };
 		DAB3D7FC1AEC860C003DA43A /* BHEasyWayServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHEasyWayServicesManager.h; sourceTree = "<group>"; };
 		DAB3D7FD1AEC860C003DA43A /* BHEasyWayServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHEasyWayServicesManager.m; sourceTree = "<group>"; };
+		DAC9EEA41B01954500E3B730 /* Avenir Next Demi Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next Demi Bold.ttf"; sourceTree = "<group>"; };
+		DAC9EEA51B01954500E3B730 /* Avenir Next Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next Medium.ttf"; sourceTree = "<group>"; };
+		DAC9EEA61B01954500E3B730 /* Avenir Next Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next Regular.ttf"; sourceTree = "<group>"; };
+		DAC9EEA81B01954500E3B730 /* SabonBolIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonBolIta.ttf; sourceTree = "<group>"; };
+		DAC9EEA91B01954500E3B730 /* SabonIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonIta.ttf; sourceTree = "<group>"; };
+		DAC9EEAA1B01954500E3B730 /* SabonRom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonRom.ttf; sourceTree = "<group>"; };
+		DAC9EEAB1B01954500E3B730 /* SabonRomSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonRomSC.ttf; sourceTree = "<group>"; };
+		DAC9EEB31B019D9000E3B730 /* BHSecondaryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSecondaryButton.h; sourceTree = "<group>"; };
+		DAC9EEB41B019D9000E3B730 /* BHSecondaryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSecondaryButton.m; sourceTree = "<group>"; };
+		DAC9EEB71B01A27500E3B730 /* BHDividerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDividerView.h; sourceTree = "<group>"; };
+		DAC9EEB81B01A27500E3B730 /* BHDividerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDividerView.m; sourceTree = "<group>"; };
 		DAE41C101AFA39D400A3C1CD /* BHPrimaryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHPrimaryButton.h; sourceTree = "<group>"; };
 		DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHPrimaryButton.m; sourceTree = "<group>"; };
 		DAE41C141AFAEB3C00A3C1CD /* BHSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSplashViewController.h; sourceTree = "<group>"; };
@@ -324,6 +344,7 @@
 		DA27ED391AA152AA00689F55 /* DeliGuide */ = {
 			isa = PBXGroup;
 			children = (
+				DAC9EEA21B01953800E3B730 /* Fonts */,
 				DA20ABA91AB12D0B0036CAE8 /* Objects */,
 				DA9E9A641AA242AA003FE759 /* View Controllers */,
 				DA27ED611AA155DD00689F55 /* Utilities */,
@@ -385,6 +406,7 @@
 		DA27ED611AA155DD00689F55 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DAC9EEB61B01A26800E3B730 /* Divider */,
 				DA9349121AFFE2100019B8BF /* SearchBar */,
 				DA06D3D91AFE7D3D00A66EEB /* Backgrounds */,
 				DAE41C221AFAF20100A3C1CD /* Location Textfield */,
@@ -486,6 +508,45 @@
 			name = Map;
 			sourceTree = "<group>";
 		};
+		DAC9EEA21B01953800E3B730 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DAC9EEA31B01954500E3B730 /* Avenir Next (TTF) */,
+				DAC9EEA71B01954500E3B730 /* Sabon (TTF) */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		DAC9EEA31B01954500E3B730 /* Avenir Next (TTF) */ = {
+			isa = PBXGroup;
+			children = (
+				DAC9EEA41B01954500E3B730 /* Avenir Next Demi Bold.ttf */,
+				DAC9EEA51B01954500E3B730 /* Avenir Next Medium.ttf */,
+				DAC9EEA61B01954500E3B730 /* Avenir Next Regular.ttf */,
+			);
+			path = "Avenir Next (TTF)";
+			sourceTree = "<group>";
+		};
+		DAC9EEA71B01954500E3B730 /* Sabon (TTF) */ = {
+			isa = PBXGroup;
+			children = (
+				DAC9EEA81B01954500E3B730 /* SabonBolIta.ttf */,
+				DAC9EEA91B01954500E3B730 /* SabonIta.ttf */,
+				DAC9EEAA1B01954500E3B730 /* SabonRom.ttf */,
+				DAC9EEAB1B01954500E3B730 /* SabonRomSC.ttf */,
+			);
+			path = "Sabon (TTF)";
+			sourceTree = "<group>";
+		};
+		DAC9EEB61B01A26800E3B730 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				DAC9EEB71B01A27500E3B730 /* BHDividerView.h */,
+				DAC9EEB81B01A27500E3B730 /* BHDividerView.m */,
+			);
+			name = Divider;
+			sourceTree = "<group>";
+		};
 		DAE41C0F1AFA39AA00A3C1CD /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +554,8 @@
 				DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */,
 				DA06D3E31AFE9A1F00A66EEB /* BHFacebookButton.h */,
 				DA06D3E41AFE9A1F00A66EEB /* BHFacebookButton.m */,
+				DAC9EEB31B019D9000E3B730 /* BHSecondaryButton.h */,
+				DAC9EEB41B019D9000E3B730 /* BHSecondaryButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -617,6 +680,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA27ED461AA152AA00689F55 /* Main.storyboard in Resources */,
+				DAC9EEB11B01954500E3B730 /* SabonRom.ttf in Resources */,
+				DAC9EEB01B01954500E3B730 /* SabonIta.ttf in Resources */,
+				DAC9EEAF1B01954500E3B730 /* SabonBolIta.ttf in Resources */,
+				DAC9EEAE1B01954500E3B730 /* Avenir Next Regular.ttf in Resources */,
+				DAC9EEAD1B01954500E3B730 /* Avenir Next Medium.ttf in Resources */,
+				DAC9EEAC1B01954500E3B730 /* Avenir Next Demi Bold.ttf in Resources */,
+				DAC9EEB21B01954500E3B730 /* SabonRomSC.ttf in Resources */,
 				DA27ED4B1AA152AA00689F55 /* LaunchScreen.xib in Resources */,
 				DA27ED481AA152AA00689F55 /* Images.xcassets in Resources */,
 			);
@@ -654,8 +724,10 @@
 				DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */,
 				DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */,
 				DA20ABAC1AB12D370036CAE8 /* BHDeliObject.m in Sources */,
+				DAC9EEB91B01A27500E3B730 /* BHDividerView.m in Sources */,
 				DA06D3EE1AFED0AE00A66EEB /* BHUserObject.m in Sources */,
 				DA20ABC41AB133DC0036CAE8 /* BHMenuItemObject.m in Sources */,
+				DAC9EEB51B019D9000E3B730 /* BHSecondaryButton.m in Sources */,
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */,
 				DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */,
