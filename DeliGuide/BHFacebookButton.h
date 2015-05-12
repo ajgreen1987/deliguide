@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BHPrimaryButton.h"
 
-@interface BHFacebookButton : UIButton
+@interface BHFacebookButton : BHPrimaryButton
 
 @end
