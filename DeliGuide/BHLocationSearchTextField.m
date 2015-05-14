@@ -42,7 +42,7 @@
     
     [self.layer setMasksToBounds:YES];
     [self.layer setCornerRadius:15.0f];
-    [self.layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+    [self.layer setBorderColor:[UIColor clearColor].CGColor];
     [self.layer setBorderWidth:1];
     [self.layer setBackgroundColor:[UIColor whiteColor].CGColor];
 }

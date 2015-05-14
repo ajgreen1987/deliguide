@@ -41,6 +41,11 @@
 		DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */; };
 		DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */; };
 		DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */; };
+		DA6197111B04329500DC7AE3 /* BHInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197101B04329500DC7AE3 /* BHInputTextField.m */; };
+		DA61971B1B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197141B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m */; };
+		DA61971C1B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197161B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m */; };
+		DA61971D1B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197181B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.m */; };
+		DA61971E1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61971A1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */; };
 		DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */; };
 		DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */; };
@@ -152,6 +157,16 @@
 		DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
 		DA436E8A1AB2675000CE19A4 /* BHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLoadingViewController.h; sourceTree = "<group>"; };
 		DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLoadingViewController.m; sourceTree = "<group>"; };
+		DA61970F1B04329500DC7AE3 /* BHInputTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHInputTextField.h; sourceTree = "<group>"; };
+		DA6197101B04329500DC7AE3 /* BHInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHInputTextField.m; sourceTree = "<group>"; };
+		DA6197131B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		DA6197141B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		DA6197151B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		DA6197161B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		DA6197171B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		DA6197181B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		DA6197191B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		DA61971A1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		DA6AC1C41AD36C00005337F7 /* BHSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSignInViewController.h; sourceTree = "<group>"; };
 		DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSignInViewController.m; sourceTree = "<group>"; };
 		DA6AC1C71AD36C7C005337F7 /* BHSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSignUpViewController.h; sourceTree = "<group>"; };
@@ -406,6 +421,8 @@
 		DA27ED611AA155DD00689F55 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DA6197121B043CB500DC7AE3 /* Keyboard Avoiding */,
+				DA61970E1B04326D00DC7AE3 /* Input */,
 				DAC9EEB61B01A26800E3B730 /* Divider */,
 				DA9349121AFFE2100019B8BF /* SearchBar */,
 				DA06D3D91AFE7D3D00A66EEB /* Backgrounds */,
@@ -447,6 +464,30 @@
 				DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */,
 			);
 			name = Loading;
+			sourceTree = "<group>";
+		};
+		DA61970E1B04326D00DC7AE3 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				DA61970F1B04329500DC7AE3 /* BHInputTextField.h */,
+				DA6197101B04329500DC7AE3 /* BHInputTextField.m */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
+		DA6197121B043CB500DC7AE3 /* Keyboard Avoiding */ = {
+			isa = PBXGroup;
+			children = (
+				DA6197131B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.h */,
+				DA6197141B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m */,
+				DA6197151B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.h */,
+				DA6197161B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m */,
+				DA6197171B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.h */,
+				DA6197181B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.m */,
+				DA6197191B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				DA61971A1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			name = "Keyboard Avoiding";
 			sourceTree = "<group>";
 		};
 		DA6AC1C31AD36BC0005337F7 /* Authentication */ = {
@@ -711,6 +752,7 @@
 				DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */,
 				DA27ED431AA152AA00689F55 /* ViewController.m in Sources */,
 				DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */,
+				DA61971C1B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				DAE41C201AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m in Sources */,
 				DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				DAE41C251AFAF21500A3C1CD /* BHLocationSearchTextField.m in Sources */,
@@ -725,6 +767,8 @@
 				DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */,
 				DA20ABAC1AB12D370036CAE8 /* BHDeliObject.m in Sources */,
 				DAC9EEB91B01A27500E3B730 /* BHDividerView.m in Sources */,
+				DA61971B1B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				DA61971D1B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.m in Sources */,
 				DA06D3EE1AFED0AE00A66EEB /* BHUserObject.m in Sources */,
 				DA20ABC41AB133DC0036CAE8 /* BHMenuItemObject.m in Sources */,
 				DAC9EEB51B019D9000E3B730 /* BHSecondaryButton.m in Sources */,
@@ -732,6 +776,7 @@
 				DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */,
 				DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */,
 				DA06D3E51AFE9A1F00A66EEB /* BHFacebookButton.m in Sources */,
+				DA61971E1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				DA06D3F21AFEEB0B00A66EEB /* BHNoFavoritesViewController.m in Sources */,
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
@@ -744,6 +789,7 @@
 				DAE41C161AFAEB3C00A3C1CD /* BHSplashViewController.m in Sources */,
 				DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */,
 				DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */,
+				DA6197111B04329500DC7AE3 /* BHInputTextField.m in Sources */,
 				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
 				DA06D3EB1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
