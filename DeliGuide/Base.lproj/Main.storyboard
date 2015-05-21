@@ -1102,6 +1102,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1000"/>
+                    <connections>
+                        <outlet property="dislike" destination="e0c-K5-YIB" id="fdC-sl-uaz"/>
+                        <outlet property="like" destination="lCP-fK-N3u" id="DZa-Jn-dMf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krM-B3-oEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1507,7 +1511,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Nst-7Z-Fe5"/>
-        <segue reference="adE-hN-4tC"/>
         <segue reference="ye3-6p-l8U"/>
+        <segue reference="OiD-HT-CHc"/>
     </inferredMetricsTieBreakers>
 </document>

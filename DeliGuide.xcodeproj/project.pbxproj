@@ -48,6 +48,12 @@
 		DA3F0AAD1B0DA89C00464800 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AAB1B0DA89C00464800 /* PopoverView.m */; };
 		DA3F0AB21B0DA95900464800 /* BHDetailsLikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AB01B0DA95900464800 /* BHDetailsLikeViewController.m */; };
 		DA3F0AB31B0DA95900464800 /* BHDetailsLikeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0AB11B0DA95900464800 /* BHDetailsLikeViewController.xib */; };
+		DA3F0AB91B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AB71B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.m */; };
+		DA3F0ABA1B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0AB81B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.xib */; };
+		DA3F0ABF1B0DAFA600464800 /* BHDislikeHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0ABD1B0DAFA600464800 /* BHDislikeHeaderViewController.m */; };
+		DA3F0AC01B0DAFA600464800 /* BHDislikeHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0ABE1B0DAFA600464800 /* BHDislikeHeaderViewController.xib */; };
+		DA3F0AC31B0DB0FF00464800 /* BHDislikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0AC21B0DB0FF00464800 /* BHDislikeCell.xib */; };
+		DA3F0AC61B0DB13B00464800 /* BHDislikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AC51B0DB13B00464800 /* BHDislikeTableViewCell.m */; };
 		DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */; };
 		DA6197111B04329500DC7AE3 /* BHInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197101B04329500DC7AE3 /* BHInputTextField.m */; };
 		DA61971B1B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197141B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m */; };
@@ -178,6 +184,15 @@
 		DA3F0AAF1B0DA95900464800 /* BHDetailsLikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDetailsLikeViewController.h; sourceTree = "<group>"; };
 		DA3F0AB01B0DA95900464800 /* BHDetailsLikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDetailsLikeViewController.m; sourceTree = "<group>"; };
 		DA3F0AB11B0DA95900464800 /* BHDetailsLikeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHDetailsLikeViewController.xib; sourceTree = "<group>"; };
+		DA3F0AB61B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSatisfactionDislikeTableViewController.h; sourceTree = "<group>"; };
+		DA3F0AB71B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSatisfactionDislikeTableViewController.m; sourceTree = "<group>"; };
+		DA3F0AB81B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHSatisfactionDislikeTableViewController.xib; sourceTree = "<group>"; };
+		DA3F0ABC1B0DAFA600464800 /* BHDislikeHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDislikeHeaderViewController.h; sourceTree = "<group>"; };
+		DA3F0ABD1B0DAFA600464800 /* BHDislikeHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDislikeHeaderViewController.m; sourceTree = "<group>"; };
+		DA3F0ABE1B0DAFA600464800 /* BHDislikeHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHDislikeHeaderViewController.xib; sourceTree = "<group>"; };
+		DA3F0AC21B0DB0FF00464800 /* BHDislikeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHDislikeCell.xib; sourceTree = "<group>"; };
+		DA3F0AC41B0DB13B00464800 /* BHDislikeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDislikeTableViewCell.h; sourceTree = "<group>"; };
+		DA3F0AC51B0DB13B00464800 /* BHDislikeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDislikeTableViewCell.m; sourceTree = "<group>"; };
 		DA436E8A1AB2675000CE19A4 /* BHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLoadingViewController.h; sourceTree = "<group>"; };
 		DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLoadingViewController.m; sourceTree = "<group>"; };
 		DA61970F1B04329500DC7AE3 /* BHInputTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHInputTextField.h; sourceTree = "<group>"; };
@@ -546,11 +561,52 @@
 		DA3F0AAE1B0DA94200464800 /* Satisfaction */ = {
 			isa = PBXGroup;
 			children = (
+				DA3F0AB51B0DAE9800464800 /* Dislike */,
+				DA3F0AB41B0DAE8300464800 /* Like */,
+			);
+			name = Satisfaction;
+			sourceTree = "<group>";
+		};
+		DA3F0AB41B0DAE8300464800 /* Like */ = {
+			isa = PBXGroup;
+			children = (
 				DA3F0AAF1B0DA95900464800 /* BHDetailsLikeViewController.h */,
 				DA3F0AB01B0DA95900464800 /* BHDetailsLikeViewController.m */,
 				DA3F0AB11B0DA95900464800 /* BHDetailsLikeViewController.xib */,
 			);
-			name = Satisfaction;
+			name = Like;
+			sourceTree = "<group>";
+		};
+		DA3F0AB51B0DAE9800464800 /* Dislike */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F0AC11B0DB0E900464800 /* Cells */,
+				DA3F0ABB1B0DAF8F00464800 /* Header */,
+				DA3F0AB61B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.h */,
+				DA3F0AB71B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.m */,
+				DA3F0AB81B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.xib */,
+			);
+			name = Dislike;
+			sourceTree = "<group>";
+		};
+		DA3F0ABB1B0DAF8F00464800 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F0ABC1B0DAFA600464800 /* BHDislikeHeaderViewController.h */,
+				DA3F0ABD1B0DAFA600464800 /* BHDislikeHeaderViewController.m */,
+				DA3F0ABE1B0DAFA600464800 /* BHDislikeHeaderViewController.xib */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		DA3F0AC11B0DB0E900464800 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F0AC21B0DB0FF00464800 /* BHDislikeCell.xib */,
+				DA3F0AC41B0DB13B00464800 /* BHDislikeTableViewCell.h */,
+				DA3F0AC51B0DB13B00464800 /* BHDislikeTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		DA436E891AB2673600CE19A4 /* Loading */ = {
@@ -827,6 +883,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3F0AB31B0DA95900464800 /* BHDetailsLikeViewController.xib in Resources */,
+				DA3F0AC31B0DB0FF00464800 /* BHDislikeCell.xib in Resources */,
+				DA3F0AC01B0DAFA600464800 /* BHDislikeHeaderViewController.xib in Resources */,
 				DA27ED461AA152AA00689F55 /* Main.storyboard in Resources */,
 				DAC9EEB11B01954500E3B730 /* SabonRom.ttf in Resources */,
 				DAC9EEB01B01954500E3B730 /* SabonIta.ttf in Resources */,
@@ -839,6 +897,7 @@
 				DAC9EEB21B01954500E3B730 /* SabonRomSC.ttf in Resources */,
 				DA27ED4B1AA152AA00689F55 /* LaunchScreen.xib in Resources */,
 				DA27ED481AA152AA00689F55 /* Images.xcassets in Resources */,
+				DA3F0ABA1B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +918,7 @@
 				DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */,
 				DAA084211AABA41D00ABBA68 /* BHLocationManager.m in Sources */,
 				DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */,
+				DA3F0AC61B0DB13B00464800 /* BHDislikeTableViewCell.m in Sources */,
 				DA27ED431AA152AA00689F55 /* ViewController.m in Sources */,
 				DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */,
 				DA61971C1B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m in Sources */,
@@ -886,6 +946,7 @@
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */,
 				DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */,
+				DA3F0ABF1B0DAFA600464800 /* BHDislikeHeaderViewController.m in Sources */,
 				DA06D3E51AFE9A1F00A66EEB /* BHFacebookButton.m in Sources */,
 				DA61971E1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				DA3F0AB21B0DA95900464800 /* BHDetailsLikeViewController.m in Sources */,
@@ -895,6 +956,7 @@
 				DA9349151AFFE2390019B8BF /* BHCustomSearchBar.m in Sources */,
 				DA3F0AAD1B0DA89C00464800 /* PopoverView.m in Sources */,
 				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,
+				DA3F0AB91B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.m in Sources */,
 				DA3F0A821B0D784800464800 /* BHDeliDetailDynamicHeaderButton.m in Sources */,
 				DA06D3DF1AFE802000A66EEB /* BHSearchFieldBackgroundView.m in Sources */,
 				DA3F0A971B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.m in Sources */,

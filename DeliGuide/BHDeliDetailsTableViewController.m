@@ -14,6 +14,7 @@
 #import "BHDeliDetailsTravelTableViewController.h"
 #import "PopoverView.h"
 #import "BHDetailsLikeViewController.h"
+#import "BHSatisfactionDislikeTableViewController.h"
 
 @interface BHDeliDetailsTableViewController ()
 
@@ -110,16 +111,37 @@
 - (IBAction)handleLikeTouchUpInside:(id)sender
 {
     UIButton *like = (UIButton*)sender;
-    
-    BHDetailsLikeViewController *likeController = [[BHDetailsLikeViewController alloc] initWithNibName:@"BHDetailsLikeViewController"
-                                                                                      bundle:nil];
-    [PopoverView showPopoverAtPoint:like.center
-                             inView:like.superview
-                    withContentView:likeController.view
-                           delegate:nil];
+    if (![like isSelected])
+    {
+        [like setSelected:!like.isSelected];
+        [self.dislike setEnabled:YES];
+        [self.dislike setSelected:NO];
+        
+        BHDetailsLikeViewController *likeController = [[BHDetailsLikeViewController alloc] initWithNibName:@"BHDetailsLikeViewController"
+                                                                                                    bundle:nil];
+        [PopoverView showPopoverAtPoint:like.center
+                                 inView:like.superview
+                        withContentView:likeController.view
+                               delegate:nil];
+    }
 }
 
-- (IBAction)handleDislikeTouchUpInside:(id)sender {
+- (IBAction)handleDislikeTouchUpInside:(id)sender
+{
+    UIButton *dislike = (UIButton*)sender;
+    
+    if (![dislike isSelected])
+    {
+        [dislike setSelected:!dislike.isSelected];
+        [self.like setEnabled:YES];
+        [self.like setSelected:NO];
+        
+
+        BHSatisfactionDislikeTableViewController *dislike = [[BHSatisfactionDislikeTableViewController alloc] initWithNibName:@"BHSatisfactionDislikeTableViewController"
+                                                                                                                       bundle:nil];
+        
+        [self presentSemiViewController:dislike];
+    }
 }
 
 - (IBAction)handleAddToFavoritesTouchUpInside:(id)sender

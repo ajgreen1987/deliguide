@@ -10,6 +10,21 @@
 
 @implementation BHPrimaryButton
 
+- (id) initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    if (self)
+    {
+        [[self titleLabel] setFont:AppFontSabonRomanSC(18)];
+        [[self titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
+        [[self titleLabel] setNumberOfLines:0];
+        [[self titleLabel] setTextAlignment:NSTextAlignmentCenter];
+    }
+    
+    return self;
+}
+
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];

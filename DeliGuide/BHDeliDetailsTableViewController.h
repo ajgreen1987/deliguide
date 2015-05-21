@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface BHDeliDetailsTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIButton *like;
+@property (weak, nonatomic) IBOutlet UIButton *dislike;
 
 - (IBAction)handleCallLocationTouchUpInside:(id)sender;
 - (IBAction)handleDirectionsTouchUpInside:(id)sender;
