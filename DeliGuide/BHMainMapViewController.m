@@ -75,10 +75,9 @@
 
 - (void) enableMapFeatures:(BOOL)shouldBeEnabled
 {
-    
     [[self mapView] setScrollEnabled:shouldBeEnabled];
     [[self mapView] setZoomEnabled:shouldBeEnabled];
-    [[self mapView] setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
+    //[[self mapView] setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
     [self zoomToUserLocation:self.mapView.userLocation.location];
 }
 
@@ -218,6 +217,29 @@
 
         [self.mapView addAnnotation:annotation];
     }
+    
+    [self zoomMapViewToFitAnnotationsWithExtraZoomToAdjust:0];
+}
+
+- (void)zoomMapViewToFitAnnotationsWithExtraZoomToAdjust:(double)extraZoom
+{
+    if ([self.mapView.annotations count] == 0) return;
+    
+    int i = 0;
+    MKMapPoint points[[self.mapView.annotations count]];
+    
+    for (id<MKAnnotation> annotation in self.mapView.annotations)
+    {
+        points[i++] = MKMapPointForCoordinate(annotation.coordinate);
+    }
+    
+    MKPolygon *poly = [MKPolygon polygonWithPoints:points count:i];
+    
+    MKCoordinateRegion r = MKCoordinateRegionForMapRect([poly boundingMapRect]);
+    r.span.latitudeDelta += extraZoom;
+    r.span.longitudeDelta += extraZoom;
+    
+    [self.mapView setRegion: r animated:YES];
 }
 
 #pragma mark - Alert Views

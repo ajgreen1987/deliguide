@@ -15,6 +15,7 @@
 #import "PopoverView.h"
 #import "BHDetailsLikeViewController.h"
 #import "BHSatisfactionDislikeTableViewController.h"
+#import "BHDeliAnnotation.h"
 
 @interface BHDeliDetailsTableViewController ()
 
@@ -25,11 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setupMap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +52,59 @@
     
     [self.navigationController.navigationBar setBackgroundImage:nil
                                                   forBarMetrics:UIBarMetricsDefault];
+}
+
+#pragma mark - map
+
+- (void) setupMap
+{
+    [self.mapview setDelegate:self];
+    BHDeliObject *deli = (BHDeliObject*)[[[BHApplicationManager appManager] delis] objectAtIndex:0];
+
+    BHDeliAnnotation *annotation = [[BHDeliAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(deli.latitude, deli.longitude)];
+    [self.mapview addAnnotation:annotation];
+    
+    [self zoomMapViewToFitAnnotationsWithExtraZoomToAdjust:0];
+}
+
+#pragma mark - Map Delegate
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+    return nil;
+    static NSString* AnnotationIdentifier = @"AnnotationIdentifier";
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
+    if(annotationView)
+    return annotationView;
+    else
+    {
+        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                                        reuseIdentifier:AnnotationIdentifier];
+        annotationView.image = [UIImage imageNamed:@"pin-selected.png"];
+        return annotationView;
+    }
+    return nil;
+}
+
+- (void)zoomMapViewToFitAnnotationsWithExtraZoomToAdjust:(double)extraZoom
+{
+    if ([self.mapview.annotations count] == 0) return;
+    
+    int i = 0;
+    MKMapPoint points[[self.mapview.annotations count]];
+    
+    for (id<MKAnnotation> annotation in self.mapview.annotations)
+    {
+        points[i++] = MKMapPointForCoordinate(annotation.coordinate);
+    }
+    
+    MKPolygon *poly = [MKPolygon polygonWithPoints:points count:i];
+    
+    MKCoordinateRegion r = MKCoordinateRegionForMapRect([poly boundingMapRect]);
+    r.span.latitudeDelta += extraZoom;
+    r.span.longitudeDelta += extraZoom;
+    
+    [self.mapview setRegion: r animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -113,6 +163,7 @@
     UIButton *like = (UIButton*)sender;
     if (![like isSelected])
     {
+        [self.percentage setText:@"81 %"];
         [like setSelected:!like.isSelected];
         [self.dislike setEnabled:YES];
         [self.dislike setSelected:NO];
@@ -132,6 +183,8 @@
     
     if (![dislike isSelected])
     {
+        [self.percentage setText:@"62 %"];        
+        
         [dislike setSelected:!dislike.isSelected];
         [self.like setEnabled:YES];
         [self.like setSelected:NO];

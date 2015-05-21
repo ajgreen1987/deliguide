@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface BHDeliDetailsTableViewController : UITableViewController
+@interface BHDeliDetailsTableViewController : UITableViewController <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *like;
 @property (weak, nonatomic) IBOutlet UIButton *dislike;
+@property (weak, nonatomic) IBOutlet MKMapView *mapview;
+@property (weak, nonatomic) IBOutlet UILabel *percentage;
 
 - (IBAction)handleCallLocationTouchUpInside:(id)sender;
 - (IBAction)handleDirectionsTouchUpInside:(id)sender;
