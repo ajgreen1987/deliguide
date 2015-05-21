@@ -36,6 +36,9 @@
 {
     NSMutableArray *toReturn = [[NSMutableArray alloc] initWithObjects:nil];
     
+    // Seed (only once)
+    srand48(arc4random());
+    
     for (int i=0; i<25; i++)
     {
         BHDeliObject *newMockDeli = [[BHDeliObject alloc] init];
@@ -62,8 +65,14 @@
         [newMockDeli setSatisfactionPercentage:94.2];
         [newMockDeli setDeliHours:@"Open 9 am - 5 pm"];
         [newMockDeli setIsFeatured:(i%2==0) ? YES : NO];
-        [newMockDeli setLatitude:40.7127];
-        [newMockDeli setLongitude:74.0059];
+        
+        double baseLat = 35.225633;
+        double baseLong = -80.848663;
+        double randomMinus = drand48()/10;
+        double randomMinusLong = drand48()/10;
+        
+        [newMockDeli setLatitude:baseLat - randomMinus];
+        [newMockDeli setLongitude:baseLong - randomMinusLong];
         [newMockDeli setDeliMoreInformation:nil]; // Need to mock out more info
         [newMockDeli setDeliTravelTimes:nil]; // Need to mock out travel times
         

@@ -10,6 +10,7 @@
 #import "BHApplicationManager.h"
 #import "BHDeliTableViewCell.h"
 #import "BHDeliObject.h"
+#import "BHDeliAnnotation.h"
 
 #define CELL_HEIGHT 136.0f
 
@@ -29,6 +30,7 @@
     [super viewDidLoad];
     
     self.screenName = @"MAP";
+    self.title = @"Deli's Near Me";
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -68,6 +70,7 @@
     [self enableMapFeatures:self.isMapFullScreen];
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
     [[BHLocationManager locationManager] requestLocationServicesAuthorization];
+    [self enableMapFeatures:YES];
 }
 
 - (void) enableMapFeatures:(BOOL)shouldBeEnabled
@@ -75,6 +78,8 @@
     
     [[self mapView] setScrollEnabled:shouldBeEnabled];
     [[self mapView] setZoomEnabled:shouldBeEnabled];
+    [[self mapView] setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
+    [self zoomToUserLocation:self.mapView.userLocation.location];
 }
 
 - (void) setupTableView
@@ -146,7 +151,7 @@
                                                              self.tableView.frame.size.height)];
                      }];
     self.isMapFullScreen = !self.isMapFullScreen;
-    [self enableMapFeatures:self.isMapFullScreen];
+    [self.mapView setScrollEnabled:self.isMapFullScreen];
 }
 
 #pragma mark - UITableViewDataSource
@@ -201,15 +206,18 @@
 
 - (void) didUpdateUserLocationFromLocation:(CLLocation *)anOldLocation toLocation:(CLLocation *)aNewLocation
 {
-    [self zoomToUserLocation:aNewLocation];
+    [self zoomToUserLocation:self.mapView.userLocation.location];
 }
 
 - (void) zoomToUserLocation:(CLLocation*)aLocation
 {
-    /*
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(aLocation.coordinate, 800, 800);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
-     */
+    for (BHDeliObject *deli in [[BHApplicationManager appManager] delis])
+    {
+        BHDeliAnnotation *annotation = [[BHDeliAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(deli.latitude, deli.longitude)];
+
+
+        [self.mapView addAnnotation:annotation];
+    }
 }
 
 #pragma mark - Alert Views
@@ -236,6 +244,25 @@
 
 - (IBAction)handleUpdateLocationTouchUpInside:(id)sender
 {
+}
+
+#pragma mark - Map Delegate
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    static NSString* AnnotationIdentifier = @"AnnotationIdentifier";
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
+    if(annotationView)
+        return annotationView;
+    else
+    {
+        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                                         reuseIdentifier:AnnotationIdentifier];
+        annotationView.image = [UIImage imageNamed:@"pin.png"];
+        return annotationView;
+    }
+    return nil;
 }
 
 @end

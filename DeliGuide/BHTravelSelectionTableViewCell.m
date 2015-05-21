@@ -1,14 +1,14 @@
 //
-//  BHDeliDetailTableViewCell.m
+//  BHTravelSelectionTableViewCell.m
 //  DeliGuide
 //
-//  Created by AJ Green on 3/15/15.
+//  Created by AJ Green on 5/21/15.
 //  Copyright (c) 2015 Mode. All rights reserved.
 //
 
-#import "BHDeliDetailTableViewCell.h"
+#import "BHTravelSelectionTableViewCell.h"
 
-@implementation BHDeliDetailTableViewCell
+@implementation BHTravelSelectionTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -18,16 +18,6 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-}
-
-- (IBAction) handlePhoneTouchUpInside:(id)sender
-{
-    
-}
-
-- (IBAction) handleGetDirectionsTouchUpInside:(id)sender
-{
-    
 }
 
 @end

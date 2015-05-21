@@ -16,8 +16,6 @@
 		DA06D3F21AFEEB0B00A66EEB /* BHNoFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA06D3F11AFEEB0B00A66EEB /* BHNoFavoritesViewController.m */; };
 		DA0C9D6F1AB4B52F00FEDC35 /* BHDeliTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */; };
 		DA0C9D761AB6328000FEDC35 /* BHDeliDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */; };
-		DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */; };
-		DA0C9D7D1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C9D7C1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m */; };
 		DA20ABA81AB124BD0036CAE8 /* BHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABA71AB124BD0036CAE8 /* BHTableView.m */; };
 		DA20ABAC1AB12D370036CAE8 /* BHDeliObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA20ABAB1AB12D370036CAE8 /* BHDeliObject.m */; };
 		DA20ABAF1AB12E530036CAE8 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20ABAE1AB12E530036CAE8 /* libGoogleAnalyticsServices.a */; };
@@ -40,12 +38,20 @@
 		DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED821AA15E4500689F55 /* ECSlidingInteractiveTransition.m */; };
 		DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED851AA15E4500689F55 /* ECSlidingAnimationController.m */; };
 		DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */; };
+		DA3F0A821B0D784800464800 /* BHDeliDetailDynamicHeaderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0A811B0D784800464800 /* BHDeliDetailDynamicHeaderButton.m */; };
+		DA3F0A891B0D992600464800 /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0A881B0D992600464800 /* UIViewController+KNSemiModal.m */; };
+		DA3F0A971B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0A951B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.m */; };
+		DA3F0A981B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0A961B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.xib */; };
+		DA3F0A9A1B0D9B3600464800 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3F0A991B0D9B3600464800 /* QuartzCore.framework */; };
+		DA3F0A9F1B0D9ED500464800 /* BHTravelSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0A9E1B0D9ED500464800 /* BHTravelSelectionCell.xib */; };
+		DA3F0AA21B0D9F4D00464800 /* BHTravelSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AA11B0D9F4D00464800 /* BHTravelSelectionTableViewCell.m */; };
 		DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */; };
 		DA6197111B04329500DC7AE3 /* BHInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197101B04329500DC7AE3 /* BHInputTextField.m */; };
 		DA61971B1B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197141B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m */; };
 		DA61971C1B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197161B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m */; };
 		DA61971D1B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197181B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.m */; };
 		DA61971E1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61971A1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		DA6197231B04521600DC7AE3 /* BHDeliAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197221B04521600DC7AE3 /* BHDeliAnnotation.m */; };
 		DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */; };
 		DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1C81AD36C7C005337F7 /* BHSignUpViewController.m */; };
 		DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6DE1D21AB280D700D2FB34 /* BHApplicationManager.m */; };
@@ -102,10 +108,6 @@
 		DA0C9D6E1AB4B52F00FEDC35 /* BHDeliTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliTableViewCell.m; sourceTree = "<group>"; };
 		DA0C9D741AB6328000FEDC35 /* BHDeliDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailsTableViewController.h; sourceTree = "<group>"; };
 		DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliDetailsTableViewController.m; sourceTree = "<group>"; };
-		DA0C9D781AB636CA00FEDC35 /* BHDeliDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailTableViewCell.h; sourceTree = "<group>"; };
-		DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliDetailTableViewCell.m; sourceTree = "<group>"; };
-		DA0C9D7B1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliSatisfactionTableViewCell.h; sourceTree = "<group>"; };
-		DA0C9D7C1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliSatisfactionTableViewCell.m; sourceTree = "<group>"; };
 		DA20ABA61AB124BD0036CAE8 /* BHTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTableView.h; sourceTree = "<group>"; };
 		DA20ABA71AB124BD0036CAE8 /* BHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTableView.m; sourceTree = "<group>"; };
 		DA20ABAA1AB12D370036CAE8 /* BHDeliObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliObject.h; sourceTree = "<group>"; };
@@ -155,6 +157,17 @@
 		DA27ED861AA15E4500689F55 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
 		DA27ED871AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
 		DA27ED881AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		DA3F0A801B0D784800464800 /* BHDeliDetailDynamicHeaderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailDynamicHeaderButton.h; sourceTree = "<group>"; };
+		DA3F0A811B0D784800464800 /* BHDeliDetailDynamicHeaderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliDetailDynamicHeaderButton.m; sourceTree = "<group>"; };
+		DA3F0A871B0D992600464800 /* UIViewController+KNSemiModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNSemiModal.h"; sourceTree = "<group>"; };
+		DA3F0A881B0D992600464800 /* UIViewController+KNSemiModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNSemiModal.m"; sourceTree = "<group>"; };
+		DA3F0A941B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliDetailsTravelTableViewController.h; sourceTree = "<group>"; };
+		DA3F0A951B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliDetailsTravelTableViewController.m; sourceTree = "<group>"; };
+		DA3F0A961B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHDeliDetailsTravelTableViewController.xib; sourceTree = "<group>"; };
+		DA3F0A991B0D9B3600464800 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DA3F0A9E1B0D9ED500464800 /* BHTravelSelectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHTravelSelectionCell.xib; sourceTree = "<group>"; };
+		DA3F0AA01B0D9F4D00464800 /* BHTravelSelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTravelSelectionTableViewCell.h; sourceTree = "<group>"; };
+		DA3F0AA11B0D9F4D00464800 /* BHTravelSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTravelSelectionTableViewCell.m; sourceTree = "<group>"; };
 		DA436E8A1AB2675000CE19A4 /* BHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLoadingViewController.h; sourceTree = "<group>"; };
 		DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLoadingViewController.m; sourceTree = "<group>"; };
 		DA61970F1B04329500DC7AE3 /* BHInputTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHInputTextField.h; sourceTree = "<group>"; };
@@ -167,6 +180,8 @@
 		DA6197181B043CD600DC7AE3 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		DA6197191B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		DA61971A1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		DA6197211B04521600DC7AE3 /* BHDeliAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDeliAnnotation.h; sourceTree = "<group>"; };
+		DA6197221B04521600DC7AE3 /* BHDeliAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDeliAnnotation.m; sourceTree = "<group>"; };
 		DA6AC1C41AD36C00005337F7 /* BHSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSignInViewController.h; sourceTree = "<group>"; };
 		DA6AC1C51AD36C00005337F7 /* BHSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSignInViewController.m; sourceTree = "<group>"; };
 		DA6AC1C71AD36C7C005337F7 /* BHSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSignUpViewController.h; sourceTree = "<group>"; };
@@ -218,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3F0A9A1B0D9B3600464800 /* QuartzCore.framework in Frameworks */,
 				DA20ABC11AB12EC70036CAE8 /* libsqlite3.dylib in Frameworks */,
 				DA20ABBF1AB12EBC0036CAE8 /* libz.dylib in Frameworks */,
 				DA20ABBD1AB12EB00036CAE8 /* SystemConfiguration.framework in Frameworks */,
@@ -272,22 +288,13 @@
 		DA0C9D701AB6265F00FEDC35 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				DA0C9D771AB6369300FEDC35 /* Table View Cells */,
+				DA3F0A851B0D8F0300464800 /* Travel */,
+				DA3F0A841B0D8EEA00464800 /* Menu */,
+				DA3F0A831B0D8E9400464800 /* Hours */,
 				DA0C9D741AB6328000FEDC35 /* BHDeliDetailsTableViewController.h */,
 				DA0C9D751AB6328000FEDC35 /* BHDeliDetailsTableViewController.m */,
 			);
 			name = Details;
-			sourceTree = "<group>";
-		};
-		DA0C9D771AB6369300FEDC35 /* Table View Cells */ = {
-			isa = PBXGroup;
-			children = (
-				DA0C9D781AB636CA00FEDC35 /* BHDeliDetailTableViewCell.h */,
-				DA0C9D791AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m */,
-				DA0C9D7B1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.h */,
-				DA0C9D7C1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m */,
-			);
-			name = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		DA20ABA51AB124A60036CAE8 /* Overlay Tableview */ = {
@@ -335,6 +342,7 @@
 		DA27ED2E1AA152AA00689F55 = {
 			isa = PBXGroup;
 			children = (
+				DA3F0A991B0D9B3600464800 /* QuartzCore.framework */,
 				DA20ABC01AB12EC70036CAE8 /* libsqlite3.dylib */,
 				DA20ABBE1AB12EBC0036CAE8 /* libz.dylib */,
 				DA20ABBC1AB12EB00036CAE8 /* SystemConfiguration.framework */,
@@ -421,6 +429,8 @@
 		DA27ED611AA155DD00689F55 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DA3F0A861B0D991100464800 /* SemiModal */,
+				DA3F0A7F1B0D782A00464800 /* Details Button */,
 				DA6197121B043CB500DC7AE3 /* Keyboard Avoiding */,
 				DA61970E1B04326D00DC7AE3 /* Input */,
 				DAC9EEB61B01A26800E3B730 /* Divider */,
@@ -457,6 +467,59 @@
 			name = "Sliding Menu";
 			sourceTree = "<group>";
 		};
+		DA3F0A7F1B0D782A00464800 /* Details Button */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F0A801B0D784800464800 /* BHDeliDetailDynamicHeaderButton.h */,
+				DA3F0A811B0D784800464800 /* BHDeliDetailDynamicHeaderButton.m */,
+			);
+			name = "Details Button";
+			sourceTree = "<group>";
+		};
+		DA3F0A831B0D8E9400464800 /* Hours */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Hours;
+			sourceTree = "<group>";
+		};
+		DA3F0A841B0D8EEA00464800 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		DA3F0A851B0D8F0300464800 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F0A9D1B0D9EBE00464800 /* Cells */,
+				DA3F0A941B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.h */,
+				DA3F0A951B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.m */,
+				DA3F0A961B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.xib */,
+			);
+			name = Travel;
+			sourceTree = "<group>";
+		};
+		DA3F0A861B0D991100464800 /* SemiModal */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F0A871B0D992600464800 /* UIViewController+KNSemiModal.h */,
+				DA3F0A881B0D992600464800 /* UIViewController+KNSemiModal.m */,
+			);
+			name = SemiModal;
+			sourceTree = "<group>";
+		};
+		DA3F0A9D1B0D9EBE00464800 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F0A9E1B0D9ED500464800 /* BHTravelSelectionCell.xib */,
+				DA3F0AA01B0D9F4D00464800 /* BHTravelSelectionTableViewCell.h */,
+				DA3F0AA11B0D9F4D00464800 /* BHTravelSelectionTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		DA436E891AB2673600CE19A4 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +551,15 @@
 				DA61971A1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			name = "Keyboard Avoiding";
+			sourceTree = "<group>";
+		};
+		DA6197201B0451EB00DC7AE3 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				DA6197211B04521600DC7AE3 /* BHDeliAnnotation.h */,
+				DA6197221B04521600DC7AE3 /* BHDeliAnnotation.m */,
+			);
+			name = Annotation;
 			sourceTree = "<group>";
 		};
 		DA6AC1C31AD36BC0005337F7 /* Authentication */ = {
@@ -542,6 +614,7 @@
 		DAA084131AAB995D00ABBA68 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				DA6197201B0451EB00DC7AE3 /* Annotation */,
 				DA0C9D6C1AB4B51500FEDC35 /* Table View Cell */,
 				DAA084141AAB99B700ABBA68 /* BHMainMapViewController.h */,
 				DAA084151AAB99B700ABBA68 /* BHMainMapViewController.m */,
@@ -723,10 +796,12 @@
 				DA27ED461AA152AA00689F55 /* Main.storyboard in Resources */,
 				DAC9EEB11B01954500E3B730 /* SabonRom.ttf in Resources */,
 				DAC9EEB01B01954500E3B730 /* SabonIta.ttf in Resources */,
+				DA3F0A981B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.xib in Resources */,
 				DAC9EEAF1B01954500E3B730 /* SabonBolIta.ttf in Resources */,
 				DAC9EEAE1B01954500E3B730 /* Avenir Next Regular.ttf in Resources */,
 				DAC9EEAD1B01954500E3B730 /* Avenir Next Medium.ttf in Resources */,
 				DAC9EEAC1B01954500E3B730 /* Avenir Next Demi Bold.ttf in Resources */,
+				DA3F0A9F1B0D9ED500464800 /* BHTravelSelectionCell.xib in Resources */,
 				DAC9EEB21B01954500E3B730 /* SabonRomSC.ttf in Resources */,
 				DA27ED4B1AA152AA00689F55 /* LaunchScreen.xib in Resources */,
 				DA27ED481AA152AA00689F55 /* Images.xcassets in Resources */,
@@ -754,6 +829,7 @@
 				DA27ED8A1AA15E4500689F55 /* ECSlidingViewController.m in Sources */,
 				DA61971C1B043CD600DC7AE3 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				DAE41C201AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m in Sources */,
+				DA3F0AA21B0D9F4D00464800 /* BHTravelSelectionTableViewCell.m in Sources */,
 				DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				DAE41C251AFAF21500A3C1CD /* BHLocationSearchTextField.m in Sources */,
 				DA27ED8B1AA15E4500689F55 /* ECSlidingSegue.m in Sources */,
@@ -761,6 +837,7 @@
 				DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */,
 				DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */,
 				DA27ED401AA152AA00689F55 /* AppDelegate.m in Sources */,
+				DA3F0A891B0D992600464800 /* UIViewController+KNSemiModal.m in Sources */,
 				DA27ED891AA15E4500689F55 /* UIViewController+ECSlidingViewController.m in Sources */,
 				DA9349181B001A480019B8BF /* BHMockDataManager.m in Sources */,
 				DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */,
@@ -782,13 +859,14 @@
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
 				DA9349151AFFE2390019B8BF /* BHCustomSearchBar.m in Sources */,
 				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,
+				DA3F0A821B0D784800464800 /* BHDeliDetailDynamicHeaderButton.m in Sources */,
 				DA06D3DF1AFE802000A66EEB /* BHSearchFieldBackgroundView.m in Sources */,
-				DA0C9D7D1AB636F600FEDC35 /* BHDeliSatisfactionTableViewCell.m in Sources */,
+				DA3F0A971B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.m in Sources */,
 				DAE41C211AFAEFE000A3C1CD /* UIView+MBIBnspectable.m in Sources */,
 				DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */,
 				DAE41C161AFAEB3C00A3C1CD /* BHSplashViewController.m in Sources */,
+				DA6197231B04521600DC7AE3 /* BHDeliAnnotation.m in Sources */,
 				DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */,
-				DA0C9D7A1AB636CA00FEDC35 /* BHDeliDetailTableViewCell.m in Sources */,
 				DA6197111B04329500DC7AE3 /* BHInputTextField.m in Sources */,
 				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
 				DA06D3EB1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m in Sources */,

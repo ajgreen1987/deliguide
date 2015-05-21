@@ -10,6 +10,8 @@
 #import "BHApplicationManager.h"
 #import "BHLocationManager.h"
 #import <CoreLocation/CoreLocation.h>
+#import "UIViewController+KNSemiModal.h"
+#import "BHDeliDetailsTravelTableViewController.h"
 
 @interface BHDeliDetailsTableViewController ()
 
@@ -32,6 +34,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:nil
+                                                  forBarMetrics:UIBarMetricsDefault];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -42,7 +64,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 7;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,15 +81,42 @@
 
 - (IBAction)handleDirectionsTouchUpInside:(id)sender
 {
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:29.33891 longitude:48.077202];
-    CLLocation *anotherLocation = [[CLLocation alloc] initWithLatitude:37.33120 longitude:48.077202];
-    
-    /*[BHLocationManager getDirectionsFromLocation:location
-                                      toLocation:anotherLocation];*/
 }
 
 - (IBAction)handleOrderTouchUpInside:(id)sender
 {
     // Display Order screen
+    UIViewController *toPush = [[UIViewController alloc] init];
+    
+    [[self navigationController] pushViewController:toPush
+                                           animated:YES];
+}
+
+- (IBAction)handleTravelTimeTouchUpInside:(id)sender
+{
+    BHDeliDetailsTravelTableViewController *travel = [[BHDeliDetailsTravelTableViewController alloc] initWithNibName:@"BHDeliDetailsTravelTableViewController" bundle:nil];
+    
+    [self presentSemiViewController:travel];
+}
+
+- (IBAction)handleHoursTouchUpInside:(id)sender {
+}
+
+- (IBAction)handleViewMenuTouchUpInside:(id)sender {
+}
+
+- (IBAction)handleLikeTouchUpInside:(id)sender {
+}
+
+- (IBAction)handleDislikeTouchUpInside:(id)sender {
+}
+
+- (IBAction)handleAddToFavoritesTouchUpInside:(id)sender {
+}
+
+- (IBAction)handleDeliWebsiteTouchUpInside:(id)sender {
+}
+
+- (IBAction)handleFacebookTouchUpInside:(id)sender {
 }
 @end
