@@ -12,6 +12,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "UIViewController+KNSemiModal.h"
 #import "BHDeliDetailsTravelTableViewController.h"
+#import "PopoverView.h"
+#import "BHDetailsLikeViewController.h"
 
 @interface BHDeliDetailsTableViewController ()
 
@@ -105,13 +107,27 @@
 - (IBAction)handleViewMenuTouchUpInside:(id)sender {
 }
 
-- (IBAction)handleLikeTouchUpInside:(id)sender {
+- (IBAction)handleLikeTouchUpInside:(id)sender
+{
+    UIButton *like = (UIButton*)sender;
+    
+    BHDetailsLikeViewController *likeController = [[BHDetailsLikeViewController alloc] initWithNibName:@"BHDetailsLikeViewController"
+                                                                                      bundle:nil];
+    [PopoverView showPopoverAtPoint:like.center
+                             inView:like.superview
+                    withContentView:likeController.view
+                           delegate:nil];
 }
 
 - (IBAction)handleDislikeTouchUpInside:(id)sender {
 }
 
-- (IBAction)handleAddToFavoritesTouchUpInside:(id)sender {
+- (IBAction)handleAddToFavoritesTouchUpInside:(id)sender
+{
+    UIButton *favorite = (UIButton*)sender;
+    
+    [favorite setSelected:!favorite.isSelected];
+    [favorite setBackgroundColor:favorite.isSelected?GOLD_1:[UIColor clearColor]];
 }
 
 - (IBAction)handleDeliWebsiteTouchUpInside:(id)sender {

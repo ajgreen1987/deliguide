@@ -952,13 +952,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VYg-Wc-oyx">
-                                                    <rect key="frame" x="14" y="19" width="292" height="47"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VYg-Wc-oyx">
+                                                    <rect key="frame" x="8" y="14" width="304" height="57"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Sabon-RomanSC" family="Sabon" pointSize="18"/>
-                                                    <state key="normal" title="Add to your favorites">
+                                                    <fontDescription key="fontDescription" name="Sabon-RomanSC" family="Sabon" pointSize="22"/>
+                                                    <state key="normal" title="Add to your favorites" image="favorite-add">
                                                         <color key="titleColor" red="0.87450980389999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="favorite">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -1483,6 +1486,7 @@
         <image name="dislike-off" width="50" height="49"/>
         <image name="dislike-on" width="50" height="49"/>
         <image name="favorite" width="11" height="10"/>
+        <image name="favorite-add" width="10" height="10"/>
         <image name="favorites-empty" width="44" height="38"/>
         <image name="home-default-content" width="275" height="118"/>
         <image name="info" width="21" height="22"/>
