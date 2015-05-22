@@ -63,7 +63,7 @@
         [newMockDeli setDeliMenu:nil]; // Need to mock out Menu Objects
         [newMockDeli setPhoneNumber:@"(123)-123-1234"];
         [newMockDeli setSatisfactionPercentage:94.2];
-        [newMockDeli setDeliHours:@"Open 9 am - 5 pm"];
+        [newMockDeli setDeliHours:@"Open 10a-7p"];
         [newMockDeli setIsFeatured:(i%2==0) ? YES : NO];
         
         double baseLat = 35.225633;

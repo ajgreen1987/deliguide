@@ -31,6 +31,8 @@
     
     self.screenName = @"MAP";
     self.title = @"Deli's Near Me";
+    
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -70,15 +72,13 @@
     [self enableMapFeatures:self.isMapFullScreen];
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
     [[BHLocationManager locationManager] requestLocationServicesAuthorization];
-    [self enableMapFeatures:YES];
+    [self enableMapFeatures:NO];
 }
 
 - (void) enableMapFeatures:(BOOL)shouldBeEnabled
 {
     [[self mapView] setScrollEnabled:shouldBeEnabled];
     [[self mapView] setZoomEnabled:shouldBeEnabled];
-    //[[self mapView] setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
-    [self zoomToUserLocation:self.mapView.userLocation.location];
 }
 
 - (void) setupTableView
@@ -150,7 +150,7 @@
                                                              self.tableView.frame.size.height)];
                      }];
     self.isMapFullScreen = !self.isMapFullScreen;
-    [self.mapView setScrollEnabled:self.isMapFullScreen];
+    [self enableMapFeatures:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -168,8 +168,7 @@
     
     cell.deliName.text = deli.deliName;
     cell.address.text = deli.deliDisplayAddress;
-    cell.satisfactionPercentage.text = [NSString stringWithFormat:@"%.2f%% LIKE",deli.satisfactionPercentage];
-    cell.featured.hidden = !deli.isFeatured;
+    cell.satisfactionPercentage.text = [NSString stringWithFormat:@"%.2f%% like",deli.satisfactionPercentage];
     
     cell.travelDistance.text = [NSString stringWithFormat:@"%ld min",(long)indexPath.row];
     
@@ -205,7 +204,6 @@
 
 - (void) didUpdateUserLocationFromLocation:(CLLocation *)anOldLocation toLocation:(CLLocation *)aNewLocation
 {
-    [self zoomToUserLocation:self.mapView.userLocation.location];
 }
 
 - (void) zoomToUserLocation:(CLLocation*)aLocation
@@ -213,7 +211,6 @@
     for (BHDeliObject *deli in [[BHApplicationManager appManager] delis])
     {
         BHDeliAnnotation *annotation = [[BHDeliAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(deli.latitude, deli.longitude)];
-
 
         [self.mapView addAnnotation:annotation];
     }

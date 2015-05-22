@@ -54,6 +54,11 @@
 		DA3F0AC01B0DAFA600464800 /* BHDislikeHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0ABE1B0DAFA600464800 /* BHDislikeHeaderViewController.xib */; };
 		DA3F0AC31B0DB0FF00464800 /* BHDislikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0AC21B0DB0FF00464800 /* BHDislikeCell.xib */; };
 		DA3F0AC61B0DB13B00464800 /* BHDislikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AC51B0DB13B00464800 /* BHDislikeTableViewCell.m */; };
+		DA3F0AD01B0E0F6500464800 /* SabonBolIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0ACD1B0E0F6500464800 /* SabonBolIta.ttf */; };
+		DA3F0AD11B0E0F6500464800 /* SabonIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0ACE1B0E0F6500464800 /* SabonIta.ttf */; };
+		DA3F0AD21B0E0F6500464800 /* SabonRom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0ACF1B0E0F6500464800 /* SabonRom.ttf */; };
+		DA3F0AD41B0E0F9200464800 /* SabonRomSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0AD31B0E0F9200464800 /* SabonRomSC.ttf */; };
+		DA3F0AE91B0EC9FE00464800 /* BHHoursTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AE81B0EC9FE00464800 /* BHHoursTableViewController.m */; };
 		DA436E8C1AB2675000CE19A4 /* BHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */; };
 		DA6197111B04329500DC7AE3 /* BHInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197101B04329500DC7AE3 /* BHInputTextField.m */; };
 		DA61971B1B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6197141B043CD600DC7AE3 /* TPKeyboardAvoidingCollectionView.m */; };
@@ -75,10 +80,6 @@
 		DAC9EEAC1B01954500E3B730 /* Avenir Next Demi Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA41B01954500E3B730 /* Avenir Next Demi Bold.ttf */; };
 		DAC9EEAD1B01954500E3B730 /* Avenir Next Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA51B01954500E3B730 /* Avenir Next Medium.ttf */; };
 		DAC9EEAE1B01954500E3B730 /* Avenir Next Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA61B01954500E3B730 /* Avenir Next Regular.ttf */; };
-		DAC9EEAF1B01954500E3B730 /* SabonBolIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA81B01954500E3B730 /* SabonBolIta.ttf */; };
-		DAC9EEB01B01954500E3B730 /* SabonIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEA91B01954500E3B730 /* SabonIta.ttf */; };
-		DAC9EEB11B01954500E3B730 /* SabonRom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEAA1B01954500E3B730 /* SabonRom.ttf */; };
-		DAC9EEB21B01954500E3B730 /* SabonRomSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAC9EEAB1B01954500E3B730 /* SabonRomSC.ttf */; };
 		DAC9EEB51B019D9000E3B730 /* BHSecondaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC9EEB41B019D9000E3B730 /* BHSecondaryButton.m */; };
 		DAC9EEB91B01A27500E3B730 /* BHDividerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC9EEB81B01A27500E3B730 /* BHDividerView.m */; };
 		DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */; };
@@ -193,6 +194,12 @@
 		DA3F0AC21B0DB0FF00464800 /* BHDislikeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHDislikeCell.xib; sourceTree = "<group>"; };
 		DA3F0AC41B0DB13B00464800 /* BHDislikeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDislikeTableViewCell.h; sourceTree = "<group>"; };
 		DA3F0AC51B0DB13B00464800 /* BHDislikeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDislikeTableViewCell.m; sourceTree = "<group>"; };
+		DA3F0ACD1B0E0F6500464800 /* SabonBolIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonBolIta.ttf; sourceTree = "<group>"; };
+		DA3F0ACE1B0E0F6500464800 /* SabonIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonIta.ttf; sourceTree = "<group>"; };
+		DA3F0ACF1B0E0F6500464800 /* SabonRom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonRom.ttf; sourceTree = "<group>"; };
+		DA3F0AD31B0E0F9200464800 /* SabonRomSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonRomSC.ttf; sourceTree = "<group>"; };
+		DA3F0AE71B0EC9FE00464800 /* BHHoursTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHHoursTableViewController.h; sourceTree = "<group>"; };
+		DA3F0AE81B0EC9FE00464800 /* BHHoursTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHHoursTableViewController.m; sourceTree = "<group>"; };
 		DA436E8A1AB2675000CE19A4 /* BHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLoadingViewController.h; sourceTree = "<group>"; };
 		DA436E8B1AB2675000CE19A4 /* BHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLoadingViewController.m; sourceTree = "<group>"; };
 		DA61970F1B04329500DC7AE3 /* BHInputTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHInputTextField.h; sourceTree = "<group>"; };
@@ -233,10 +240,6 @@
 		DAC9EEA41B01954500E3B730 /* Avenir Next Demi Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next Demi Bold.ttf"; sourceTree = "<group>"; };
 		DAC9EEA51B01954500E3B730 /* Avenir Next Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next Medium.ttf"; sourceTree = "<group>"; };
 		DAC9EEA61B01954500E3B730 /* Avenir Next Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next Regular.ttf"; sourceTree = "<group>"; };
-		DAC9EEA81B01954500E3B730 /* SabonBolIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonBolIta.ttf; sourceTree = "<group>"; };
-		DAC9EEA91B01954500E3B730 /* SabonIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonIta.ttf; sourceTree = "<group>"; };
-		DAC9EEAA1B01954500E3B730 /* SabonRom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonRom.ttf; sourceTree = "<group>"; };
-		DAC9EEAB1B01954500E3B730 /* SabonRomSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SabonRomSC.ttf; sourceTree = "<group>"; };
 		DAC9EEB31B019D9000E3B730 /* BHSecondaryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSecondaryButton.h; sourceTree = "<group>"; };
 		DAC9EEB41B019D9000E3B730 /* BHSecondaryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHSecondaryButton.m; sourceTree = "<group>"; };
 		DAC9EEB71B01A27500E3B730 /* BHDividerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDividerView.h; sourceTree = "<group>"; };
@@ -463,7 +466,6 @@
 				DAC9EEB61B01A26800E3B730 /* Divider */,
 				DA9349121AFFE2100019B8BF /* SearchBar */,
 				DA06D3D91AFE7D3D00A66EEB /* Backgrounds */,
-				DAE41C221AFAF20100A3C1CD /* Location Textfield */,
 				DAE41C1B1AFAEFD500A3C1CD /* Categories */,
 				DAE41C171AFAEBBB00A3C1CD /* Segue */,
 				DAE41C0F1AFA39AA00A3C1CD /* Buttons */,
@@ -506,6 +508,8 @@
 		DA3F0A831B0D8E9400464800 /* Hours */ = {
 			isa = PBXGroup;
 			children = (
+				DA3F0AE71B0EC9FE00464800 /* BHHoursTableViewController.h */,
+				DA3F0AE81B0EC9FE00464800 /* BHHoursTableViewController.m */,
 			);
 			name = Hours;
 			sourceTree = "<group>";
@@ -733,10 +737,10 @@
 		DAC9EEA71B01954500E3B730 /* Sabon (TTF) */ = {
 			isa = PBXGroup;
 			children = (
-				DAC9EEA81B01954500E3B730 /* SabonBolIta.ttf */,
-				DAC9EEA91B01954500E3B730 /* SabonIta.ttf */,
-				DAC9EEAA1B01954500E3B730 /* SabonRom.ttf */,
-				DAC9EEAB1B01954500E3B730 /* SabonRomSC.ttf */,
+				DA3F0AD31B0E0F9200464800 /* SabonRomSC.ttf */,
+				DA3F0ACD1B0E0F6500464800 /* SabonBolIta.ttf */,
+				DA3F0ACE1B0E0F6500464800 /* SabonIta.ttf */,
+				DA3F0ACF1B0E0F6500464800 /* SabonRom.ttf */,
 			);
 			path = "Sabon (TTF)";
 			sourceTree = "<group>";
@@ -788,13 +792,6 @@
 				DAE41C1F1AFAEFE000A3C1CD /* UIView+MBIBnspectable.m */,
 			);
 			name = Categories;
-			sourceTree = "<group>";
-		};
-		DAE41C221AFAF20100A3C1CD /* Location Textfield */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Location Textfield";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -883,19 +880,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3F0AB31B0DA95900464800 /* BHDetailsLikeViewController.xib in Resources */,
+				DA3F0AD41B0E0F9200464800 /* SabonRomSC.ttf in Resources */,
+				DA3F0AD21B0E0F6500464800 /* SabonRom.ttf in Resources */,
 				DA3F0AC31B0DB0FF00464800 /* BHDislikeCell.xib in Resources */,
 				DA3F0AC01B0DAFA600464800 /* BHDislikeHeaderViewController.xib in Resources */,
 				DA27ED461AA152AA00689F55 /* Main.storyboard in Resources */,
-				DAC9EEB11B01954500E3B730 /* SabonRom.ttf in Resources */,
-				DAC9EEB01B01954500E3B730 /* SabonIta.ttf in Resources */,
 				DA3F0A981B0D9AEB00464800 /* BHDeliDetailsTravelTableViewController.xib in Resources */,
-				DAC9EEAF1B01954500E3B730 /* SabonBolIta.ttf in Resources */,
 				DAC9EEAE1B01954500E3B730 /* Avenir Next Regular.ttf in Resources */,
+				DA3F0AD01B0E0F6500464800 /* SabonBolIta.ttf in Resources */,
 				DAC9EEAD1B01954500E3B730 /* Avenir Next Medium.ttf in Resources */,
 				DAC9EEAC1B01954500E3B730 /* Avenir Next Demi Bold.ttf in Resources */,
 				DA3F0A9F1B0D9ED500464800 /* BHTravelSelectionCell.xib in Resources */,
-				DAC9EEB21B01954500E3B730 /* SabonRomSC.ttf in Resources */,
 				DA27ED4B1AA152AA00689F55 /* LaunchScreen.xib in Resources */,
+				DA3F0AD11B0E0F6500464800 /* SabonIta.ttf in Resources */,
 				DA27ED481AA152AA00689F55 /* Images.xcassets in Resources */,
 				DA3F0ABA1B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.xib in Resources */,
 			);
@@ -927,6 +924,7 @@
 				DA27ED8E1AA15E4500689F55 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				DAE41C251AFAF21500A3C1CD /* BHLocationSearchTextField.m in Sources */,
 				DA27ED8B1AA15E4500689F55 /* ECSlidingSegue.m in Sources */,
+				DA3F0AE91B0EC9FE00464800 /* BHHoursTableViewController.m in Sources */,
 				DA27ED8C1AA15E4500689F55 /* ECSlidingInteractiveTransition.m in Sources */,
 				DAA084161AAB99B700ABBA68 /* BHMainMapViewController.m in Sources */,
 				DA6AC1C61AD36C00005337F7 /* BHSignInViewController.m in Sources */,

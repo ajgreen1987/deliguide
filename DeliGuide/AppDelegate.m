@@ -11,6 +11,8 @@
 #import "BHApplicationManager.h"
 #import "BHNavigationBarBackgroundView.h"
 #import "BHMockDataManager.h"
+#import <Mapkit/Mapkit.h>
+
 
 @interface AppDelegate ()
 
@@ -96,7 +98,7 @@
 #pragma mark - Nav Appearance
 - (void) setupNavigationControllerAppearance
 {
-
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];
@@ -104,6 +106,8 @@
     [[[UINavigationBar appearance] layer] insertSublayer:[[BHNavigationBarBackgroundView background] layer] atIndex:0];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor redColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName:AppFontSabonItalic(15)}];
+    
+    [[MKMapView appearance] setTintColor:[UIColor blackColor]];
 }
 
 @end

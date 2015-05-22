@@ -23,7 +23,8 @@
 
 @implementation BHDeliDetailsTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self setupMap];
@@ -38,6 +39,20 @@
 {
     [super viewWillAppear:animated];
     
+    [self transparentNavBar];
+
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+    [self normalNavBar];
+}
+
+- (void) transparentNavBar
+{
+    
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
@@ -46,9 +61,8 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 
-- (void) viewWillDisappear:(BOOL)animated
+- (void) normalNavBar
 {
-    [super viewWillDisappear:animated];
     
     [self.navigationController.navigationBar setBackgroundImage:nil
                                                   forBarMetrics:UIBarMetricsDefault];
@@ -154,6 +168,7 @@
 
 - (IBAction)handleHoursTouchUpInside:(id)sender {
 }
+
 
 - (IBAction)handleViewMenuTouchUpInside:(id)sender {
 }

@@ -104,6 +104,7 @@
     [self.rightSideButton setTitle:self.rightSideButtonTitle
                           forState:UIControlStateNormal];
     [self.rightSideButton setTitleColor:GOLD_1 forState:UIControlStateNormal];
+    [[self.rightSideButton titleLabel] setFont:AppFontSabonRomanSC(15.0f)];
     [self.rightSideButton setCenter:CGPointMake(self.bounds.size.width - (self.rightSideButton.frame.size.width*0.55f),
                                        self.bounds.size.height*0.5f)];
     

@@ -9,6 +9,8 @@
 #import "BHLocationSearchTextField.h"
 #import "BHSearchFieldBackgroundView.h"
 
+#define PLACEHOLDER_TEXT @"Find a Deli near you"
+
 @interface BHLocationSearchTextField ()
 
 @property (nonatomic, assign) CGFloat originalWidth;
@@ -25,6 +27,8 @@
     
     if (self)
     {
+        [self setPlaceholder:PLACEHOLDER_TEXT];
+        [self setFont:AppFontAvenirRegular(15.0f)];
         [self setSearchImage:searchImage];
         [self setButtonImage:buttonImage];
         [self setDelegate:self];
