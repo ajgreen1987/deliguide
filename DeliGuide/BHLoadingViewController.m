@@ -9,6 +9,7 @@
 #import "BHLoadingViewController.h"
 #import "BHLocationManager.h"
 #import "BHApplicationManager.h"
+#import "BHWebViewController.h"
 
 @implementation BHLoadingViewController
 
@@ -66,6 +67,15 @@
         
         [self performSegueWithIdentifier:@"SignUpLoading"
                                   sender:self];
+    }
+    else if(![[[BHApplicationManager appManager] urlToLoad] isEqualToString:EMPTY_URL])
+    {
+
+            BHWebViewController *webView = [[BHWebViewController alloc] initWithNibName:@"BHWebViewController"
+                                                                                 bundle:nil
+                                                                                 andURL:[NSURL URLWithString:[[BHApplicationManager appManager] urlToLoad]]];
+            
+            [[self navigationController] pushViewController:webView animated:YES];
     }
 }
 

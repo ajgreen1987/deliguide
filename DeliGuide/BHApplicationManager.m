@@ -21,6 +21,8 @@ static BHApplicationManager *sharedAppManager;
         if (sharedAppManager == nil)
         {
             sharedAppManager = [[self alloc] init];
+            
+            sharedAppManager.urlToLoad = EMPTY_URL;
         }
     }
     return sharedAppManager;

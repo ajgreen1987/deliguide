@@ -8,12 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "PopoverView.h"
 
 @interface BHDeliDetailsTableViewController : UITableViewController <MKMapViewDelegate>
+{
+    PopoverView *_popover;
+}
+
+@property (weak, nonatomic) IBOutlet UILabel *deliName;
+@property (weak, nonatomic) IBOutlet UIButton *call;
+@property (weak, nonatomic) IBOutlet UIButton *directions;
+@property (weak, nonatomic) IBOutlet UIButton *order;
+
 @property (weak, nonatomic) IBOutlet UIButton *like;
 @property (weak, nonatomic) IBOutlet UIButton *dislike;
 @property (weak, nonatomic) IBOutlet MKMapView *mapview;
 @property (weak, nonatomic) IBOutlet UILabel *percentage;
+
+@property (weak, nonatomic) IBOutlet UIButton *favorites;
+@property (weak, nonatomic) IBOutlet UIButton *deliWebsite;
+@property (weak, nonatomic) IBOutlet UIButton *facebook;
 
 - (IBAction)handleCallLocationTouchUpInside:(id)sender;
 - (IBAction)handleDirectionsTouchUpInside:(id)sender;

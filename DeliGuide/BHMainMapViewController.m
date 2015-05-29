@@ -69,6 +69,7 @@
 {
     self.isMapFullScreen = NO;
     [self setupMapTapGestureRecognizer];
+    [self setupMapSwipeGestureRecognizer];
     [self enableMapFeatures:self.isMapFullScreen];
     [[BHLocationManager locationManager] setLocationManagerDelegate:self];
     [[BHLocationManager locationManager] requestLocationServicesAuthorization];
@@ -117,7 +118,15 @@
     }
 }
 
-#pragma mark - Map Tap Recognizer
+#pragma mark - Map Gesture Recognizers
+- (void) setupMapSwipeGestureRecognizer
+{
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleMapSwipe:)];
+    [swipeGesture setDirection:(UISwipeGestureRecognizerDirectionDown | UISwipeGestureRecognizerDirectionUp)];
+    
+    [self.mapView addGestureRecognizer:swipeGesture];
+}
+
 - (void) setupMapTapGestureRecognizer
 {
     UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleMapTapGesture:)];
@@ -125,6 +134,11 @@
 
     
     [self.mapView addGestureRecognizer:tgr];
+}
+
+- (void) handleMapSwipe:(UISwipeGestureRecognizer*) gestureRecognizer
+{
+    [self handleMapAndTableViewToggle];
 }
 
 - (void)handleMapTapGesture:(UIGestureRecognizer *)gestureRecognizer
@@ -150,7 +164,7 @@
                                                              self.tableView.frame.size.height)];
                      }];
     self.isMapFullScreen = !self.isMapFullScreen;
-    [self enableMapFeatures:YES];
+    [self enableMapFeatures:self.isMapFullScreen];
 }
 
 #pragma mark - UITableViewDataSource
@@ -169,6 +183,7 @@
     cell.deliName.text = deli.deliName;
     cell.address.text = deli.deliDisplayAddress;
     cell.satisfactionPercentage.text = [NSString stringWithFormat:@"%.2f%% like",deli.satisfactionPercentage];
+    cell.featured.hidden = !deli.isFeatured;
     
     cell.travelDistance.text = [NSString stringWithFormat:@"%ld min",(long)indexPath.row];
     

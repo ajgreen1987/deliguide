@@ -13,11 +13,15 @@
 #import "UIViewController+KNSemiModal.h"
 #import "BHDeliDetailsTravelTableViewController.h"
 #import "PopoverView.h"
-#import "BHDetailsLikeViewController.h"
 #import "BHSatisfactionDislikeTableViewController.h"
 #import "BHDeliAnnotation.h"
+#import "BHHoursTableViewController.h"
+#import "BHMenuTableViewController.h"
+#import "BHDetailsLikeViewController.h"
 
 @interface BHDeliDetailsTableViewController ()
+
+@property (nonatomic, assign) CGPoint lastContentOffset;
 
 @end
 
@@ -28,6 +32,7 @@
     [super viewDidLoad];
     
     [self setupMap];
+    [self setupFonts];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,7 +57,6 @@
 
 - (void) transparentNavBar
 {
-    
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
@@ -66,6 +70,40 @@
     
     [self.navigationController.navigationBar setBackgroundImage:nil
                                                   forBarMetrics:UIBarMetricsDefault];
+}
+
+- (void) scrollViewDidScrollToTop:(UIScrollView *)scrollView
+{
+    [self transparentNavBar];
+}
+
+-(void) scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGPoint currentOffset = scrollView.contentOffset;
+    
+    if (currentOffset.y > self.lastContentOffset.y)
+    {
+        // Downward
+        [self transparentNavBar];
+    }
+    else
+    {
+        // Upward
+        [self normalNavBar];
+    }
+    
+    self.lastContentOffset = currentOffset;
+}
+
+- (void) setupFonts
+{
+    [self.deliName setFont:AppFontSabonRomanSC(22.0f)];
+    [[self.call titleLabel] setFont:AppFontSabonRomanSC(15.0f)];
+    [[self.directions titleLabel] setFont:AppFontSabonRomanSC(15.0f)];
+    [[self.order titleLabel] setFont:AppFontSabonRomanSC(15.0f)];
+    [[self.favorites titleLabel] setFont:AppFontSabonRomanSC(22.0f)];
+    [[self.deliWebsite titleLabel] setFont:AppFontSabonRomanSC(18.0f)];
+    [[self.facebook titleLabel] setFont:AppFontSabonRomanSC(18.0f)];
 }
 
 #pragma mark - map
@@ -166,13 +204,6 @@
     [self presentSemiViewController:travel];
 }
 
-- (IBAction)handleHoursTouchUpInside:(id)sender {
-}
-
-
-- (IBAction)handleViewMenuTouchUpInside:(id)sender {
-}
-
 - (IBAction)handleLikeTouchUpInside:(id)sender
 {
     UIButton *like = (UIButton*)sender;
@@ -185,7 +216,7 @@
         
         BHDetailsLikeViewController *likeController = [[BHDetailsLikeViewController alloc] initWithNibName:@"BHDetailsLikeViewController"
                                                                                                     bundle:nil];
-        [PopoverView showPopoverAtPoint:like.center
+        _popover = [PopoverView showPopoverAtPoint:like.center
                                  inView:like.superview
                         withContentView:likeController.view
                                delegate:nil];
@@ -225,4 +256,50 @@
 
 - (IBAction)handleFacebookTouchUpInside:(id)sender {
 }
+
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:HOURS_SEGUE])
+    {
+        // Get reference to the destination view controller
+        BHHoursTableViewController *vc = [segue destinationViewController];
+        
+        // This is fucking awful, referencing the UI element instead of the data object...AJ
+        [vc setTitle:[self.deliName text]];
+    }
+    else if([[segue identifier] isEqualToString:MENU_SEGUE])
+    {
+        // Get reference to the destination view controller
+        BHMenuTableViewController *vc = [segue destinationViewController];
+        
+        // #oopsIDidItAgain
+        [vc setTitle:[self.deliName text]];
+    }
+}
+
+- (void) setupNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleSatisfactionNoThanks)
+                                                 name:@"LikeNoThanks"
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleSatisfactionNoThanks)
+                                                 name:@"LikeShare"
+                                               object:nil];
+}
+
+- (void) handleSatisfactionNoThanks
+{
+    //[_popover performSelector:@selector(dismiss) withObject:nil afterDelay:0.5f];
+}
+
+- (void) handleSatisfactionShareIt
+{
+    
+}
+
 @end

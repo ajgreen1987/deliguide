@@ -253,15 +253,19 @@ const struct KNSemiModalOptionKeys KNSemiModalOptionKeys = {
             dismissButton.tag = kSemiModalDismissButtonTag;
             [overlay addSubview:dismissButton];
         }
+
+		NSTimeInterval duration = [[self ym_optionOrDefaultForKey:KNSemiModalOptionKeys.animationDuration] doubleValue];
         
+        /*
         // Begin overlay animation
 		if ([[self ym_optionOrDefaultForKey:KNSemiModalOptionKeys.pushParentBack] boolValue]) {
 			[ss.layer addAnimation:[self animationGroupForward:YES] forKey:@"pushedBackAnimation"];
 		}
-		NSTimeInterval duration = [[self ym_optionOrDefaultForKey:KNSemiModalOptionKeys.animationDuration] doubleValue];
+
         [UIView animateWithDuration:duration animations:^{
             ss.alpha = [[self ym_optionOrDefaultForKey:KNSemiModalOptionKeys.parentAlpha] floatValue];
         }];
+         */
         
         // Present view animated
         view.frame = (transitionStyle == KNSemiModalTransitionStyleSlideUp
@@ -372,22 +376,22 @@ const struct KNSemiModalOptionKeys KNSemiModalOptionKeys = {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
     }];
     
-    // Begin overlay animation
-    UIImageView * ss = (UIImageView*)[overlay.subviews objectAtIndex:0];
-	if ([[self ym_optionOrDefaultForKey:KNSemiModalOptionKeys.pushParentBack] boolValue]) {
-		[ss.layer addAnimation:[self animationGroupForward:NO] forKey:@"bringForwardAnimation"];
-	}
-    [UIView animateWithDuration:duration animations:^{
-        ss.alpha = 1;
-    } completion:^(BOOL finished) {
-        if(finished){
-            [[NSNotificationCenter defaultCenter] postNotificationName:kSemiModalDidHideNotification
-                                                                object:self];
-            if (completion) {
-                completion();
-            }
-        }
-    }];
+//    // Begin overlay animation
+//    UIImageView * ss = (UIImageView*)[overlay.subviews objectAtIndex:0];
+//	if ([[self ym_optionOrDefaultForKey:KNSemiModalOptionKeys.pushParentBack] boolValue]) {
+//		[ss.layer addAnimation:[self animationGroupForward:NO] forKey:@"bringForwardAnimation"];
+//	}
+//    [UIView animateWithDuration:duration animations:^{
+//        ss.alpha = 1;
+//    } completion:^(BOOL finished) {
+//        if(finished){
+//            [[NSNotificationCenter defaultCenter] postNotificationName:kSemiModalDidHideNotification
+//                                                                object:self];
+//            if (completion) {
+//                completion();
+//            }
+//        }
+//    }];
 }
 
 - (void)resizeSemiView:(CGSize)newSize {

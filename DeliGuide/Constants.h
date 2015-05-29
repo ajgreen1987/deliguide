@@ -11,6 +11,8 @@
 
 #define USE_MOCK_LOCATIONS  1
 
+#define EMPTY_URL @"http://wwwwwwwwwwww"
+
 #define API_KEY                     @"skxgq9aqrs"
 #define API_BASE_URL                @"http://www.easywayordering.com/ewoapi/ewoapi_v1.php?apireq"
 #define API_KVP_EQUALS              @"="
@@ -58,16 +60,19 @@ __responder = [__responder nextResponder]; \
 })
 
 #define AppFontSabonItalic(_size_)\
-[UIFont fontWithName:@"Sabon-Italic" size:_size_]
+[UIFont fontWithName:@"SabonLTStd-BoldItalic" size:_size_]
 #define AppFontSabonRoman(_size_)\
 [UIFont fontWithName:@"Sabon-Roman" size:_size_]
 #define AppFontSabonRomanSC(_size_)\
-[UIFont fontWithName:@"Sabon-RomanSC" size:_size_]
+[UIFont applicationSmallCapsFont:@"SabonLTStd-Roman" withSize:_size_]
 #define AppFontAvenirDemiBold(_size_)\
 [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:_size_]
 #define AppFontAvenirMedium(_size_)\
 [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:_size_]
 #define AppFontAvenirRegular(_size_)\
 [UIFont fontWithName:@"AvenirNextCondensed-Regular" size:_size_]
+
+#define HOURS_SEGUE @"Hours"
+#define MENU_SEGUE  @"Menu"
 
 #endif

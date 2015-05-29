@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSArray *delis;
 @property (nonatomic, assign) BOOL shouldSignUp;
 @property (nonatomic, assign) BOOL shouldSignIn;
+@property (nonatomic, assign) NSString *urlToLoad;
 
 + (instancetype)appManager;
 

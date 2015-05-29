@@ -12,6 +12,7 @@
 #import "BHNavigationBarBackgroundView.h"
 #import "BHMockDataManager.h"
 #import <Mapkit/Mapkit.h>
+#import "UIFont+SmallFont.h"
 
 
 @interface AppDelegate ()
@@ -25,15 +26,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    for (NSString* family in [UIFont familyNames])
-//    {
-//        NSLog(@"%@", family);
-//        
-//        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-//        {
-//            NSLog(@"  %@", name);
-//        }
-//    }
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
     
     [self setupUser];
     [self setupGoogleAnalytics];

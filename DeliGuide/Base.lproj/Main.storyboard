@@ -269,6 +269,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleProductsAndNutritionTouchUpInside:" destination="dwd-J1-Vd2" eventType="touchUpInside" id="vRc-4x-qSv"/>
+                                    <segue destination="6ec-ti-9rF" kind="custom" customClass="ECSlidingSegue" id="2gg-gv-ZHO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rwk-aW-zKo">
@@ -289,6 +290,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleBoarsHeadWebsiteTouchUpInside:" destination="dwd-J1-Vd2" eventType="touchUpInside" id="P0d-VB-cIW"/>
+                                    <segue destination="6ec-ti-9rF" kind="custom" customClass="ECSlidingSegue" id="Oxf-bV-Ppu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ces-pa-Ezx">
@@ -309,6 +311,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleBoarsHeadWebsiteTouchUpInside:" destination="dwd-J1-Vd2" eventType="touchUpInside" id="ccn-FG-J4i"/>
+                                    <segue destination="6ec-ti-9rF" kind="custom" customClass="ECSlidingSegue" id="bxw-dT-SPs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gIO-Zg-qPk">
@@ -329,6 +332,8 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleBoarsHeadWebsiteTouchUpInside:" destination="dwd-J1-Vd2" eventType="touchUpInside" id="rMW-4s-xQi"/>
+                                    <action selector="handleContactTouchUpInside:" destination="dwd-J1-Vd2" eventType="touchUpInside" id="2Pb-l3-UgU"/>
+                                    <segue destination="6ec-ti-9rF" kind="custom" customClass="ECSlidingSegue" id="wAP-MW-AIs"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-logo" id="XUY-Q3-pZx">
@@ -710,14 +715,19 @@
                                                     <rect key="frame" x="212" y="8" width="100" height="110"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="featured" id="ALq-ki-5Fe">
+                                                    <rect key="frame" x="212" y="8" width="100" height="110"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="address" destination="8MJ-Qb-RBH" id="wff-hk-wDP"/>
+                                            <outlet property="deliImage" destination="Teq-GD-pf6" id="aBZ-5Y-BKW"/>
                                             <outlet property="deliName" destination="I6g-AZ-kzs" id="XDn-G8-Cs6"/>
-                                            <outlet property="featured" destination="Teq-GD-pf6" id="C8i-w0-fL7"/>
+                                            <outlet property="featured" destination="ALq-ki-5Fe" id="nR1-EU-Jaq"/>
                                             <outlet property="openOrClosed" destination="8os-vc-3Yj" id="joO-mr-2HM"/>
                                             <outlet property="satisfactionPercentage" destination="lGs-Qn-SMB" id="TBc-fL-J80"/>
                                             <outlet property="travelDistance" destination="ujk-Yt-g2T" id="tVn-kr-qYf"/>
@@ -911,8 +921,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="handleHoursTouchUpInside:" destination="A3f-Vb-EGy" eventType="touchUpInside" id="Xtg-zF-PJ4"/>
-                                                        <segue destination="gKZ-8q-PMx" kind="push" id="AMF-lU-4r2"/>
+                                                        <segue destination="gKZ-8q-PMx" kind="push" identifier="Hours" id="AMF-lU-4r2"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f8J-7r-yDx">
@@ -925,8 +934,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="handleViewMenuTouchUpInside:" destination="A3f-Vb-EGy" eventType="touchUpInside" id="VOG-O8-mvf"/>
-                                                        <segue destination="gek-EG-vah" kind="push" id="bbZ-mg-qne"/>
+                                                        <segue destination="tsX-Oe-uHt" kind="push" identifier="Menu" id="Hz3-x9-PzL"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1144,15 +1152,51 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="call" destination="z6L-8g-5ml" id="txc-xz-Jsf"/>
+                        <outlet property="deliName" destination="dBq-rV-2yd" id="LLf-3m-1Oz"/>
+                        <outlet property="deliWebsite" destination="xIo-eH-K9a" id="aNd-ky-Xnp"/>
+                        <outlet property="directions" destination="esv-xG-zoO" id="Glb-ik-TXC"/>
                         <outlet property="dislike" destination="e0c-K5-YIB" id="fdC-sl-uaz"/>
+                        <outlet property="facebook" destination="NC4-Ar-uH1" id="2ng-ef-Xft"/>
+                        <outlet property="favorites" destination="VYg-Wc-oyx" id="bMn-MU-PjU"/>
                         <outlet property="like" destination="lCP-fK-N3u" id="DZa-Jn-dMf"/>
                         <outlet property="mapview" destination="UfL-EQ-9u8" id="v7H-Xh-rcA"/>
+                        <outlet property="order" destination="INa-3c-VA6" id="yxW-DJ-nbD"/>
                         <outlet property="percentage" destination="BWf-Ts-UZf" id="Xv9-pm-1za"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krM-B3-oEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="882" y="-469"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="L2T-uH-01Y">
+            <objects>
+                <tableViewController id="tsX-Oe-uHt" customClass="BHMenuTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QLE-7W-hBw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hnF-zx-Chi">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hnF-zx-Chi" id="nn0-ff-X5z">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tsX-Oe-uHt" id="0OX-4h-itD"/>
+                            <outlet property="delegate" destination="tsX-Oe-uHt" id="9Ot-qJ-A3A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="StN-R9-tbe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkx-Y5-mDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="641"/>
         </scene>
         <!--Hours-->
         <scene sceneID="d8F-MT-nnl">
@@ -1364,21 +1408,6 @@
             </objects>
             <point key="canvasLocation" x="1536" y="641"/>
         </scene>
-        <!--Menu-->
-        <scene sceneID="QzT-pE-bdw">
-            <objects>
-                <viewController title="Menu" id="gek-EG-vah" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qZk-8f-0uD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="9Ra-z6-Wdc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dHb-aI-tiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1106" y="641"/>
-        </scene>
         <!--Create Your Account-->
         <scene sceneID="yCf-JD-13h">
             <objects>
@@ -1542,6 +1571,7 @@
         <image name="favorite" width="11" height="10"/>
         <image name="favorite-add" width="10" height="10"/>
         <image name="favorites-empty" width="44" height="38"/>
+        <image name="featured" width="100" height="110"/>
         <image name="home-default-content" width="275" height="118"/>
         <image name="home-featured-delis" width="154" height="200"/>
         <image name="home-top-rated" width="154" height="200"/>
@@ -1562,8 +1592,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Nst-7Z-Fe5"/>
-        <segue reference="adE-hN-4tC"/>
-        <segue reference="ye3-6p-l8U"/>
+        <segue reference="wAP-MW-AIs"/>
+        <segue reference="ien-9U-N6T"/>
+        <segue reference="GZ8-Rd-3pM"/>
     </inferredMetricsTieBreakers>
 </document>

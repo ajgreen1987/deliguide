@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BHApplicationManager.h"
+#import "BHWebViewController.h"
 
 @interface ViewController ()
 
@@ -46,12 +47,19 @@
 
 - (IBAction)handleProductsAndNutritionTouchUpInside:(id)sender
 {
-    [BHApplicationManager browserForURL:@"http://boarshead.com/health-wellness"];
+    [[BHApplicationManager appManager] setUrlToLoad:@"http://boarshead.com/products"];
 }
 
 - (IBAction)handleBoarsHeadWebsiteTouchUpInside:(id)sender
 {
-    [BHApplicationManager browserForURL:@"http://www.boarshead.com"];
+    [[BHApplicationManager appManager] setUrlToLoad:@"http://boarshead.com"];
 }
+
+- (IBAction) handleContactTouchUpInside:(id)sender
+{
+    [[BHApplicationManager appManager] setUrlToLoad:@"http://boarshead.com/about/contact"];
+}
+
+
 
 @end

@@ -16,6 +16,8 @@
 @property (nonatomic, weak) IBOutlet UIImageView *travelMode;
 @property (nonatomic, weak) IBOutlet UILabel *travelDistance;
 @property (nonatomic, weak) IBOutlet UILabel *address;
+@property (nonatomic, weak) IBOutlet UIImageView *deliImage;
 @property (nonatomic, weak) IBOutlet UIImageView *featured;
+
 
 @end

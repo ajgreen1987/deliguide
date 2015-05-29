@@ -10,7 +10,8 @@
 
 @implementation BHDeliTableViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     // Initialization code
 }
 
