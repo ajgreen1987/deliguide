@@ -29,6 +29,7 @@
     {
         [self setPlaceholder:PLACEHOLDER_TEXT];
         [self setFont:AppFontAvenirRegular(15.0f)];
+        [self setReturnKeyType:UIReturnKeySearch];
         [self setSearchImage:searchImage];
         [self setButtonImage:buttonImage];
         [self setDelegate:self];

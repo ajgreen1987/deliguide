@@ -10,6 +10,17 @@
 
 @implementation BHFacebookButton
 
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self)
+    {
+        [[self titleLabel] setText:[[[self titleLabel] text] lowercaseString]];
+    }
+    
+    return self;
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

@@ -20,6 +20,7 @@
         [[self titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
         [[self titleLabel] setNumberOfLines:0];
         [[self titleLabel] setTextAlignment:NSTextAlignmentCenter];
+        [[self titleLabel] setText:[[[self titleLabel] text] lowercaseString]];
     }
     
     return self;
@@ -35,6 +36,7 @@
         [[self titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
         [[self titleLabel] setNumberOfLines:0];
         [[self titleLabel] setTextAlignment:NSTextAlignmentCenter];
+        [[self titleLabel] setText:[[[self titleLabel] text] lowercaseString]];        
     }
     
     return self;

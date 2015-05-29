@@ -84,6 +84,8 @@
 		DACE35C51B17E6920060C486 /* BHMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE35C41B17E6920060C486 /* BHMenuTableViewController.m */; };
 		DACE35CA1B17FD580060C486 /* BHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE35C81B17FD580060C486 /* BHWebViewController.m */; };
 		DACE35CB1B17FD580060C486 /* BHWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACE35C91B17FD580060C486 /* BHWebViewController.xib */; };
+		DACE35CF1B1818D60060C486 /* BHItalicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE35CE1B1818D60060C486 /* BHItalicLabel.m */; };
+		DACE35D21B18C69C0060C486 /* BHRomanLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE35D11B18C69C0060C486 /* BHRomanLabel.m */; };
 		DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */; };
 		DAE41C161AFAEB3C00A3C1CD /* BHSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C151AFAEB3C00A3C1CD /* BHSplashViewController.m */; };
 		DAE41C201AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C1D1AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m */; };
@@ -251,6 +253,10 @@
 		DACE35C71B17FD580060C486 /* BHWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHWebViewController.h; sourceTree = "<group>"; };
 		DACE35C81B17FD580060C486 /* BHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHWebViewController.m; sourceTree = "<group>"; };
 		DACE35C91B17FD580060C486 /* BHWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHWebViewController.xib; sourceTree = "<group>"; };
+		DACE35CD1B1818D60060C486 /* BHItalicLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHItalicLabel.h; sourceTree = "<group>"; };
+		DACE35CE1B1818D60060C486 /* BHItalicLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHItalicLabel.m; sourceTree = "<group>"; };
+		DACE35D01B18C69C0060C486 /* BHRomanLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHRomanLabel.h; sourceTree = "<group>"; };
+		DACE35D11B18C69C0060C486 /* BHRomanLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHRomanLabel.m; sourceTree = "<group>"; };
 		DAE41C101AFA39D400A3C1CD /* BHPrimaryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHPrimaryButton.h; sourceTree = "<group>"; };
 		DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHPrimaryButton.m; sourceTree = "<group>"; };
 		DAE41C141AFAEB3C00A3C1CD /* BHSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSplashViewController.h; sourceTree = "<group>"; };
@@ -467,6 +473,7 @@
 		DA27ED611AA155DD00689F55 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DACE35CC1B1818BB0060C486 /* Labels */,
 				DACE35C61B17FD430060C486 /* Webview */,
 				DAEB09A41B127D1B00E58B73 /* Small Fonts */,
 				DA3F0AA81B0DA88D00464800 /* Popover */,
@@ -776,6 +783,17 @@
 			name = Webview;
 			sourceTree = "<group>";
 		};
+		DACE35CC1B1818BB0060C486 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				DACE35CD1B1818D60060C486 /* BHItalicLabel.h */,
+				DACE35CE1B1818D60060C486 /* BHItalicLabel.m */,
+				DACE35D01B18C69C0060C486 /* BHRomanLabel.h */,
+				DACE35D11B18C69C0060C486 /* BHRomanLabel.m */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
 		DAE41C0F1AFA39AA00A3C1CD /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -981,6 +999,7 @@
 				DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */,
 				DA3F0ABF1B0DAFA600464800 /* BHDislikeHeaderViewController.m in Sources */,
 				DA06D3E51AFE9A1F00A66EEB /* BHFacebookButton.m in Sources */,
+				DACE35CF1B1818D60060C486 /* BHItalicLabel.m in Sources */,
 				DA61971E1B043CD600DC7AE3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				DA3F0AB21B0DA95900464800 /* BHDetailsLikeViewController.m in Sources */,
 				DA06D3F21AFEEB0B00A66EEB /* BHNoFavoritesViewController.m in Sources */,
@@ -999,6 +1018,7 @@
 				DA6197231B04521600DC7AE3 /* BHDeliAnnotation.m in Sources */,
 				DAB3D7FE1AEC860C003DA43A /* BHEasyWayServicesManager.m in Sources */,
 				DA6197111B04329500DC7AE3 /* BHInputTextField.m in Sources */,
+				DACE35D21B18C69C0060C486 /* BHRomanLabel.m in Sources */,
 				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
 				DA06D3EB1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,

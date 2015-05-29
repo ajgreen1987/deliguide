@@ -62,7 +62,7 @@ __responder = [__responder nextResponder]; \
 #define AppFontSabonItalic(_size_)\
 [UIFont fontWithName:@"SabonLTStd-BoldItalic" size:_size_]
 #define AppFontSabonRoman(_size_)\
-[UIFont fontWithName:@"Sabon-Roman" size:_size_]
+[UIFont fontWithName:@"SabonLTStd-Roman" size:_size_]
 #define AppFontSabonRomanSC(_size_)\
 [UIFont applicationSmallCapsFont:@"SabonLTStd-Roman" withSize:_size_]
 #define AppFontAvenirDemiBold(_size_)\
