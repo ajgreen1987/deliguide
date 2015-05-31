@@ -70,7 +70,26 @@
 
 - (IBAction) handleShare:(id)sender
 {
+    UIActionSheet *shareSheet = [[UIActionSheet alloc] initWithTitle:@""
+                                                            delegate:self
+                                                   cancelButtonTitle:@"Cancel"
+                                              destructiveButtonTitle:nil
+                                                   otherButtonTitles:@"Open in Safari",nil];
     
+    [shareSheet showInView:self.view];
+}
+
+#pragma mark - Action Sheet Delegate
+- (void) actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex)
+    {
+        case 0:
+            [BHApplicationManager browserForURL:self.url];
+            break;
+        default:
+            break;
+    }
 }
 
 @end

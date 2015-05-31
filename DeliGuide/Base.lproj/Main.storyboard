@@ -691,21 +691,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1800 East Blvd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8MJ-Qb-RBH">
-                                                    <rect key="frame" x="8" y="78" width="204" height="21"/>
+                                                    <rect key="frame" x="8" y="81" width="195" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" red="0.76470588235294112" green="0.73725490196078436" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8os-vc-3Yj">
-                                                    <rect key="frame" x="8" y="101" width="83" height="21"/>
+                                                    <rect key="frame" x="8" y="100" width="83" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" red="0.76470588235294112" green="0.73725490196078436" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 min walk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ujk-Yt-g2T">
-                                                    <rect key="frame" x="66" y="101" width="108" height="21"/>
+                                                    <rect key="frame" x="66" y="100" width="108" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" red="0.76470588235294112" green="0.73725490196078436" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1155,16 +1155,23 @@
                     <size key="freeformSize" width="320" height="1024"/>
                     <connections>
                         <outlet property="call" destination="z6L-8g-5ml" id="txc-xz-Jsf"/>
+                        <outlet property="deliAddress" destination="Elv-Af-IKd" id="csp-1h-qap"/>
+                        <outlet property="deliDistance" destination="nF9-L6-bO2" id="Acp-au-jTx"/>
+                        <outlet property="deliHours" destination="oEC-o8-vR7" id="4KT-BB-rsa"/>
                         <outlet property="deliName" destination="dBq-rV-2yd" id="LLf-3m-1Oz"/>
                         <outlet property="deliWebsite" destination="xIo-eH-K9a" id="aNd-ky-Xnp"/>
+                        <outlet property="delivery" destination="eVi-pN-FiN" id="YBD-Jz-WP9"/>
                         <outlet property="directions" destination="esv-xG-zoO" id="Glb-ik-TXC"/>
                         <outlet property="dislike" destination="e0c-K5-YIB" id="fdC-sl-uaz"/>
                         <outlet property="facebook" destination="NC4-Ar-uH1" id="2ng-ef-Xft"/>
                         <outlet property="favorites" destination="VYg-Wc-oyx" id="bMn-MU-PjU"/>
                         <outlet property="like" destination="lCP-fK-N3u" id="DZa-Jn-dMf"/>
                         <outlet property="mapview" destination="UfL-EQ-9u8" id="v7H-Xh-rcA"/>
+                        <outlet property="openOrClosed" destination="api-ri-WJ5" id="Y5U-Ti-7Gg"/>
                         <outlet property="order" destination="INa-3c-VA6" id="yxW-DJ-nbD"/>
+                        <outlet property="paymentOptions" destination="g7Y-CA-Nom" id="huh-VQ-mkg"/>
                         <outlet property="percentage" destination="BWf-Ts-UZf" id="Xv9-pm-1za"/>
+                        <outlet property="takeOut" destination="rha-zj-0ZP" id="9TZ-JU-LgK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krM-B3-oEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1181,7 +1188,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hnF-zx-Chi">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hnF-zx-Chi" id="nn0-ff-X5z">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1215,7 +1222,7 @@
                             <tableViewSection id="EJY-Jz-8MX">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="61" id="XWF-CO-xou">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWF-CO-xou" id="Pav-GR-egc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -1233,7 +1240,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="54" id="8W3-aE-q1R">
-                                        <rect key="frame" x="0.0" y="125" width="320" height="54"/>
+                                        <rect key="frame" x="0.0" y="61" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8W3-aE-q1R" id="WZh-3Y-SSc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
@@ -1258,7 +1265,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="54" id="qOv-QX-bAn">
-                                        <rect key="frame" x="0.0" y="179" width="320" height="54"/>
+                                        <rect key="frame" x="0.0" y="115" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qOv-QX-bAn" id="Ena-D8-VZ8">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
@@ -1283,7 +1290,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="54" id="vrU-S5-L4t">
-                                        <rect key="frame" x="0.0" y="233" width="320" height="54"/>
+                                        <rect key="frame" x="0.0" y="169" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vrU-S5-L4t" id="1u4-wH-7tv">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
@@ -1308,7 +1315,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="54" id="jal-Fz-lhR">
-                                        <rect key="frame" x="0.0" y="287" width="320" height="54"/>
+                                        <rect key="frame" x="0.0" y="223" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jal-Fz-lhR" id="efg-Ht-8cr">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
@@ -1333,7 +1340,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="54" id="fea-IF-unm">
-                                        <rect key="frame" x="0.0" y="341" width="320" height="54"/>
+                                        <rect key="frame" x="0.0" y="277" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fea-IF-unm" id="ibN-RA-ppu">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
@@ -1358,7 +1365,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="54" id="iod-s5-mK8">
-                                        <rect key="frame" x="0.0" y="395" width="320" height="54"/>
+                                        <rect key="frame" x="0.0" y="331" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iod-s5-mK8" id="kYy-YH-2c2">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
@@ -1383,7 +1390,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="121" id="kx4-rg-U1j">
-                                        <rect key="frame" x="0.0" y="449" width="320" height="121"/>
+                                        <rect key="frame" x="0.0" y="385" width="320" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kx4-rg-U1j" id="WrK-kx-md9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
@@ -1607,7 +1614,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="wAP-MW-AIs"/>
-        <segue reference="GZ8-Rd-3pM"/>
-        <segue reference="OiD-HT-CHc"/>
+        <segue reference="adE-hN-4tC"/>
+        <segue reference="ye3-6p-l8U"/>
     </inferredMetricsTieBreakers>
 </document>

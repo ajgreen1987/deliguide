@@ -11,6 +11,14 @@
 
 #define USE_MOCK_LOCATIONS  1
 
+typedef enum
+{
+    WALKING=0,
+    BIKING,
+    DRIVING,
+    PUBLIC
+} ModeOfTransportation;
+
 #define EMPTY_URL @"http://wwwwwwwwwwww"
 
 #define API_KEY                     @"skxgq9aqrs"
@@ -74,5 +82,6 @@ __responder = [__responder nextResponder]; \
 
 #define HOURS_SEGUE @"Hours"
 #define MENU_SEGUE  @"Menu"
+#define DETAILS_SEGUE @"DetailsSegue"
 
 #endif

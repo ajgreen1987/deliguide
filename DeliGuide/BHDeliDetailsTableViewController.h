@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "PopoverView.h"
+#import "BHDeliObject.h"
 
 @interface BHDeliDetailsTableViewController : UITableViewController <MKMapViewDelegate>
-{
-    PopoverView *_popover;
-}
+
+@property (nonatomic, strong) BHDeliObject *currentDeli;
+@property (weak, nonatomic) IBOutlet UILabel *deliAddress;
+@property (weak, nonatomic) IBOutlet UILabel *deliDistance;
+@property (weak, nonatomic) IBOutlet UILabel *openOrClosed;
+@property (weak, nonatomic) IBOutlet UIButton *deliHours;
+@property (weak, nonatomic) IBOutlet UILabel *takeOut;
+@property (weak, nonatomic) IBOutlet UILabel *delivery;
+@property (weak, nonatomic) IBOutlet UILabel *paymentOptions;
 
 @property (weak, nonatomic) IBOutlet UILabel *deliName;
 @property (weak, nonatomic) IBOutlet UIButton *call;
@@ -34,7 +40,6 @@
 - (IBAction)handleOrderTouchUpInside:(id)sender;
 - (IBAction)handleTravelTimeTouchUpInside:(id)sender;
 - (IBAction)handleHoursTouchUpInside:(id)sender;
-- (IBAction)handleViewMenuTouchUpInside:(id)sender;
 
 - (IBAction)handleLikeTouchUpInside:(id)sender;
 - (IBAction)handleDislikeTouchUpInside:(id)sender;

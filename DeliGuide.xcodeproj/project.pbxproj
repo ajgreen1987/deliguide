@@ -45,7 +45,6 @@
 		DA3F0A9A1B0D9B3600464800 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3F0A991B0D9B3600464800 /* QuartzCore.framework */; };
 		DA3F0A9F1B0D9ED500464800 /* BHTravelSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0A9E1B0D9ED500464800 /* BHTravelSelectionCell.xib */; };
 		DA3F0AA21B0D9F4D00464800 /* BHTravelSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AA11B0D9F4D00464800 /* BHTravelSelectionTableViewCell.m */; };
-		DA3F0AAD1B0DA89C00464800 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AAB1B0DA89C00464800 /* PopoverView.m */; };
 		DA3F0AB21B0DA95900464800 /* BHDetailsLikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AB01B0DA95900464800 /* BHDetailsLikeViewController.m */; };
 		DA3F0AB31B0DA95900464800 /* BHDetailsLikeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3F0AB11B0DA95900464800 /* BHDetailsLikeViewController.xib */; };
 		DA3F0AB91B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F0AB71B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.m */; };
@@ -86,6 +85,9 @@
 		DACE35CB1B17FD580060C486 /* BHWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACE35C91B17FD580060C486 /* BHWebViewController.xib */; };
 		DACE35CF1B1818D60060C486 /* BHItalicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE35CE1B1818D60060C486 /* BHItalicLabel.m */; };
 		DACE35D21B18C69C0060C486 /* BHRomanLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE35D11B18C69C0060C486 /* BHRomanLabel.m */; };
+		DACE36471B1ACA110060C486 /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE36421B1ACA100060C486 /* FPPopoverController.m */; };
+		DACE36481B1ACA110060C486 /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE36441B1ACA100060C486 /* FPPopoverView.m */; };
+		DACE36491B1ACA110060C486 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE36461B1ACA110060C486 /* FPTouchView.m */; };
 		DAE41C121AFA39D400A3C1CD /* BHPrimaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */; };
 		DAE41C161AFAEB3C00A3C1CD /* BHSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C151AFAEB3C00A3C1CD /* BHSplashViewController.m */; };
 		DAE41C201AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE41C1D1AFAEFE000A3C1CD /* UILabel+MBIBnsepectable.m */; };
@@ -183,10 +185,6 @@
 		DA3F0A9E1B0D9ED500464800 /* BHTravelSelectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHTravelSelectionCell.xib; sourceTree = "<group>"; };
 		DA3F0AA01B0D9F4D00464800 /* BHTravelSelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTravelSelectionTableViewCell.h; sourceTree = "<group>"; };
 		DA3F0AA11B0D9F4D00464800 /* BHTravelSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTravelSelectionTableViewCell.m; sourceTree = "<group>"; };
-		DA3F0AA91B0DA89C00464800 /* PopoverView_Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopoverView_Configuration.h; path = "../../../../../../Downloads/PopoverView-master/PopoverView/PopoverView_Configuration.h"; sourceTree = "<group>"; };
-		DA3F0AAA1B0DA89C00464800 /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopoverView.h; path = "../../../../../../Downloads/PopoverView-master/PopoverView/PopoverView.h"; sourceTree = "<group>"; };
-		DA3F0AAB1B0DA89C00464800 /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopoverView.m; path = "../../../../../../Downloads/PopoverView-master/PopoverView/PopoverView.m"; sourceTree = "<group>"; };
-		DA3F0AAC1B0DA89C00464800 /* PopoverViewCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopoverViewCompatibility.h; path = "../../../../../../Downloads/PopoverView-master/PopoverView/PopoverViewCompatibility.h"; sourceTree = "<group>"; };
 		DA3F0AAF1B0DA95900464800 /* BHDetailsLikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDetailsLikeViewController.h; sourceTree = "<group>"; };
 		DA3F0AB01B0DA95900464800 /* BHDetailsLikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDetailsLikeViewController.m; sourceTree = "<group>"; };
 		DA3F0AB11B0DA95900464800 /* BHDetailsLikeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHDetailsLikeViewController.xib; sourceTree = "<group>"; };
@@ -257,6 +255,13 @@
 		DACE35CE1B1818D60060C486 /* BHItalicLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHItalicLabel.m; sourceTree = "<group>"; };
 		DACE35D01B18C69C0060C486 /* BHRomanLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHRomanLabel.h; sourceTree = "<group>"; };
 		DACE35D11B18C69C0060C486 /* BHRomanLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHRomanLabel.m; sourceTree = "<group>"; };
+		DACE36401B1ACA100060C486 /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
+		DACE36411B1ACA100060C486 /* FPPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverController.h; sourceTree = "<group>"; };
+		DACE36421B1ACA100060C486 /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
+		DACE36431B1ACA100060C486 /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
+		DACE36441B1ACA100060C486 /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
+		DACE36451B1ACA110060C486 /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
+		DACE36461B1ACA110060C486 /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
 		DAE41C101AFA39D400A3C1CD /* BHPrimaryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHPrimaryButton.h; sourceTree = "<group>"; };
 		DAE41C111AFA39D400A3C1CD /* BHPrimaryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHPrimaryButton.m; sourceTree = "<group>"; };
 		DAE41C141AFAEB3C00A3C1CD /* BHSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHSplashViewController.h; sourceTree = "<group>"; };
@@ -574,10 +579,13 @@
 		DA3F0AA81B0DA88D00464800 /* Popover */ = {
 			isa = PBXGroup;
 			children = (
-				DA3F0AA91B0DA89C00464800 /* PopoverView_Configuration.h */,
-				DA3F0AAA1B0DA89C00464800 /* PopoverView.h */,
-				DA3F0AAB1B0DA89C00464800 /* PopoverView.m */,
-				DA3F0AAC1B0DA89C00464800 /* PopoverViewCompatibility.h */,
+				DACE36401B1ACA100060C486 /* ARCMacros.h */,
+				DACE36411B1ACA100060C486 /* FPPopoverController.h */,
+				DACE36421B1ACA100060C486 /* FPPopoverController.m */,
+				DACE36431B1ACA100060C486 /* FPPopoverView.h */,
+				DACE36441B1ACA100060C486 /* FPPopoverView.m */,
+				DACE36451B1ACA110060C486 /* FPTouchView.h */,
+				DACE36461B1ACA110060C486 /* FPTouchView.m */,
 			);
 			name = Popover;
 			sourceTree = "<group>";
@@ -994,6 +1002,7 @@
 				DA20ABC41AB133DC0036CAE8 /* BHMenuItemObject.m in Sources */,
 				DAC9EEB51B019D9000E3B730 /* BHSecondaryButton.m in Sources */,
 				DAEB09A71B127D5800E58B73 /* UIFont+SmallFont.m in Sources */,
+				DACE36491B1ACA110060C486 /* FPTouchView.m in Sources */,
 				DA9E9A681AA242DF003FE759 /* BHSlidingViewController.m in Sources */,
 				DA06D3DC1AFE7D5100A66EEB /* BHDrawerBackgroundView.m in Sources */,
 				DA06D3E81AFE9BF800A66EEB /* BHNavigationBarBackgroundView.m in Sources */,
@@ -1006,7 +1015,7 @@
 				DA27ED3D1AA152AA00689F55 /* main.m in Sources */,
 				DA20ABC71AB133ED0036CAE8 /* BHTravelObject.m in Sources */,
 				DA9349151AFFE2390019B8BF /* BHCustomSearchBar.m in Sources */,
-				DA3F0AAD1B0DA89C00464800 /* PopoverView.m in Sources */,
+				DACE36481B1ACA110060C486 /* FPPopoverView.m in Sources */,
 				DA6AC1C91AD36C7C005337F7 /* BHSignUpViewController.m in Sources */,
 				DA3F0AB91B0DAEB900464800 /* BHSatisfactionDislikeTableViewController.m in Sources */,
 				DA3F0A821B0D784800464800 /* BHDeliDetailDynamicHeaderButton.m in Sources */,
@@ -1020,6 +1029,7 @@
 				DA6197111B04329500DC7AE3 /* BHInputTextField.m in Sources */,
 				DACE35D21B18C69C0060C486 /* BHRomanLabel.m in Sources */,
 				DA6DE1D31AB280D700D2FB34 /* BHApplicationManager.m in Sources */,
+				DACE36471B1ACA110060C486 /* FPPopoverController.m in Sources */,
 				DA06D3EB1AFEC87A00A66EEB /* BHSignUpSuccessViewController.m in Sources */,
 				DA27ED8D1AA15E4500689F55 /* ECSlidingAnimationController.m in Sources */,
 			);

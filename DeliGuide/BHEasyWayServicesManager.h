@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <CoreLocation/CoreLocation.h>
 
 
 @interface BHEasyWayServicesManager : NSObject
 
 + (instancetype) servicesManager;
+
++ (void) getDirectionsFromLocation:(CLLocation *)location
+                        toLocation:(CLLocation*)aNewLocation;
 
 @end

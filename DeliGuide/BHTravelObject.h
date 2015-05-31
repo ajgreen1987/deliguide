@@ -8,17 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum
-{
-    WALKING,
-    BIKING,
-    DRIVING,
-    PUBLIC
-} ModeOfTransportation;
-
 @interface BHTravelObject : NSObject
 
-@property (nonatomic, assign) ModeOfTransportation *travelMode;
+@property (nonatomic, assign) ModeOfTransportation travelMode;
 @property (nonatomic, assign) CGFloat travelTime;
+@property (nonatomic, assign) NSString *travelString;
 
 @end

@@ -10,4 +10,23 @@
 
 @implementation BHTravelObject
 
+- (NSString*) travelString
+{
+    switch (self.travelMode)
+    {
+        case WALKING:
+            return @"walk";
+            break;
+        case BIKING:
+            return @"ride";
+            break;
+        case DRIVING:
+            return @"drive";
+            break;
+        default:
+            return @"by transit";
+            break;
+    }
+}
+
 @end

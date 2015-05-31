@@ -26,7 +26,7 @@
                                      viewController:(UIViewController *)viewController;
 
 + (void) callLocation:(NSString*)aTelephoneNumber;
-+ (void) browserForURL:(NSString*)aURL;
++ (void) browserForURL:(NSURL *)aURL;
 + (NSString*) readStringFromUserDefaultsForKey:(NSString*)aKey;
 + (void) writeString:(NSString*)aValue toUserDefaultsForKey:(NSString*)aKey;
 

@@ -61,7 +61,7 @@ static BHEasyWayServicesManager *sharedServicesManager;
     
     
 }
-
+*/
 + (void) getDirectionsFromLocation:(CLLocation *)location
                         toLocation:(CLLocation*)aNewLocation
 {
@@ -70,6 +70,5 @@ static BHEasyWayServicesManager *sharedServicesManager;
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mapsURLString]];
 }
- */
 
 @end

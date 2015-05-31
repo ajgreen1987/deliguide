@@ -76,9 +76,9 @@ static BHApplicationManager *sharedAppManager;
     }
 }
 
-+ (void) browserForURL:(NSString *)aURL
++ (void) browserForURL:(NSURL *)aURL
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:aURL]];
+    [[UIApplication sharedApplication] openURL:aURL];
 }
 
 + (NSString*) readStringFromUserDefaultsForKey:(NSString*)aKey

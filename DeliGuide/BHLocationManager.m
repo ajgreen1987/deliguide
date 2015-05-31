@@ -120,7 +120,13 @@ static BHLocationManager *sharedLocationManager = nil;
     [self.locationManager stopUpdatingLocation];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *user = [locations objectAtIndex:0];
+    
+    [[[BHApplicationManager appManager] currentUser] setLatitude:user.coordinate.latitude];
+    [[[BHApplicationManager appManager] currentUser] setLongitude:user.coordinate.longitude];
+    
     /*
      Do something with the new location the application just received...
      */

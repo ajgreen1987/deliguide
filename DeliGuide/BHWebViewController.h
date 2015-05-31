@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BHWebViewController : UIViewController
+@interface BHWebViewController : UIViewController <UIActionSheetDelegate>
 
 @property (nonatomic, strong) NSURL *url;
 

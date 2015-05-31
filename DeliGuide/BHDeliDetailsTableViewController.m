@@ -12,12 +12,14 @@
 #import <CoreLocation/CoreLocation.h>
 #import "UIViewController+KNSemiModal.h"
 #import "BHDeliDetailsTravelTableViewController.h"
-#import "PopoverView.h"
+#import "FPPopoverController.h"
 #import "BHSatisfactionDislikeTableViewController.h"
 #import "BHDeliAnnotation.h"
 #import "BHHoursTableViewController.h"
 #import "BHMenuTableViewController.h"
 #import "BHDetailsLikeViewController.h"
+#import "BHLocationManager.h"
+#import "BHEasyWayServicesManager.h"
 
 @interface BHDeliDetailsTableViewController ()
 
@@ -33,6 +35,7 @@
     
     [self setupMap];
     [self setupFonts];
+    [self setupDeliDetails];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -106,14 +109,24 @@
     [[self.facebook titleLabel] setFont:AppFontSabonRomanSC(18.0f)];
 }
 
+- (void) setupDeliDetails
+{
+    [self.deliName setText:self.currentDeli.deliName];
+    [self.deliAddress setText:self.currentDeli.deliDisplayAddress];
+    [self.takeOut setText:self.currentDeli.isTakeoutAvailable ? @"Yes" : @"No"];
+    [self.delivery setText:self.currentDeli.isDeliveryAvailable ? @"Yes" : @"No"];
+    [self.paymentOptions setText:[self.currentDeli.paymentMethods componentsJoinedByString:@", "]];
+    [self.percentage setText:[NSString stringWithFormat:@"%.0f%%",self.currentDeli.satisfactionPercentage]];
+}
+
 #pragma mark - map
 
 - (void) setupMap
 {
     [self.mapview setDelegate:self];
-    BHDeliObject *deli = (BHDeliObject*)[[[BHApplicationManager appManager] delis] objectAtIndex:0];
+    
 
-    BHDeliAnnotation *annotation = [[BHDeliAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(deli.latitude, deli.longitude)];
+    BHDeliAnnotation *annotation = [[BHDeliAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(self.currentDeli.latitude, self.currentDeli.longitude)];
     [self.mapview addAnnotation:annotation];
     
     [self zoomMapViewToFitAnnotationsWithExtraZoomToAdjust:0];
@@ -181,11 +194,18 @@
 
 - (IBAction)handleCallLocationTouchUpInside:(id)sender
 {
-    [BHApplicationManager callLocation:@"(804) 222-1111"];
+    [BHApplicationManager callLocation:self.currentDeli.phoneNumber];
 }
 
 - (IBAction)handleDirectionsTouchUpInside:(id)sender
 {
+    CLLocation *deliLocation = [[CLLocation alloc] initWithLatitude:self.currentDeli.latitude
+                                                          longitude:self.currentDeli.longitude];
+    CLLocation *userLocation = [[CLLocation alloc] initWithLatitude:[[[BHApplicationManager appManager] currentUser] latitude]
+                                                          longitude:[[[BHApplicationManager appManager] currentUser] longitude]];
+    
+    [BHEasyWayServicesManager getDirectionsFromLocation:userLocation
+                                             toLocation:deliLocation];
 }
 
 - (IBAction)handleOrderTouchUpInside:(id)sender
@@ -216,10 +236,17 @@
         
         BHDetailsLikeViewController *likeController = [[BHDetailsLikeViewController alloc] initWithNibName:@"BHDetailsLikeViewController"
                                                                                                     bundle:nil];
-        _popover = [PopoverView showPopoverAtPoint:like.center
-                                 inView:like.superview
-                        withContentView:likeController.view
-                               delegate:nil];
+        [likeController setTitle:nil];
+
+        //our popover
+        FPPopoverController *popover = [[FPPopoverController alloc] initWithViewController:likeController];
+        
+        [popover setContentSize:CGSizeMake(292,152)];
+        [popover setTint:FPPopoverWhiteTint];
+        [popover setBorder:NO];
+        
+        //the popover will be presented from the okButton view
+        [popover presentPopoverFromView:self.like];
     }
 }
 
@@ -251,10 +278,14 @@
     [favorite setBackgroundColor:favorite.isSelected?GOLD_1:[UIColor clearColor]];
 }
 
-- (IBAction)handleDeliWebsiteTouchUpInside:(id)sender {
+- (IBAction)handleDeliWebsiteTouchUpInside:(id)sender
+{
+    [BHApplicationManager browserForURL:self.currentDeli.website];
 }
 
-- (IBAction)handleFacebookTouchUpInside:(id)sender {
+- (IBAction)handleFacebookTouchUpInside:(id)sender
+{
+    // Launch FB
 }
 
 #pragma mark - Segue

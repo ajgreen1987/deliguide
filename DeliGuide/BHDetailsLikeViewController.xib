@@ -70,11 +70,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="274" y="187"/>
         </view>
-        <view contentMode="scaleToFill" id="2Dz-On-geK" customClass="BHDividerView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-        </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

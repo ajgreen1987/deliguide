@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PopoverView.h"
 
 @protocol BHDetailsLikeViewDelegate <NSObject>
 
@@ -19,7 +18,6 @@
 @interface BHDetailsLikeViewController : UIViewController
 
 @property (nonatomic, assign) id<BHDetailsLikeViewDelegate> delegate;
-@property (nonatomic, weak) PopoverView *popover;
 
 - (IBAction) handleNoThanksTapped:(id)sender;
 - (IBAction) handleShareItTapped:(id)sender;

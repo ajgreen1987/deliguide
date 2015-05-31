@@ -11,6 +11,7 @@
 #import "BHDeliTableViewCell.h"
 #import "BHDeliObject.h"
 #import "BHDeliAnnotation.h"
+#import "BHDeliDetailsTableViewController.h"
 
 #define CELL_HEIGHT 136.0f
 
@@ -18,6 +19,7 @@
 
 @property (nonatomic, assign) BOOL isMapFullScreen;
 @property (nonatomic, assign) CGFloat originalTableViewYOrigin;
+@property (nonatomic, assign) NSInteger selectedIndex;
 
 - (void) handleProbableNavigationTrees;
 
@@ -185,7 +187,7 @@
     cell.satisfactionPercentage.text = [NSString stringWithFormat:@"%.1f%% like",deli.satisfactionPercentage];
     cell.featured.hidden = !deli.isFeatured;
     
-    cell.travelDistance.text = [NSString stringWithFormat:@"%ld min",(long)indexPath.row];
+    cell.travelDistance.text = [self stringForDelisTransporationModes:[deli deliTravelTimes]];
     
     return cell;
     
@@ -194,6 +196,9 @@
 #pragma mark - UITableView Delegate
 - (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    self.selectedIndex = indexPath.row;
+    
     [tableView deselectRowAtIndexPath:indexPath
                              animated:YES];
     
@@ -297,6 +302,36 @@
         return annotationView;
     }
     return nil;
+}
+
+- (NSString*) stringForDelisTransporationModes:(NSMutableArray*)modes
+{
+    int userMode = [[[BHApplicationManager appManager] currentUser] currentMode];
+    
+    for (BHTravelObject *transportation in modes)
+    {
+        if ([transportation travelMode] == userMode)
+        {
+            return [NSString stringWithFormat:@"%.0f min %@",[transportation travelTime], [transportation travelString]];
+        }
+    }
+    
+    return @"";
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:DETAILS_SEGUE])
+    {
+        BHDeliObject *deli = (BHDeliObject*)[[[BHApplicationManager appManager] delis] objectAtIndex:self.selectedIndex];
+        
+        // Get reference to the destination view controller
+        BHDeliDetailsTableViewController *vc = [segue destinationViewController];
+        
+        [vc setCurrentDeli:deli];
+    }
+
 }
 
 @end
