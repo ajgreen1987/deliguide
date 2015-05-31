@@ -28,5 +28,4 @@
 @property (nonatomic, assign) BOOL isDeliveryAvailable;
 @property (nonatomic, strong) NSMutableArray *paymentMethods;
 
-
 @end

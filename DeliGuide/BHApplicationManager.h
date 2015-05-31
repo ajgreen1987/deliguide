@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BHUserObject.h"
+#import "BHDeliObject.h"
 
 @class KAWebViewController;
 
@@ -30,5 +31,7 @@
 + (void) browserForURL:(NSURL *)aURL;
 + (NSString*) readStringFromUserDefaultsForKey:(NSString*)aKey;
 + (void) writeString:(NSString*)aValue toUserDefaultsForKey:(NSString*)aKey;
++ (NSString*) today;
++ (NSString*) isDeliOpenOrClosed:(BHDeliObject*)aDeli;
 
 @end

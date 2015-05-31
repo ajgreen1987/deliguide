@@ -186,6 +186,7 @@
     cell.address.text = deli.deliDisplayAddress;
     cell.satisfactionPercentage.text = [NSString stringWithFormat:@"%.1f%% like",deli.satisfactionPercentage];
     cell.featured.hidden = !deli.isFeatured;
+    cell.openOrClosed.text = [BHApplicationManager isDeliOpenOrClosed:deli];
     
     cell.travelDistance.text = [self stringForDelisTransporationModes:[deli deliTravelTimes]];
     

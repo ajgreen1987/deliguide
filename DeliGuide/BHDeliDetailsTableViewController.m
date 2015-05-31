@@ -117,6 +117,9 @@
     [self.delivery setText:self.currentDeli.isDeliveryAvailable ? @"Yes" : @"No"];
     [self.paymentOptions setText:[self.currentDeli.paymentMethods componentsJoinedByString:@", "]];
     [self.percentage setText:[NSString stringWithFormat:@"%.0f%%",self.currentDeli.satisfactionPercentage]];
+    [self.openOrClosed setText:[BHApplicationManager isDeliOpenOrClosed:self.currentDeli]];
+    [self.deliHours setTitle:[NSString stringWithFormat:@"Hours: %@", [self.currentDeli.deliHours objectForKey:[BHApplicationManager today] ]] forState:UIControlStateNormal];
+
 }
 
 #pragma mark - map

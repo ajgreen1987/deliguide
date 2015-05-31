@@ -106,4 +106,21 @@ static BHApplicationManager *sharedAppManager;
                                              forKey:aKey];
 }
 
++ (NSString*) today
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE"];
+    
+    return [dateFormatter stringFromDate:[NSDate date]];
+}
+
++ (NSString*) isDeliOpenOrClosed:(BHDeliObject*)aDeli
+{
+    NSString *today = [BHApplicationManager today];
+    
+    NSString *hours = [[aDeli deliHours] objectForKey:today];
+    
+    return ([hours isEqualToString:@"closed"])? @"Closed" : @"Open";
+}
+
 @end
