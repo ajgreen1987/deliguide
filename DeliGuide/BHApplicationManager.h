@@ -14,7 +14,8 @@
 @interface BHApplicationManager : NSObject
 
 @property (nonatomic, strong) BHUserObject *currentUser;
-@property (nonatomic, strong) NSArray *delis;
+@property (nonatomic, strong) NSMutableArray *delis;
+@property (nonatomic, strong) NSMutableArray *featuredDelis;
 @property (nonatomic, assign) BOOL shouldSignUp;
 @property (nonatomic, assign) BOOL shouldSignIn;
 @property (nonatomic, assign) NSString *urlToLoad;

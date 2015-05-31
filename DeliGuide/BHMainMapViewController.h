@@ -16,6 +16,7 @@
 
 @interface BHMainMapViewController : GAITrackedViewController <UITextFieldDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, BHLocationManagerDelegate>
 
+@property (nonatomic, strong) NSArray *delisToDisplay;
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet BHTableView *tableView;
 @property (nonatomic, weak) IBOutlet BHCustomSearchBar *customSearchBar;

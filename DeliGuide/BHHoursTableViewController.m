@@ -17,16 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setupHours];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) setupHours
+{
+    [[self sundayHours] setText:[self.hours objectForKey:@"Sunday"]];
+    [[self mondayHours] setText:[self.hours objectForKey:@"Monday"]];
+    [[self tuesdayHours] setText:[self.hours objectForKey:@"Tuesday"]];
+    [[self wednesdayHours] setText:[self.hours objectForKey:@"Wednesday"]];
+    [[self thursdayHours] setText:[self.hours objectForKey:@"Thursday"]];
+    [[self fridayHours] setText:[self.hours objectForKey:@"Friday"]];
+    [[self saturdayHours] setText:[self.hours objectForKey:@"Saturday"]];
 }
 
 @end

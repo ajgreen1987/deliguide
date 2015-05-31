@@ -43,11 +43,11 @@ static BHApplicationManager *sharedAppManager;
     return alertView;
 }
 
-- (NSArray*) delis
+- (NSMutableArray*) delis
 {
     if (USE_MOCK_LOCATIONS)
     {
-        _delis = [BHMockDataManager mockDelis];
+        _delis = [[NSMutableArray alloc] initWithArray:[BHMockDataManager mockDelis]];
     }
     else if (_delis == nil)
     {
@@ -55,6 +55,20 @@ static BHApplicationManager *sharedAppManager;
     }
     
     return _delis;
+}
+
+- (NSMutableArray*) featuredDelis
+{
+    if (USE_MOCK_LOCATIONS)
+    {
+        _featuredDelis = [[NSMutableArray alloc] initWithArray:[BHMockDataManager mockFeaturedDelis]];
+    }
+    else if(_featuredDelis == nil)
+    {
+        _featuredDelis = [[NSMutableArray alloc] initWithObjects:nil];
+    }
+    
+    return _featuredDelis;
 }
 
 + (void) callLocation:(NSString*)aTelephoneNumber

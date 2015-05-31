@@ -32,9 +32,6 @@
     [super viewDidLoad];
     
     self.screenName = @"MAP";
-    self.title = @"Deli's Near Me";
-    
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -49,8 +46,10 @@
 {
     [super viewDidLayoutSubviews];
     
-    [[self tableView] setContentOffset:CGPointMake(0, -self.tableView.contentInset.top)];
-    [[self tableView] setContentInset:UIEdgeInsetsMake(self.mapView.frame.size.height-(CELL_HEIGHT*2), 0, 0, 0)];
+    //[[self tableView] setContentOffset:CGPointMake(0, -self.tableView.contentInset.top)];
+
+    CGFloat topInset = ([[self delisToDisplay]count]>1) ? self.mapView.frame.size.height-(CELL_HEIGHT*2) : self.view.bounds.size.height - (CELL_HEIGHT*1.75);
+    [[self tableView] setContentInset:UIEdgeInsetsMake(topInset, 0, 0, 0)];
 }
 
 
@@ -63,6 +62,7 @@
 #pragma mark - Initiailizers
 - (void) setupCustomSearchBar
 {
+    [self.customSearchBar setHidden:([self.delisToDisplay count] < 2)];
     [self.customSearchBar setShouldAutoShrink:YES];
     [self.customSearchBar setRightSideButtonTitle:@"FILTER"];
 }
@@ -173,14 +173,14 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[BHApplicationManager appManager] delis] count];
+    return [self.delisToDisplay count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BHDeliTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    BHDeliObject *deli = (BHDeliObject*)[[[BHApplicationManager appManager] delis] objectAtIndex:indexPath.row];
+    BHDeliObject *deli = (BHDeliObject*)[self.delisToDisplay objectAtIndex:indexPath.row];
     
     cell.deliName.text = deli.deliName;
     cell.address.text = deli.deliDisplayAddress;
@@ -228,7 +228,7 @@
 
 - (void) zoomToUserLocation:(CLLocation*)aLocation
 {
-    for (BHDeliObject *deli in [[BHApplicationManager appManager] delis])
+    for (BHDeliObject *deli in self.delisToDisplay)
     {
         BHDeliAnnotation *annotation = [[BHDeliAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(deli.latitude, deli.longitude)];
 
@@ -324,7 +324,7 @@
     // Make sure your segue name in storyboard is the same as this line
     if ([[segue identifier] isEqualToString:DETAILS_SEGUE])
     {
-        BHDeliObject *deli = (BHDeliObject*)[[[BHApplicationManager appManager] delis] objectAtIndex:self.selectedIndex];
+        BHDeliObject *deli = (BHDeliObject*)[self.delisToDisplay objectAtIndex:self.selectedIndex];
         
         // Get reference to the destination view controller
         BHDeliDetailsTableViewController *vc = [segue destinationViewController];

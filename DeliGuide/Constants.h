@@ -83,5 +83,10 @@ __responder = [__responder nextResponder]; \
 #define HOURS_SEGUE @"Hours"
 #define MENU_SEGUE  @"Menu"
 #define DETAILS_SEGUE @"DetailsSegue"
+#define MAPVIEW_SEGUE @"MapView"
+#define FEATURED_MAPVIEW_SEGUE @"featuredMapView"
+
+#define DELI_TITLE @"Delis Near Me"
+#define FEATURED_TITLE @"Featured Delis"
 
 #endif

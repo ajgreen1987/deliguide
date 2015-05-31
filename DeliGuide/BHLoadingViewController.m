@@ -10,6 +10,7 @@
 #import "BHLocationManager.h"
 #import "BHApplicationManager.h"
 #import "BHWebViewController.h"
+#import "BHMainMapViewController.h"
 
 @implementation BHLoadingViewController
 
@@ -116,6 +117,31 @@
 - (void) customSearchbarEnteredText:(NSString *)textEntered
 {
     // Perform search for text entered
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:MAPVIEW_SEGUE])
+    {
+        // Get reference to the destination view controller
+        BHMainMapViewController *mapVC = [segue destinationViewController];
+        
+        [mapVC setDelisToDisplay:[[BHApplicationManager appManager] delis]];
+        
+        // This is fucking awful, referencing the UI element instead of the data object...AJ
+        [mapVC setTitle:DELI_TITLE];
+    }
+    else if([[segue identifier] isEqualToString:FEATURED_MAPVIEW_SEGUE])
+    {
+        // Get reference to the destination view controller
+        BHMainMapViewController *mapVC = [segue destinationViewController];
+        
+        [mapVC setDelisToDisplay:[[BHApplicationManager appManager] featuredDelis]];
+        
+        // This is fucking awful, referencing the UI element instead of the data object...AJ
+        [mapVC setTitle:FEATURED_TITLE];
+    }
 }
 
 @end

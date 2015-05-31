@@ -298,7 +298,8 @@
         BHHoursTableViewController *vc = [segue destinationViewController];
         
         // This is fucking awful, referencing the UI element instead of the data object...AJ
-        [vc setTitle:[self.deliName text]];
+        [vc setHours:[self.currentDeli deliHours]];
+        [vc setTitle:[self.currentDeli deliName]];
     }
     else if([[segue identifier] isEqualToString:MENU_SEGUE])
     {

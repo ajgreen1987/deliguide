@@ -16,5 +16,6 @@
 + (BHUserObject*) mockUser;
 
 + (NSArray*) mockDelis;
++ (NSArray*) mockFeaturedDelis;
 
 @end

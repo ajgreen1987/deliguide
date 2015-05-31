@@ -54,7 +54,8 @@
                          @"Takeout":[NSNumber numberWithInt:1],
                          @"Delivery":[NSNumber numberWithInt:1],
                          @"Payments":@[@"Cash",@"credit card"],
-                         @"URL":@"http://www.boarshead.com/"},
+                         @"URL":@"http://www.boarshead.com/",
+                         @"Satisfaction":[NSNumber numberWithDouble:83]},
                             @{@"Name":@"Toasties",
                               @"Address":@"148 W 49th St, New York, NY 10019",
                               @"shortAddress":@"148 W 49th St",
@@ -70,7 +71,8 @@
                               @"Takeout":[NSNumber numberWithInt:1],
                               @"Delivery":[NSNumber numberWithInt:1],
                               @"Payments":@[@"Cash",@"credit card"],
-                              @"URL":@"http://www.boarshead.com/"},
+                              @"URL":@"http://www.boarshead.com/",
+                              @"Satisfaction":[NSNumber numberWithDouble:18]},
                             @{@"Name":@"Gourmet 157",
                               @"Address":@"157 Christopher St, New York, NY 10014",
                               @"shortAddress":@"157 Christopher St",
@@ -86,7 +88,8 @@
                               @"Takeout":[NSNumber numberWithInt:1],
                               @"Delivery":[NSNumber numberWithInt:1],
                               @"Payments":@[@"Cash",@"credit card"],
-                              @"URL":@"http://www.boarshead.com/"},
+                              @"URL":@"http://www.boarshead.com/",
+                              @"Satisfaction":[NSNumber numberWithDouble:76]},
                             @{@"Name":@"Sarah's Artisanal Kitchen",
                               @"Address":@"270 Madison Ave, New York, NY 10016",
                               @"shortAddress":@"270 Madison Ave",
@@ -102,7 +105,8 @@
                               @"Takeout":[NSNumber numberWithInt:1],
                               @"Delivery":[NSNumber numberWithInt:1],
                               @"Payments":@[@"Cash",@"credit card"],
-                              @"URL":@"http://www.boarshead.com/"},
+                              @"URL":@"http://www.boarshead.com/",
+                              @"Satisfaction":[NSNumber numberWithDouble:55]},
                             @{@"Name":@"Saluggi Pizza",
                               @"Address":@"325 Church St, New York, NY 10013",
                               @"shortAddress":@"325 Church St",
@@ -118,7 +122,8 @@
                               @"Takeout":[NSNumber numberWithInt:1],
                               @"Delivery":[NSNumber numberWithInt:1],
                               @"Payments":@[@"Cash",@"credit card"],
-                              @"URL":@"http://www.boarshead.com/"}];
+                              @"URL":@"http://www.boarshead.com/",
+                              @"Satisfaction":[NSNumber numberWithDouble:91]}];
     
     
     for (NSDictionary *mock in mocks) {
@@ -147,10 +152,10 @@
         [newMockDeli setDeliDisplayAddress:[mock objectForKey:@"shortAddress"]];
         [newMockDeli setDeliMenu:nil]; // Need to mock out Menu Objects
         [newMockDeli setPhoneNumber:@"(123)-123-1234"];
-        [newMockDeli setSatisfactionPercentage:94.2];
+        [newMockDeli setSatisfactionPercentage:[[mock objectForKey:@"Satisfaction"] doubleValue]];
         [newMockDeli setDeliHours:[mock objectForKey:@"Hours"]];
 
-        [newMockDeli setIsFeatured:YES];
+        [newMockDeli setIsFeatured:[[newMockDeli deliName] isEqualToString:@"Saluggi Pizza"]? YES : NO];
         
         [newMockDeli setLatitude:[[mock objectForKey:@"Lat"] doubleValue]];
         [newMockDeli setLongitude:[[mock objectForKey:@"Long"] doubleValue]];
@@ -179,6 +184,22 @@
     
     NSArray *delis = [toReturn copy];
     return delis;
+}
+
++ (NSArray*) mockFeaturedDelis
+{
+    NSArray *mockDelis = [BHMockDataManager mockDelis];
+    NSMutableArray *featured = [[NSMutableArray alloc] initWithObjects:nil];
+    
+    for (BHDeliObject *deli in mockDelis)
+    {
+        if ([deli isFeatured])
+        {
+            [featured addObject:deli];
+        }
+    }
+    
+    return featured;
 }
 
 @end
