@@ -12,6 +12,7 @@
 
 - (void) didStartEditing;
 - (void) didCancelEditing;
+- (void) didEndEditing;
 - (void) tappedLocationButton;
 
 @end

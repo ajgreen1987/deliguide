@@ -81,7 +81,7 @@
 - (IBAction) handleSignUpTouchUpInside:(id)sender
 {
     if ([[[BHApplicationManager appManager] currentUser] isReadyForSignUp])
-    {
+    {        
         // Signup service call and next page
         [self performSegueWithIdentifier:@"SignUpSuccess"
                                   sender:self];

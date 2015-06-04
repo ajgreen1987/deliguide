@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TravelDelegate <NSObject>
+
+- (void) selectedTravelTime:(NSString*)travel;
+
+@end
+
 @interface BHDeliDetailsTravelTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSDictionary *travel;
+@property (nonatomic, assign) id<TravelDelegate> travelDelegate;
+@property (nonatomic, strong) NSArray *travel;
 
 @end

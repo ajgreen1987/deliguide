@@ -85,8 +85,11 @@ __responder = [__responder nextResponder]; \
 #define DETAILS_SEGUE @"DetailsSegue"
 #define MAPVIEW_SEGUE @"MapView"
 #define FEATURED_MAPVIEW_SEGUE @"featuredMapView"
+#define FAVORITES_SEGUE @"Favorite"
+#define NO_FAVORITES_SEGUE @"NoFavorites"
 
 #define DELI_TITLE @"Delis Near Me"
 #define FEATURED_TITLE @"Featured Delis"
+#define FAVORITE_TITLE @"Your Favorite Delis"
 
 #endif

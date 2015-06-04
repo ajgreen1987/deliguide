@@ -25,6 +25,11 @@
 
 - (void) awakeFromNib
 {
+    [self setupFromBeginning];
+}
+
+- (void) setupFromBeginning
+{
     [self setupTextfield];
     [self setupRightSideButton];
 }
@@ -140,6 +145,16 @@
                      }];
     
     [self dimOtherViewsToAlpha:0.4f];
+}
+
+- (void) didEndEditing
+{
+    //[self handleRightSideButtonTouchUpInside];
+    
+    if ([[self customSearchDelegate] respondsToSelector:@selector(customSearchbarDidFinishedEditing:)])
+    {
+        [[self customSearchDelegate] customSearchbarDidFinishedEditing:self.textField.text];
+    }
 }
 
 - (void) didCancelEditing

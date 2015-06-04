@@ -22,4 +22,5 @@
     
     [toggleButton setSelected:!toggleButton.isSelected];
 }
+
 @end

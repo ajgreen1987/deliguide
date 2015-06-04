@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "BHDeliObject.h"
+#import "BHDeliDetailsTravelTableViewController.h"
 
-@interface BHDeliDetailsTableViewController : UITableViewController <MKMapViewDelegate>
+@interface BHDeliDetailsTableViewController : UITableViewController <MKMapViewDelegate, TravelDelegate>
 
 @property (nonatomic, strong) BHDeliObject *currentDeli;
 @property (weak, nonatomic) IBOutlet UILabel *deliAddress;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *takeOut;
 @property (weak, nonatomic) IBOutlet UILabel *delivery;
 @property (weak, nonatomic) IBOutlet UILabel *paymentOptions;
+@property (weak, nonatomic) IBOutlet UIButton *travelMode;
 
 @property (weak, nonatomic) IBOutlet UILabel *deliName;
 @property (weak, nonatomic) IBOutlet UIButton *call;
@@ -39,7 +41,6 @@
 - (IBAction)handleDirectionsTouchUpInside:(id)sender;
 - (IBAction)handleOrderTouchUpInside:(id)sender;
 - (IBAction)handleTravelTimeTouchUpInside:(id)sender;
-- (IBAction)handleHoursTouchUpInside:(id)sender;
 
 - (IBAction)handleLikeTouchUpInside:(id)sender;
 - (IBAction)handleDislikeTouchUpInside:(id)sender;

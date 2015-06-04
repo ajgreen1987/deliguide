@@ -40,7 +40,12 @@
 {
     if ([[[[BHApplicationManager appManager] currentUser] favorites] count] < 1)
     {
-        [self performSegueWithIdentifier:@"NoFavorites"
+        [self performSegueWithIdentifier:NO_FAVORITES_SEGUE
+                                  sender:self];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:FAVORITES_SEGUE
                                   sender:self];
     }
 }
@@ -48,7 +53,7 @@
 #pragma mark - Controller Segue
 - (void) presentMapController
 {
-    [self performSegueWithIdentifier:@"MapView"
+    [self performSegueWithIdentifier:MAPVIEW_SEGUE
                               sender:self];
 }
 
@@ -114,6 +119,11 @@
     [[BHLocationManager locationManager] requestLocationServicesAuthorization];
 }
 
+- (void) customSearchbarDidFinishedEditing:(NSString *)text
+{
+    [self performSegueWithIdentifier:MAPVIEW_SEGUE sender:self];
+}
+
 - (void) customSearchbarEnteredText:(NSString *)textEntered
 {
     // Perform search for text entered
@@ -141,6 +151,14 @@
         
         // This is fucking awful, referencing the UI element instead of the data object...AJ
         [mapVC setTitle:FEATURED_TITLE];
+    }
+    else if([[segue identifier] isEqualToString:FAVORITES_SEGUE])
+    {
+        BHMainMapViewController *mapVC = [segue destinationViewController];
+        
+        [mapVC setDelisToDisplay:[[[BHApplicationManager appManager] currentUser] favorites]];
+        
+        [mapVC setTitle:FAVORITE_TITLE];
     }
 }
 

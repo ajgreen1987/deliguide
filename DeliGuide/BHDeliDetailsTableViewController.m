@@ -113,13 +113,13 @@
 {
     [self.deliName setText:self.currentDeli.deliName];
     [self.deliAddress setText:self.currentDeli.deliDisplayAddress];
+    [self.travelMode setTitle:@"5 min walk" forState:UIControlStateNormal];
     [self.takeOut setText:self.currentDeli.isTakeoutAvailable ? @"Yes" : @"No"];
     [self.delivery setText:self.currentDeli.isDeliveryAvailable ? @"Yes" : @"No"];
     [self.paymentOptions setText:[self.currentDeli.paymentMethods componentsJoinedByString:@", "]];
     [self.percentage setText:[NSString stringWithFormat:@"%.0f%%",self.currentDeli.satisfactionPercentage]];
     [self.openOrClosed setText:[BHApplicationManager isDeliOpenOrClosed:self.currentDeli]];
     [self.deliHours setTitle:[NSString stringWithFormat:@"Hours: %@", [self.currentDeli.deliHours objectForKey:[BHApplicationManager today] ]] forState:UIControlStateNormal];
-
 }
 
 #pragma mark - map
@@ -223,6 +223,10 @@
 - (IBAction)handleTravelTimeTouchUpInside:(id)sender
 {
     BHDeliDetailsTravelTableViewController *travel = [[BHDeliDetailsTravelTableViewController alloc] initWithNibName:@"BHDeliDetailsTravelTableViewController" bundle:nil];
+    
+    [travel setTravel:[self.currentDeli deliTravelTimes]];
+    
+    [travel setTravelDelegate:self];
     
     [self presentSemiViewController:travel];
 }
@@ -335,6 +339,13 @@
 - (void) handleSatisfactionShareIt
 {
     
+}
+
+#pragma mark - Travel Delegate
+- (void) selectedTravelTime:(NSString *)travel
+{
+    [self dismissSemiModalView];
+    [self.travelMode setTitle:travel forState:UIControlStateNormal];
 }
 
 @end

@@ -13,6 +13,7 @@
 
 - (void) customSearchbarTouchedUserLocation;
 - (void) customSearchbarEnteredText:(NSString*)textEntered;
+- (void) customSearchbarDidFinishedEditing:(NSString*)text;
 - (void) customSearchbarTouchedRightButton:(id)sender;
 
 @end

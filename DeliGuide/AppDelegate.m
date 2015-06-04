@@ -70,7 +70,7 @@
 {
     NSString *userID = [BHApplicationManager readStringFromUserDefaultsForKey:USER_ID_KEY];
     
-    if ([userID isEqual:nil])
+    if (userID == nil)
     {
         [[BHApplicationManager appManager] setCurrentUser:[BHMockDataManager anonymousUser]];
     }

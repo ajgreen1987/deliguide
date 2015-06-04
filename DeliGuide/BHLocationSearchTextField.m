@@ -124,6 +124,16 @@
      ];
 }
 
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    if ([self isSearchDelegateValidForSelector:@selector(didEndEditing)])
+    {
+        [[self searchDelegate] didEndEditing];
+    }
+    
+    return true;
+}
+
 - (BOOL) isSearchDelegateValidForSelector:(SEL)aSelector
 {
     return ((self.searchDelegate != nil) && [self.searchDelegate respondsToSelector:aSelector]);

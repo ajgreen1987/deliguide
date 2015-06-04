@@ -28,6 +28,7 @@
     [mockUser setUserName:@"First Last"];
     [mockUser setUserEmail:@"First.Last@Email.com"];
     [mockUser setUserID:@"1233456789"];
+    [mockUser setFavorites:[BHMockDataManager mockFavorites]];
     
     return mockUser;
 }
@@ -200,6 +201,16 @@
     }
     
     return featured;
+}
+
++ (NSArray*) mockFavorites
+{
+    NSMutableArray *delis = [[NSMutableArray alloc] initWithArray:[BHMockDataManager mockDelis]];
+    
+    [delis removeObjectAtIndex:0];
+    [delis removeObjectAtIndex:delis.count-1];
+    
+    return delis;
 }
 
 @end

@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) ModeOfTransportation travelMode;
 @property (nonatomic, assign) CGFloat travelTime;
-@property (nonatomic, assign) NSString *travelString;
+@property (nonatomic, strong) NSString *travelString;
+@property (nonatomic, strong) NSString *longTravelString;
 
 @end

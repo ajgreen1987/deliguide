@@ -221,6 +221,7 @@
                         <segue destination="agH-3N-bam" kind="push" identifier="SignUpLoading" id="ien-9U-N6T"/>
                         <segue destination="1a8-K0-BTj" kind="push" identifier="MapView" id="XGY-5A-POb"/>
                         <segue destination="RRj-td-gfF" kind="push" identifier="NoFavorites" id="vpv-rX-roR"/>
+                        <segue destination="1a8-K0-BTj" kind="push" identifier="Favorite" id="eDR-o4-0Fa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDJ-E6-Fbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,11 +395,64 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signed in as" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bOk-Us-C6y" customClass="BHItalicLabel">
+                                <rect key="frame" x="118" y="232" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q5C-0O-rlF" customClass="BHItalicLabel">
+                                <rect key="frame" x="118" y="255" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" id="EZe-xr-pae" customClass="BHDividerView">
+                                <rect key="frame" x="105" y="328" width="215" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fjs-GK-Bi8">
+                                <rect key="frame" x="105" y="284" width="215" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.72549019609999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleProductsAndNutritionTouchUpInside:" destination="dwd-J1-Vd2" eventType="touchUpInside" id="GCy-Ia-HGP"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" id="D2O-2k-T4U" customClass="BHDividerView">
+                                <rect key="frame" x="105" y="284" width="215" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="568"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="createAccount" destination="5b3-1g-eN9" id="L8n-ef-vyk"/>
+                        <outlet property="signIn" destination="6MJ-Ke-5nW" id="jQY-3r-Ugy"/>
+                        <outlet property="signInAs" destination="bOk-Us-C6y" id="oWa-C8-xbA"/>
+                        <outlet property="signOut" destination="Fjs-GK-Bi8" id="l5h-72-0Rl"/>
+                        <outlet property="signOutBottomDivider" destination="EZe-xr-pae" id="Ysv-wn-QX1"/>
+                        <outlet property="signOutTopDivider" destination="D2O-2k-T4U" id="SyY-aM-ZTY"/>
+                        <outlet property="username" destination="q5C-0O-rlF" id="Enp-v7-23J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAF-3p-7mY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -469,7 +523,7 @@
                                         <rect key="frame" x="16" y="231" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="bottomLeftCornerRadius">
                                                 <real key="value" value="1"/>
@@ -1175,6 +1229,7 @@
                         <outlet property="paymentOptions" destination="g7Y-CA-Nom" id="huh-VQ-mkg"/>
                         <outlet property="percentage" destination="BWf-Ts-UZf" id="Xv9-pm-1za"/>
                         <outlet property="takeOut" destination="rha-zj-0ZP" id="9TZ-JU-LgK"/>
+                        <outlet property="travelMode" destination="0n5-sl-UfE" id="QwB-py-WWE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krM-B3-oEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1481,7 +1536,7 @@
                                         <rect key="frame" x="16" y="277" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="bottomLeftCornerRadius">
                                                 <real key="value" value="1"/>
@@ -1625,9 +1680,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="adE-hN-4tC"/>
-        <segue reference="XGY-5A-POb"/>
+        <segue reference="ien-9U-N6T"/>
         <segue reference="wAP-MW-AIs"/>
-        <segue reference="ye3-6p-l8U"/>
+        <segue reference="GZ8-Rd-3pM"/>
+        <segue reference="eDR-o4-0Fa"/>
     </inferredMetricsTieBreakers>
 </document>

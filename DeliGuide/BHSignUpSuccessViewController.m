@@ -7,6 +7,8 @@
 //
 
 #import "BHSignUpSuccessViewController.h"
+#import "BHApplicationManager.h"
+#import "BHMockDataManager.h"
 
 @interface BHSignUpSuccessViewController ()
 
@@ -17,8 +19,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.screenName = @"SIGNUPSUCCESS";
+    
+    [[BHApplicationManager appManager] setUserSignedIn:YES];
+    [[BHApplicationManager appManager] setCurrentUser:[BHMockDataManager mockUser]];
+    [BHApplicationManager writeString:@"USER_ID"
+                 toUserDefaultsForKey:USER_ID_KEY];
 }
 
 - (void)didReceiveMemoryWarning {

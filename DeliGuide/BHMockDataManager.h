@@ -17,5 +17,6 @@
 
 + (NSArray*) mockDelis;
 + (NSArray*) mockFeaturedDelis;
++ (NSArray*) mockFavorites;
 
 @end

@@ -29,4 +29,24 @@
     }
 }
 
+- (NSString*) longTravelString
+{
+    switch (self.travelMode)
+    {
+        case WALKING:
+            return @"Walking";
+            break;
+        case BIKING:
+            return @"Biking";
+            break;
+        case DRIVING:
+            return @"Driving";
+            break;
+        default:
+            return @"Public Transit";
+            break;
+    }
+
+}
+
 @end

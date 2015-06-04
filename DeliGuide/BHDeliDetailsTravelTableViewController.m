@@ -8,6 +8,7 @@
 
 #import "BHDeliDetailsTravelTableViewController.h"
 #import "BHDrawerBackgroundView.h"
+#import "BHTravelObject.h"
 
 @interface BHDeliDetailsTravelTableViewController ()
 
@@ -23,8 +24,6 @@
     
     BHDrawerBackgroundView *background = [[BHDrawerBackgroundView alloc] initWithFrame:self.tableView.frame];
     [[self tableView] setBackgroundView:background];
-    
-    self.travel = @{@"Walking":@"15 minutes",@"Biking":@"5 minutes", @"Driving":@"19 mintues",@"Public transit":@"32 minutes"};
     
     self.selectedRow = 0;
 }
@@ -43,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.travel.allKeys.count;
+    return self.travel.count;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -73,16 +72,15 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     }
     
-    NSString *key = [[self.travel allKeys] objectAtIndex:indexPath.row];
-    NSString *value = [self.travel objectForKey:key];
-    
     if (indexPath.row != 0)
     {
         [cell setAccessoryType:UITableViewCellAccessoryNone];
     }
     
-    [[cell textLabel] setText:key];
-    [[cell detailTextLabel] setText:value];
+    BHTravelObject *travelObject = (BHTravelObject*)[self.travel objectAtIndex:indexPath.row];
+    
+    [[cell textLabel] setText:[travelObject longTravelString]];
+    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%.0f",[travelObject travelTime]]];
     
     return cell;
 }
@@ -99,6 +97,14 @@
     [self.tableView cellForRowAtIndexPath:oldIndex].accessoryType = UITableViewCellAccessoryNone;
     [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
     return indexPath;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BHTravelObject *travelObject = (BHTravelObject*)[self.travel objectAtIndex:indexPath.row];
+
+    
+    [self.travelDelegate selectedTravelTime:[NSString stringWithFormat:@"%.0f %@", [travelObject travelTime], [travelObject travelString]]];
 }
 
 @end

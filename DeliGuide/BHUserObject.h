@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSString *userEmail;
 @property (nonatomic, strong) NSString *userPassword;
 @property (nonatomic, strong) NSString *userID;
-@property (nonatomic, strong) NSMutableArray *favorites;
+@property (nonatomic, strong) NSArray *favorites;
 @property (nonatomic, assign) ModeOfTransportation currentMode;
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;

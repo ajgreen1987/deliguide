@@ -12,6 +12,8 @@
 
 @interface ViewController ()
 
+- (void) hideForAuthenticationStatus;
+
 @end
 
 @implementation ViewController
@@ -26,11 +28,27 @@
     [super viewWillAppear:animated];
     
     [self setScreenName:@"LANDING"];
+    
+    [self hideForAuthenticationStatus];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) hideForAuthenticationStatus
+{
+    BOOL isUserSignedIn = [[BHApplicationManager appManager] userSignedIn];
+    
+    [self.signIn setHidden:isUserSignedIn];
+    [self.createAccount setHidden:isUserSignedIn];
+    [self.signInAs setHidden:!isUserSignedIn];
+    [self.username setHidden:!isUserSignedIn];
+    [self.signOut setHidden:!isUserSignedIn];
+    [self.signOutBottomDivider setHidden:!isUserSignedIn];
+    [self.signOutTopDivider setHidden:!isUserSignedIn];
+    
 }
 
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue { }
